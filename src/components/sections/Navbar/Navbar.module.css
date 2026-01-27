@@ -1,0 +1,15 @@
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.li{
+    padding-right: 25px;
+}
