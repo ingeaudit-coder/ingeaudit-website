@@ -1,4 +1,38 @@
-.heroContainer{
-    height: calc(100vh - 100px) ;
-    border: 1px solid goldenrod
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  border: 1px solid goldenrod;
+}
+
+.titleHero {
+  font-family: var(--font-geist-sans);
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.subtitleHero {
+  font-family: var(--font-geist-sans);
+  font-weight: 300;
+  font-size: larger;
+}
+
+.content {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 10; /* Por encima de la imagen, pero bajo el navbar */
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.329),
+    rgba(0, 0, 0, 0.3)
+  );
+  z-index: 5;
 }
