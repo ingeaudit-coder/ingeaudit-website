@@ -1,11 +1,10 @@
-import { Navbar } from "../components/sections/Navbar/Navbar";
+import Hero from "../components/sections/Hero/Hero";
 
 export default function Home() {
   return (
     <>
     <section>
-      <h1>Bienvenido a Ingeaudit</h1>
-      <p>Lideres y expertos en Telecomunicaciones</p>
+    <Hero />
     </section>
     </>
   );
