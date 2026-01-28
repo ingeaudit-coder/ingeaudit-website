@@ -6,10 +6,10 @@ import style from "@/src/components/sections/Navbar/Navbar.module.css";
 export const Navbar = () => {
   return (
     <nav className={style.navContainer}>
-      <Link href="/">
-        <Image
-          width={150}
-          height={50}
+      <Link href="/" className={style.linkImg}>
+        <Image className={style.imgNavbar}
+          width={100}
+          height={25}
           src={LogoIngeaudit}
           alt="Logo de Ingeaudit transparente"
           priority
