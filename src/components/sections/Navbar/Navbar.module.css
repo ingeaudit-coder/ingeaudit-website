@@ -1,4 +1,5 @@
 .navContainer{
+    border: 1px solid green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
