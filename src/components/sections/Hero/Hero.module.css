@@ -5,8 +5,8 @@
   justify-content: center;
   /* height: calc(100vh - 100px); */
   height: 100vh;
-  border: 1px solid goldenrod;
-}
+/*   border: 1px solid goldenrod;
+ */}
 
 .titleHero {
   font-family: var(--font-geist-sans);
