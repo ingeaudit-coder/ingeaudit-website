@@ -10,15 +10,16 @@
   height: 50px;
 
   /* Efecto de cristal */
-  background-color: rgba(0, 0, 0, 0.2); 
-  backdrop-filter: blur(15px); 
-  -webkit-backdrop-filter: blur(15px); /* Soporte para Safari */
+  background-color: rgba(0, 0, 0, 0.25); 
+  backdrop-filter: saturate(180%) blur(30px);
+  -webkit-backdrop-filter: saturate(180%) blur(30px); /* Soporte para Safari */
   
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
 }
 
 .listContainer {
+  filter: var(--drop-shadow-logo);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -41,6 +42,7 @@
 }
 
 .imgNavbar {
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
   object-fit: contain;
   width: 70px;
   height: auto;
