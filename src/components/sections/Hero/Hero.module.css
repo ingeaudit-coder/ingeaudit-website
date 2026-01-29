@@ -1,8 +1,10 @@
 .heroContainer {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 100px);
+  /* height: calc(100vh - 100px); */
+  height: 100vh;
   border: 1px solid goldenrod;
 }
 
@@ -19,6 +21,7 @@
 }
 
 .content {
+  filter: var(--drop-shadow-logo);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 10; /* Por encima de la imagen, pero bajo el navbar */
@@ -29,10 +32,16 @@
 .overlay {
   position: absolute;
   inset: 0;
+ /*  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(37, 16, 112, 0.233)
+  ); */
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.329),
-    rgba(0, 0, 0, 0.3)
+    rgba(0, 0, 0, 0) 0%,           /* Transparente arriba */
+    rgba(37, 16, 112, 0.23) 85%,    /* Tu azulado en el cuerpo de la imagen */
+    #000000 100%                   /* Negro puro al final para empalmar */
   );
   z-index: 5;
 }
