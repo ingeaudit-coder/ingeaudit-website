@@ -1,6 +1,54 @@
-.footerContainer{
-    background-color: black;
-    height: 200px;
-    width: 100%;
-/*     border: 1px solid greenyellow;
- */}
+.footerContainer {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 50px 150px 50px 150px;
+  box-sizing: border-box;
+  display: grid;
+  height: 300px;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr 100px;
+  grid-template-areas:
+    "logoP linkInteres"
+    "containerRRSS derechosReserados";
+  overflow: hidden;
+  font-family: var(--font-geist-sans);
+}
+
+.logoP {
+  grid-area: logoP;
+}
+
+.containerLinkInteres {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  grid-area: linkInteres;
+}
+
+.containerLogo {
+  object-fit: contain;
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) invert(1);
+}
+
+.iconosRRSS {
+    grid-area: containerRRSS;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+.containerReservados {
+    grid-area: derechosReserados;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.linksFooter{
+    text-decoration: underline;
+}
