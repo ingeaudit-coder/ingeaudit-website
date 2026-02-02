@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <section>
         <Hero />
-        <Clients />
+        {/* <Clients /> */}
       </section>
     </>
   );
