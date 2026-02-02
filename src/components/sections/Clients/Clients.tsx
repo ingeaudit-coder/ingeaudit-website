@@ -7,15 +7,15 @@ import { useEffect, useState } from "react";
 
 // Imagina que estos son los logos de la empresa
 const logos = [
-  { src: "/images/logos/clarovtr-logo.svg", alt: "Empresa 1", width: 300  },
+  { src: "/images/logos/clarovtr-logo.svg", alt: "Empresa 1", width: 200  },
   { src: "/images/logos/entel-logo.svg", alt: "Empresa 2" },
-  { src: "/images/logos/logo-efe.svg", alt: "Empresa 3", width: 120  },
-  { src: "/images/logos/logo-wom.svg", alt: "Empresa 4", width: 100 },
-  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Empresa 5", width: 140  },
-  { src: "/images/logos/motorola-logo.png", alt: "Empresa 6", width: 150  },
+  { src: "/images/logos/logo-efe.svg", alt: "Empresa 3", width: 100  },
+  { src: "/images/logos/logo-wom.svg", alt: "Empresa 4", width: 70 },
+  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Empresa 5", width: 120  },
+  { src: "/images/logos/motorola-logo.png", alt: "Empresa 6", width: 100  },
   { src: "/images/logos/komatsu-logo.webp", alt: "Empresa 7" },
   { src: "/images/logos/codelco-logo.svg", alt: "Empresa 8" },
-  { src: "/images/logos/telefonica-logo.svg", alt: "Empresa 9", width: 250  },
+  { src: "/images/logos/telefonica-logo.svg", alt: "Empresa 9", width: 150  },
   { src: "/images/logos/sollatek-logo.png", alt: "Empresa 10" },
 ];
 
@@ -29,7 +29,7 @@ const Clients = () => {
   if (!mounted) return null; // No renderiza nada en el servidor
 
   return (
-    <section className="bg-black py-16">
+    <section className={style.clientContainer}>
      {/*  <h2 className="text-white text-center text-3xl font-bold mb-10">
         Empresas que confían en nosotros
       </h2> */}
@@ -37,18 +37,20 @@ const Clients = () => {
       <Marquee
         gradient={true}
         gradientColor="black"
-        speed={35}
+        gradientWidth={0}
+        speed={20}
         pauseOnHover={true}
+        className={style.miMarquee}
       >
         {logos.map((logo, index) => (
           <div key={index} className="mx-8">
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={logo.width || 200}
+              width={logo.width || 120}
               height={80}
               /* className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" */
-              className="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
+              className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
               /* className="object-contain transition-all duration-300" */
               
             />
