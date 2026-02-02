@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoIngeaudit from "@/public/image-ingeaudit-transparent.svg";
+import LogoIngeaudit from "@/public/logo-inge-vector.svg";
 import LogoIngeauditBlanco from "@/public/logo_ingeaudit_blanco.svg";
 import Link from "next/link";
 import style from "@/src/components/sections/Navbar/Navbar.module.css";
@@ -12,7 +12,7 @@ export const Navbar = () => {
           width={100}
           height={25}
 /*        src={LogoIngeaudit}*/
-          src={LogoIngeauditBlanco}          alt="Logo de Ingeaudit transparente"
+          src={LogoIngeaudit} alt="Logo de Ingeaudit transparente"
           priority
         />
       </Link>

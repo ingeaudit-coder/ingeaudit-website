@@ -102,9 +102,10 @@
 
 .imgNavbar {
   object-fit: contain;
-  width: 90px;
+  width: 200px;
   height: auto;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) invert(1);
 }
 
 /* Responsive para tablets */
