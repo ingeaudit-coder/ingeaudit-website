@@ -3,6 +3,7 @@
 import style from "@/src/components/sections/Hero/Hero.module.css";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
+import Clients from "../Clients/Clients";
 
 const Hero = () => {
   return (
@@ -12,7 +13,7 @@ const Hero = () => {
         alt="Fondo corporativo"
         fill
         priority
-        className="object-cover"
+        className={style.imgHero}
       />
       <div className={style.overlay} />
       <section className={style.content}>
@@ -35,6 +36,9 @@ const Hero = () => {
           Más de <strong><b>20 años de experiencia</b></strong> respaldando a la industria de las telecomunicaciones
         </p>
       </section>
+    <div className={style.containerClientHero}> 
+        <Clients />
+      </div>
     </main>
   );
 };
