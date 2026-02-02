@@ -47,7 +47,7 @@
   gap: 2rem;
   align-items: center;
   font-family: var(--font-geist-sans);
-  font-weight: 400;
+  font-weight: 250;
   font-size: 0.95rem;
   letter-spacing: 0.3px;
   margin-right: 1rem;
@@ -59,7 +59,7 @@
 }
 
 .li a {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -102,9 +102,10 @@
 
 .imgNavbar {
   object-fit: contain;
-  width: 90px;
+  width: 200px;
   height: auto;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) invert(1);
 }
 
 /* Responsive para tablets */

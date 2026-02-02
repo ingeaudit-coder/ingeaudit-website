@@ -1,7 +1,29 @@
-.clientsContainer{
-    background-color: black;
-    height: 400px;
-    width: 100%;
-    border: 1px solid greenyellow;
+.clientContainer{
+  height: 10vh; /* Ajusta este valor exacto a lo que mide tu área marcada */
+  display: flex;
+  align-items: center; /* Centra los logos verticalmente dentro de la franja */
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 5px;
+  
     
+}
+
+.miMarquee{
+    mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  
+  /* Compatibilidad con Webkit (Chrome, Safari, Edge) */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
