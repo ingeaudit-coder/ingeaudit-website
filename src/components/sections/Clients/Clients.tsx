@@ -30,9 +30,9 @@ const Clients = () => {
 
   return (
     <section className="bg-black py-16">
-      <h2 className="text-white text-center text-3xl font-bold mb-10">
+     {/*  <h2 className="text-white text-center text-3xl font-bold mb-10">
         Empresas que confían en nosotros
-      </h2>
+      </h2> */}
 
       <Marquee
         gradient={true}
@@ -48,7 +48,9 @@ const Clients = () => {
               width={logo.width || 200}
               height={80}
               /* className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" */
-              className="object-contain transition-all duration-300"
+              className="grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
+              /* className="object-contain transition-all duration-300" */
+              
             />
           </div>
         ))}
