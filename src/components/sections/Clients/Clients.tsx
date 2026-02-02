@@ -50,7 +50,7 @@ const Clients = () => {
               width={logo.width || 120}
               height={80}
               /* className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" */
-              className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
+              className="grayscale opacity-100 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
               /* className="object-contain transition-all duration-300" */
               
             />
