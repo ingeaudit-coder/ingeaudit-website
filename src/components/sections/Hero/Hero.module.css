@@ -52,7 +52,6 @@
  }
 
 .titleHero {
-  border: 1px solid green;
   grid-area: principal-title;
   white-space: normal;
   /* width: 10%; */
