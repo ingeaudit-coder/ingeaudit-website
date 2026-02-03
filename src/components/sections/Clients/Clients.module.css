@@ -8,6 +8,11 @@
   background-color: black;
 }
 
+.logosClients{
+  filter: grayscale(100%) brightness(10);
+  opacity: 0.8; 
+}
+
 .miMarquee{
     mask-image: linear-gradient(
     to right,
@@ -22,7 +27,28 @@
     to right,
     transparent,
     black 10%,
+    black 10%,
+    transparent
+  );
+}
+
+
+/* @media (width < 768px) {
+.miMarquee{
+    mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 90%,
+    black 10%,
+    transparent
+  );
+  
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
     black 90%,
     transparent
   );
 }
+} */

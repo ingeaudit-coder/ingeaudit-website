@@ -30,9 +30,9 @@ const Clients = () => {
 
   return (
     <section className={style.clientContainer}>
-     {/*  <h2 className="text-white text-center text-3xl font-bold mb-10">
-        Empresas que confían en nosotros
-      </h2> */}
+      {/* <p>
+        Confían en nosotros
+      </p> */}
 
       <Marquee
         gradient={true}
@@ -49,9 +49,9 @@ const Clients = () => {
               alt={logo.alt}
               width={logo.width || 120}
               height={80}
-              /* className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" */
-              className="grayscale opacity-100 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
-              /* className="object-contain transition-all duration-300" */
+              className={style.logosClients}              /* className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" */
+/*               className="grayscale opacity-120 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
+ */              /* className="object-contain transition-all duration-300" */
               
             />
           </div>
