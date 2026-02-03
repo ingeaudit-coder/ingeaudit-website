@@ -98,7 +98,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  
+
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -134,7 +134,7 @@
     font-family: var(--font-geist-sans);
     font-weight: 300;
     font-size: 1em;
-    padding-top: 15px;
+    padding: 15px 5px 0 5px;
   }
   .content {
     height: auto; /* IMPORTANTE: Quitamos el 90vh */
@@ -149,7 +149,17 @@
     height: 95% !important;
     object-position: center 100%;
   }
-  .typeAnimation{
+  .containerAnimationHero {
+    padding-left: 5px;
+    padding-right: 5px;
     height: 55px;
+  }
+}
+
+@media (width < 2100px) {
+  .imgHero {
+    object-fit: cover;
+    height: 95% !important;
+    object-position: center 100%;
   }
 }
