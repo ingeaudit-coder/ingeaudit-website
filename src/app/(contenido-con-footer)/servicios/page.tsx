@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./servicios.module.css";
 import Certifications from "@/src/components/sections/Certifications/Certifications";
 import Services from "@/src/components/sections/Services/Services";
+import { useLanguage } from "@/src/context/LanguageContext";
+import { t } from "@/src/i18n/translations";
 
 const Servicios = () => {
+  const { lang } = useLanguage();
+
   return (
     <div className={styles.container}>
       <section className={styles.heroSection}>
@@ -16,10 +22,8 @@ const Servicios = () => {
         />
         <div className={styles.overlay} />
         <div className={styles.heroContent}>
-          <h1 className={styles.mainTitle}>Portafolio de Servicios</h1>
-          <p className={styles.subtitle}>
-            Soluciones integrales para la industria de telecomunicaciones
-          </p>
+          <h1 className={styles.mainTitle}>{t("serviciosPage.title", lang)}</h1>
+          <p className={styles.subtitle}>{t("serviciosPage.subtitle", lang)}</p>
         </div>
       </section>
       <section>

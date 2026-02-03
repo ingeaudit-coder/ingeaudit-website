@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./Team.module.css";
+import { useLanguage } from "@/src/context/LanguageContext";
+import { t } from "@/src/i18n/translations";
 
 type TeamMember = {
   id: number;
   name: string;
-  role: string;
+  roleKey: "ceoFounder" | "fieldSupervisor" | "chargeOf";
   email: string;
-  seniority: string;
+  seniorityEs: string;
+  seniorityEn: string;
   img: string;
   isCEO?: boolean;
   linkedin?: string;
@@ -16,9 +21,10 @@ const team: TeamMember[] = [
   {
     id: 1,
     name: "Juan Pérez",
-    role: "CEO & Fundador",
+    roleKey: "ceoFounder",
     email: "jlperez@ingeaudit.cl",
-    seniority: "20 años en la empresa",
+    seniorityEs: "20 años en la empresa",
+    seniorityEn: "20 years at the company",
     img: "/personal0.png",
     isCEO: true,
     linkedin:
@@ -27,79 +33,97 @@ const team: TeamMember[] = [
   {
     id: 2,
     name: "Alberto Millan",
-    role: "Encargado de",
+    roleKey: "chargeOf",
     email: "alberto.millan@ingeaudit.cl",
-    seniority: "10 años en la empresa",
+    seniorityEs: "10 años en la empresa",
+    seniorityEn: "10 years at the company",
     img: "/personal0.png",
   },
   {
     id: 3,
     name: "Hector Novoa",
-    role: "Encargado de",
+    roleKey: "chargeOf",
     email: "hector.novoa@ingeaudit.cl",
-    seniority: "10 años en la empresa",
+    seniorityEs: "10 años en la empresa",
+    seniorityEn: "10 years at the company",
     img: "/personal0.png",
   },
   {
     id: 4,
     name: "Camila Valencia",
-    role: "Encargado de",
+    roleKey: "chargeOf",
     email: "camila.valencia@ingeaudit.cl",
-    seniority: "10 años en la empresa",
+    seniorityEs: "10 años en la empresa",
+    seniorityEn: "10 years at the company",
     img: "/personal1.png",
   },
   {
     id: 5,
     name: "Javier Cerda",
-    role: "Supervisor de Terreno",
+    roleKey: "fieldSupervisor",
     email: "javier.cerda@ingeaudit.cl",
-    seniority: "2 años en la empresa",
+    seniorityEs: "2 años en la empresa",
+    seniorityEn: "2 years at the company",
     img: "/personal0.png",
   },
   {
     id: 6,
     name: "Erick Barrios",
-    role: "Supervisor de Terreno",
+    roleKey: "fieldSupervisor",
     email: "erick.barrios@ingeaudit.cl",
-    seniority: "2 años en la empresa",
+    seniorityEs: "2 años en la empresa",
+    seniorityEn: "2 years at the company",
     img: "/personal0.png",
   },
   {
     id: 7,
     name: "Ruben Tapia",
-    role: "Supervisor de Terreno",
+    roleKey: "fieldSupervisor",
     email: "ruben.tapia@ingeaudit.cl",
-    seniority: "2 años en la empresa",
+    seniorityEs: "2 años en la empresa",
+    seniorityEn: "2 years at the company",
     img: "/personal0.png",
   },
   {
     id: 8,
     name: "Carola Menjiba",
-    role: "Supervisor de Terreno",
+    roleKey: "fieldSupervisor",
     email: "carola.menjiba@ingeaudit.cl",
-    seniority: "2 años en la empresa",
+    seniorityEs: "2 años en la empresa",
+    seniorityEn: "2 years at the company",
     img: "/personal1.png",
   },
   {
     id: 9,
     name: "Felipe Tapia",
-    role: "Supervisor de Terreno",
+    roleKey: "fieldSupervisor",
     email: "felipe.tapia@ingeaudit.cl",
-    seniority: "2 años en la empresa",
+    seniorityEs: "2 años en la empresa",
+    seniorityEn: "2 years at the company",
     img: "/personal0.png",
   },
 ];
 
 export default function Team() {
+  const { lang } = useLanguage();
+
   const ceo = team.find((p) => p.isCEO);
   const staff = team.filter((p) => !p.isCEO);
 
+  const emailLabel    = t("team.email", lang);
+  const seniorityLabel = t("team.seniority", lang);
+
+  const getSeniority = (m: TeamMember) =>
+    lang === "es" ? m.seniorityEs : m.seniorityEn;
+
+  const getRole = (m: TeamMember) =>
+    t(`team.roles.${m.roleKey}`, lang);
+
   return (
     <div className={styles.section}>
-      <h2 className={styles.title}>Nuestro Equipo</h2>
-      <p className={styles.subtitle}>
-        Profesionales con amplia experiencia en telecomunicaciones y regulación.
-      </p>
+      <h2 className={styles.title}>{t("team.title", lang)}</h2>
+      <p className={styles.subtitle}>{t("team.subtitle", lang)}</p>
+
       {/* CEO centrado */}
       {ceo && (
         <div className={styles.ceoWrapper}>
@@ -109,13 +133,13 @@ export default function Team() {
             </div>
 
             <h3>{ceo.name}</h3>
-            <span>{ceo.role}</span>
+            <span>{getRole(ceo)}</span>
 
             <p>
-              <strong>Correo:</strong> {ceo.email}
+              <strong>{emailLabel}:</strong> {ceo.email}
             </p>
             <p>
-              <strong>Antigüedad:</strong> {ceo.seniority}
+              <strong>{seniorityLabel}:</strong> {getSeniority(ceo)}
             </p>
             {ceo.linkedin && (
               <a
@@ -146,17 +170,17 @@ export default function Team() {
             </div>
 
             <h3>{p.name}</h3>
-            <span>{p.role}</span>
+            <span>{getRole(p)}</span>
 
             <p>
-              <strong>Correo:</strong> {p.email}
+              <strong>{emailLabel}:</strong> {p.email}
             </p>
             <p>
-              <strong>Antigüedad:</strong> {p.seniority}
+              <strong>{seniorityLabel}:</strong> {getSeniority(p)}
             </p>
           </article>
         ))}
       </div>
-    </div>    
+    </div>
   );
 }
