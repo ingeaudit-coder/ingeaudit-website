@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Team from "@/src/components/sections/Team/Team";
 import styles from "./nosotros.module.css";
 import About from "@/src/components/sections/About/About";
+import { useLanguage } from "@/src/context/LanguageContext";
+import { t } from "@/src/i18n/translations";
 
 const Nosotros = () => {
+  const { lang } = useLanguage();
+
   return (
     <>
       <section className={styles.heroSection}>
@@ -16,10 +22,8 @@ const Nosotros = () => {
         />
         <div className={styles.overlay} />
         <div className={styles.heroContent}>
-          <h1 className={styles.mainTitle}>Nosotros</h1>
-          <p className={styles.subtitle}>
-            Más de 20 años liderando la consultoría técnica-regulatoria en Chile
-          </p>
+          <h1 className={styles.mainTitle}>{t("nosotrosPage.title", lang)}</h1>
+          <p className={styles.subtitle}>{t("nosotrosPage.subtitle", lang)}</p>
         </div>
       </section>
       <section>

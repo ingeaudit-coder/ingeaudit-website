@@ -1,14 +1,22 @@
-"use client"
+"use client";
 
 import style from "@/src/components/sections/Hero/Hero.module.css";
 import Image from "next/image";
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimation } from "react-type-animation";
 import Clients from "../Clients/Clients";
+import { useLanguage } from "@/src/context/LanguageContext";
+import translations, { t } from "@/src/i18n/translations";
 
 const Hero = () => {
+  const { lang } = useLanguage();
+
+  // Build the TypeAnimation sequence from the active language array
+  const words: string[] = translations.hero.typeSequence[lang];
+  const sequence: (string | number)[] = words.flatMap((w) => [w, 1500]);
+
   return (
     <main className={style.heroContainer}>
-        <Image
+      <Image
         src="/img-hero-oficial.jpg"
         alt="Fondo corporativo"
         fill
@@ -16,27 +24,36 @@ const Hero = () => {
         className={style.imgHero}
       />
       <div className={style.overlay} />
+
       <section className={style.content}>
-        <h1 className={style.titleHero}><br/><span className="block mb-2">Lideres en</span> {/* Línea estática */}
-        <span className="text-blue-1000 [text-shadow:0_0_10px_rgba(255,255,255,0.6)]"> {/* Color de acento de tu marca */}
-    <TypeAnimation
-      sequence={[
-        'Consultoría Regulatoria', 1500,
-        'Homologación de Equipos', 1500,
-        'Medición Densidad de Potencia', 1500,
-        'Auditoría Técnica', 1500
-      ]}
-      wrapper="span"
-      speed={50}
-      repeat={Infinity}
-    />
-  </span></h1>
-        {/* <h1 className={style.titleHero}>Lideres en <br/>Consultoría Técnica-Regulatoria</h1> */}
+        <h1 className={style.titleHero}>
+          <br />
+          <span className="block mb-2">{t("hero.leadingLine", lang)}</span>
+          <span className="text-blue-1000 [text-shadow:0_0_10px_rgba(255,255,255,0.6)]">
+            {/* key={lang} remounts TypeAnimation when language changes */}
+            <TypeAnimation
+              key={lang}
+              sequence={sequence}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </span>
+        </h1>
+
         <p className={style.subtitleHero}>
-          Más de <strong><b>20 años de experiencia</b></strong> respaldando a la industria de las telecomunicaciones
+          <strong>
+            <b>
+              {lang === "es" ? "20 años" : "20 years"}
+            </b>
+          </strong>{" "}
+          {lang === "es"
+            ? "de experiencia respaldando a la industria de las telecomunicaciones"
+            : "of experience supporting the telecommunications industry"}
         </p>
       </section>
-    <div className={style.containerClientHero}> 
+
+      <div className={style.containerClientHero}>
         <Clients />
       </div>
     </main>
