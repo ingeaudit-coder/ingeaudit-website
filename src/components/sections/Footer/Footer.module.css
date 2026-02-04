@@ -52,3 +52,22 @@
 .linksFooter{
     text-decoration: underline;
 }
+
+@media (width < 1128px) {
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    gap: 15px;
+  }
+}
+
+@media (width < 768px) {
+ .footerContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    height: 500px;
+    gap: 25px;
+  }
+}
