@@ -56,7 +56,7 @@ const Hero = () => {
         </p>
         <div className={style.containerButton}>
           <Button variant="primary" children={t("textButton.buttonServices", lang)} className={style.variantePrimary}/>
-          <Button variant="secondary" children={t("textButton.butoonContact", lang)} Contactanos className={style.variantePrimary}/>
+          <Button variant="secondary" children={t("textButton.butoonContact", lang)} className={style.variantePrimary}/>
         </div>
       </section>
 
