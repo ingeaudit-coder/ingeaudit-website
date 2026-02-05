@@ -107,6 +107,11 @@
   );
   z-index: 5;
 }
+.containerButton{
+  display: flex;
+  gap: 50px;
+  /* border: 1px solid gray; */
+}
 
 @media (width < 768px) {
   .heroContainer {
