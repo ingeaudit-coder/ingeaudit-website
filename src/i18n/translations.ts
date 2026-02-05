@@ -32,6 +32,14 @@ const translations = {
     },
   },
 
+  // ─── BUTTON ─────────────────────────────────────────────
+  textButton:{
+    buttonServices:{
+    es: "Servicios", en: "Services" },
+    butoonContact:
+    {es: "Contactanos", en: "Contact"}
+  },
+
   // ─── ABOUT ─────────────────────────────────────────────
   about: {
     whoTitle:   { es: "¿Quiénes Somos?",  en: "Who Are We?" },
