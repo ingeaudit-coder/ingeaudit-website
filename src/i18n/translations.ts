@@ -32,7 +32,7 @@ const translations = {
     },
   },
 
-  // ─── ABOUT ─────────────────────────────────────────────
+   // ─── ABOUT ─────────────────────────────────────────────
   about: {
     whoTitle:   { es: "¿Quiénes Somos?",  en: "Who Are We?" },
     whoText: {

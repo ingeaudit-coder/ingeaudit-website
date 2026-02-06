@@ -1,6 +1,6 @@
 /* Estilos base: dimensiones, fuente, transición */
 .btn {
-  width: 200px;
+  width: 14em;
   padding: 0.75rem 1.5rem; /* px-6 py-3 aprox */
   border-radius: 8px;
   font-weight: 600;
@@ -15,7 +15,7 @@
 
 /* Variante Primaria (Sólido) */
 .primary {
-  background-color: #1e3b8a62; /* Azul corporativo oscuro */
+  background-color: #1e3b8ac4; /* Azul corporativo oscuro */
   color: white;
 }
 
@@ -40,7 +40,7 @@
 
 @media (width < 768px) {
   .btn {
-    width: 160px;
+    width: 14em;
     padding: 0.75rem 1.5rem; /* px-6 py-3 aprox */
     border-radius: 8px;
     font-weight: 600;
