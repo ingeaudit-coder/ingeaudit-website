@@ -3,44 +3,43 @@
 import styles from "@/src/components/sections/About/About.module.css";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
+import { Target, Eye } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 const About = () => {
   const { lang } = useLanguage();
 
-  // whoText contains \n\n — split into two paragraphs
-  const whoParagraphs = t("about.whoText", lang).split("\n\n");
-
   return (
-    <div className={styles.section}>
-      <div className={styles.infoContainer}>
-        {/* Left column: Who Are We */}
-        <div className={styles.leftColumn}>
-          <div className={styles.infoBlockLarge}>
-            <h3>{t("about.whoTitle", lang)}</h3>
-            <p>{whoParagraphs[0]}</p>
-            {whoParagraphs[1] && (
-              <>
-                <br />
-                <p>{whoParagraphs[1]}</p>
-              </>
-            )}
-          </div>
+    <section className={styles.section}>
+      <div className={styles.container}>
+        {/* Main Description */}
+        <div className={styles.mainContent}>
+          <p className={styles.description}>{t("about.whoText", lang)}</p>
         </div>
 
-        {/* Right column: Mission & Vision */}
-        <div className={styles.rightColumn}>
-          <div className={styles.infoBlock}>
-            <h3>{t("about.missionTitle", lang)}</h3>
-            <p>{t("about.missionText", lang)}</p>
-          </div>
+        <Separator className={styles.separator} />
 
-          <div className={styles.infoBlock}>
-            <h3>{t("about.visionTitle", lang)}</h3>
-            <p>{t("about.visionText", lang)}</p>
-          </div>
+        {/* Mission & Vision Cards */}
+        <div className={styles.pillarsContainer}>
+          <Card className={styles.card}>
+            <CardContent className={styles.cardContent}>
+              <Target className={styles.pillarIcon} />
+              <h3 className={styles.pillarTitle}>{t("about.missionTitle", lang)}</h3>
+              <p className={styles.pillarText}>{t("about.missionText", lang)}</p>
+            </CardContent>
+          </Card>
+
+          <Card className={styles.card}>
+            <CardContent className={styles.cardContent}>
+              <Eye className={styles.pillarIcon} />
+              <h3 className={styles.pillarTitle}>{t("about.visionTitle", lang)}</h3>
+              <p className={styles.pillarText}>{t("about.visionText", lang)}</p>
+            </CardContent>
+          </Card>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

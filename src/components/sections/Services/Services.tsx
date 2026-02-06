@@ -2,7 +2,17 @@
 
 import React from "react";
 import styles from "@/src/components/sections/Services/Services.module.css";
-import { Smartphone, Radio, CheckCircle, FileText, Scale, Search } from "lucide-react";
+import {
+  Smartphone,
+  Radio,
+  CheckCircle,
+  FileText,
+  Scale,
+  Search,
+} from "lucide-react";
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations from "@/src/i18n/translations";
 
@@ -12,22 +22,30 @@ const Services = () => {
   const { lang } = useLanguage();
 
   return (
-    <div className={styles.servicesSection}>
-      <div className={styles.servicesGrid}>
+    <section className={styles.section}>
+      <div className={styles.grid}>
         {translations.services.map((servicio, idx) => {
-          const IconComponent = icons[idx];
+          const Icon = icons[idx];
+
           return (
-            <div key={idx} className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>
-                <IconComponent />
-              </div>
-              <h3 className={styles.serviceTitle}>{servicio.titulo[lang]}</h3>
-              <p className={styles.serviceDescription}>{servicio.descripcion[lang]}</p>
-            </div>
+            <Card key={idx} className={styles.card}>
+              <CardHeader className={styles.cardHeader}>
+                <div className={styles.iconWrap}>
+                  <Icon className={styles.icon} aria-hidden />
+                </div>
+                <CardTitle className={styles.title}>
+                  {servicio.titulo[lang]}
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className={styles.cardContent}>
+                <p className={styles.description}>{servicio.descripcion[lang]}</p>
+              </CardContent>
+            </Card>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

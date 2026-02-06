@@ -1,183 +1,271 @@
 .section {
-  padding: 0.1rem 2rem;
-  background: black;
-  color: white;
+  padding: 0.5rem 2rem 4rem;
+  color: #fff;
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    #000000 0%,
-    #0a0a0a 50%,
-    #1a1a1a 100%
-  );
+  background: linear-gradient(to bottom, #000 0%, #0a0a0a 50%, #1a1a1a 100%);
 }
+
 .title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: white;
+  color: #fff;
 }
+
 .subtitle {
   margin-top: 0.5rem;
   opacity: 0.85;
+  margin-bottom: 3rem;
 }
-.infoContainer {
-  max-width: 1200px;
-  margin: 3rem auto 4rem;
+
+/* ===== Main Layout ===== */
+.mainLayout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
   align-items: start;
 }
-.leftColumn {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
-.rightColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100%;
+
+/* ===== CEO Section - Left Side ===== */
+.ceoSection {
+  grid-row: span 2;
 }
-.infoBlock {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  text-align: left;
-  transition: all 0.3s ease;
+
+@media (max-width: 1024px) {
+  .ceoSection {
+    grid-row: span 1;
+    display: flex;
+    justify-content: center;
+  }
 }
-.infoBlock:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+/* ===== Teams Section - Right Side ===== */
+.teamsSection {
+  width: 100%;
+  grid-column: span 2;
 }
-.infoBlockLarge {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  text-align: left;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
+
+.teamsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
-.infoBlockLarge:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-.infoBlock h3,
-.infoBlockLarge h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-.infoBlock p,
-.infoBlockLarge p {
-  font-size: 1rem;
-  line-height: 1.7;
-  opacity: 0.9;
-  text-align: justify;
-}
+
 @media (max-width: 768px) {
-  .infoContainer {
+  .teamsGrid {
     grid-template-columns: 1fr;
   }
 }
-.divider {
-  width: 80px;
-  height: 3px;
-  background: white;
-  margin: 3rem auto;
-  border-radius: 2px;
-}
-.grid {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
+
+/* ===== shadcn Card look ===== */
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
-  padding: 1.5rem;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
+
 .card:hover {
   transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
+
+.ceoCard {
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.ceoCard:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== CEO Card content ===== */
+.cardHeader {
+  padding: 1.75rem 1.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cardContent {
+  padding: 0 1.5rem 1.5rem;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* ===== Avatar ===== */
 .imgBox {
   position: relative;
   width: 110px;
   height: 110px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 0.75rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid var(--gold-primary);
+  border: 2px solid white;
 }
+
 .img {
   object-fit: cover;
 }
-.card h3 {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
+
+/* ===== Typography ===== */
+.name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
 }
-.card span {
-  color: white;
-  font-size: 0.9rem;
+
+.role {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  text-align: center;
 }
-.card p {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
+
+.meta {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.82);
 }
-.ceoWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 0 5rem;
+
+.meta strong {
+  color: rgba(255, 255, 255, 0.95);
 }
-.ceoCard {
-  width: 100%;
-  max-width: 380px;
-  padding: 2.5rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.2);
-  transform: scale(1.08);
-  transition: all 0.3s ease;
-}
-.ceoCard:hover {
-  transform: scale(1.12) translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 35px rgba(255, 255, 255, 0.2), 0 0 90px rgba(0, 0, 0, 0.4);
-}
+
+/* ===== LinkedIn ===== */
 .linkedinBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto 0;
-  opacity: 0.8;
+  margin: 1.1rem auto 0;
+  opacity: 0.95;
+  transform: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
+
 .linkedinBtn:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.06);
+}
+
+/* ===== CEO Quote ===== */
+.quote {
+  margin: 1.5rem 0 1rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--gold-primary, #d4af37);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+
+.quoteText {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.quoteText::before {
+  content: '"';
+  font-size: 1.5rem;
+  color: white;
+  margin-right: 0.25rem;
+}
+
+.quoteText::after {
+  content: '"';
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 0.25rem;
+}
+
+/* ===== Team Cards (Work Groups) ===== */
+.teamCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.teamCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.teamCardHeader {
+  padding: 1.5rem 1.25rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.teamCardContent {
+  padding: 0 1.25rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.teamIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.teamCard:hover .teamIcon {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.iconSvg {
+  color: white;
+  stroke-width: 1.5;
+}
+
+.teamTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.teamDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+
+.teamSize {
+  margin: 0;
+  font-size: 0.95rem;
+  color: white;
+  font-weight: 600;
 }
