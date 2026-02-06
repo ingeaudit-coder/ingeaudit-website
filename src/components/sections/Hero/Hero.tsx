@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import Clients from "../Clients/Clients";
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations, { t } from "@/src/i18n/translations";
+import Button from "../../UI/Button/Button";
 
 const Hero = () => {
   const { lang } = useLanguage();
@@ -45,14 +46,24 @@ const Hero = () => {
 
         <p className={style.subtitleHero}>
           <strong>
-            <b>
-              {lang === "es" ? "20 años" : "20 years"}
-            </b>
+            <b>{lang === "es" ? "20 años" : "20 years"}</b>
           </strong>{" "}
           {lang === "es"
             ? "de experiencia respaldando a la industria de las telecomunicaciones"
             : "of experience supporting the telecommunications industry"}
         </p>
+        <div className={style.containerButtonHero}>
+          <Button
+            variant="primary"
+            children={lang === "es" ? "Servicios" : "Services"}
+            className={style.btn}
+          />
+          <Button
+            variant="secondary"
+            children={lang === "es" ? "Contactanos" : "Contact"}
+            className={style.btn}
+          />
+        </div>
       </section>
 
       <div className={style.containerClientHero}>
