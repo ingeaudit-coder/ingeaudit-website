@@ -32,30 +32,22 @@ const translations = {
     },
   },
 
-  // ─── BUTTON ─────────────────────────────────────────────
-  textButton:{
-    buttonServices:{
-    es: "Servicios", en: "Services" },
-    butoonContact:
-    {es: "Contactanos", en: "Contact"}
-  },
-
   // ─── ABOUT ─────────────────────────────────────────────
   about: {
     whoTitle:   { es: "¿Quiénes Somos?",  en: "Who Are We?" },
     whoText: {
-      es: `INGEAUDIT Ltda. es una Consultora creada el año 2004 y conformada por profesionales chilenos con una vasta y exitosa trayectoria en el desarrollo de proyectos relacionados con las Industrias de las Telecomunicaciones, Transportes y las Nuevas Tecnologías de la Comunicación e Información (NTIC).\n\nIngeaudit ha prestado servicios a empresas como WOM, Claro, Entel, EFE y Gallyas, realizando recepción de obras, mediciones de densidad de potencia, procesos de homologación y otras evaluaciones técnicas especializadas.`,
-      en: `INGEAUDIT Ltd. is a consulting firm founded in 2004, composed of Chilean professionals with an extensive and successful track record in projects related to the Telecommunications, Transport, and New Information and Communication Technologies (ICT) industries.\n\nIngeaudit has provided services to companies such as WOM, Claro, Entel, EFE, and Gallyas, carrying out works reception, power density measurements, homologation processes, and other specialized technical evaluations.`,
+      es: `Consultora fundada en 2004, especializada en telecomunicaciones y tecnologías de la información. Hemos trabajado con empresas líderes como WOM, Claro, Entel, EFE y Gallyas, realizando homologaciones, mediciones de densidad de potencia, recepción de obras y auditorías técnicas especializadas.`,
+      en: `Consulting firm founded in 2004, specialized in telecommunications and information technologies. We have worked with leading companies such as WOM, Claro, Entel, EFE, and Gallyas, performing homologations, power density measurements, site receptions, and specialized technical audits.`,
     },
     missionTitle: { es: "Misión",  en: "Mission" },
     missionText: {
-      es: "Entregar servicios de auditoría y consultoría técnica con altos estándares de calidad, orientados al cumplimiento normativo y a la optimización de los procesos de nuestros clientes, aportando soluciones confiables que fortalezcan su desempeño y competitividad en el mercado.",
-      en: "To deliver audit and technical consulting services with the highest quality standards, oriented towards regulatory compliance and the optimisation of our clients' processes, providing reliable solutions that strengthen their performance and competitiveness in the market.",
+      es: "Entregar servicios de auditoría y consultoría técnica con los más altos estándares de calidad, garantizando cumplimiento normativo y optimización de procesos.",
+      en: "Deliver audit and technical consulting services with the highest quality standards, ensuring regulatory compliance and process optimization.",
     },
     visionTitle: { es: "Visión",  en: "Vision" },
     visionText: {
-      es: "Consolidarnos como un referente en servicios técnicos y regulatorios especializados, reconocidos por la excelencia profesional, la independencia de nuestros análisis y la capacidad de generar valor sostenido para nuestros clientes y el sector.",
-      en: "To establish ourselves as a benchmark in specialised technical and regulatory services, recognised for professional excellence, the independence of our analyses, and our ability to generate sustained value for our clients and the sector.",
+      es: "Ser el referente en servicios técnicos y regulatorios especializados, reconocidos por la excelencia profesional y la capacidad de generar valor sostenido.",
+      en: "To be the benchmark in specialized technical and regulatory services, recognized for professional excellence and ability to generate sustained value.",
     },
   },
 
@@ -67,12 +59,51 @@ const translations = {
       en: "Professionals with extensive experience in telecommunications and regulation.",
     },
     email:      { es: "Correo",     en: "Email" },
+    phone:      { es: "Teléfono",   en: "Phone" },
     seniority:  { es: "Antigüedad", en: "Tenure" },
+    ceoQuote: {
+      es: "Nuestro compromiso es entregar soluciones técnico-regulatorias que generen valor real para nuestros clientes, respaldados por más de 20 años de experiencia en la industria de las telecomunicaciones.",
+      en: "Our commitment is to deliver technical-regulatory solutions that generate real value for our clients, backed by over 20 years of experience in the telecommunications industry."
+    },
     roles: {
       ceoFounder:       { es: "CEO & Fundador",         en: "CEO & Founder" },
       fieldSupervisor:  { es: "Supervisor de Terreno", en: "Field Supervisor" },
       chargeOf:         { es: "Encargado de",          en: "In charge of" },
     },
+    teams: {
+      homologation: {
+        es: "Homologación y Certificación",
+        en: "Homologation & Certification"
+      },
+      homologationDesc: {
+        es: "Equipo especializado en homologación de terminales móviles y dispositivos. Gestión completa del proceso de certificación ante SUBTEL con laboratorio propio equipado con tecnología R&S y Aaronia",
+        en: "Specialized team in mobile terminal and device homologation. Complete management of the certification process before SUBTEL with own laboratory equipped with R&S CMW 500 technology."
+      },
+      fieldMeasurements: {
+        es: "Mediciones de Campo",
+        en: "Field Measurements"
+      },
+      fieldMeasurementsDesc: {
+        es: "Personal capacitado en recepciones de obra y mediciones de densidad de potencia en todas las bandas (700 MHz a 26 GHz). Experiencia comprobada con operadores nacionales.",
+        en: "Trained personnel in site receptions and power density measurements across all bands (700 MHz to 26 GHz). Proven experience with national operators."
+      },
+      regulatoryAdvisory: {
+        es: "Asesorías Regulatorias",
+        en: "Regulatory Advisory"
+      },
+      regulatoryAdvisoryDesc: {
+        es: "Equipo enfocado en defensa regulatoria ante SUBTEL, elaboración de informes regulatorios y apoyo en obtención de permisos y concesiones para operadores.",
+        en: "Team focused on regulatory defense before SUBTEL, regulatory report preparation, and support in obtaining permits and concessions for operators."
+      },
+      technicalAudits: {
+        es: "Auditorías Tecnológicas",
+        en: "Technical Audits"
+      },
+      technicalAuditsDesc: {
+        es: "Especialistas en auditorías de cumplimiento regulatorio y revisión de boletas de cobro por espectro. Certificados por la CMF desde enero 2025.",
+        en: "Specialists in regulatory compliance audits and spectrum fee invoice reviews. Certified by CMF since January 2025."
+      }
+    }
   },
 
   // ─── SERVICES (cards) ──────────────────────────────────

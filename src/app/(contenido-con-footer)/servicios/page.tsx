@@ -18,7 +18,7 @@ const Servicios = () => {
           alt="Fondo corporativo"
           fill
           priority
-          className="object-cover"
+          className=""
         />
         <div className={styles.overlay} />
         <div className={styles.heroContent}>
