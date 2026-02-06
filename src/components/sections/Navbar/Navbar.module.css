@@ -124,6 +124,7 @@
   width: 80%;
 }
 
+
 /* ─── Responsive – tablets ─── */
 @media (max-width: 1024px) {
   .navContainer {
@@ -154,10 +155,11 @@
   }
 
   .imgNavbar {
-    width: 70px;
+    width: 120px;
   }
 
   .listContainer {
+    display: none;
     gap: 0.5rem;
     font-size: 0.8rem;
   }
@@ -165,6 +167,9 @@
   .li a {
     padding: 0.3rem 0.6rem;
   }
+  .navMovil{
+  padding: 18px 5px 0 15px;
+}
 }
 
 /* ─── Responsive – pantallas muy pequeñas ─── */
