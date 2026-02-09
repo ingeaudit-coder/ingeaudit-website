@@ -1,0 +1,40 @@
+.containerMetrics {
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+  display: grid;
+  height: 200px;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-template-rows: 1fr;
+  /* row-gap: 32px; */
+  grid-template-areas: "metricsAntenas homoMetricas previsitasMetrics";
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.metricasAntenas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: metricsAntenas;
+}
+
+.homoMetricas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: homoMetricas;
+}
+
+.previsitasMetricas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: previsitasMetrics;
+}
