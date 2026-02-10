@@ -1,3 +1,5 @@
+"use client";
+
 import style from "@/src/components/sections/Metrics/Metrics.module.css";
 import CountUp from "react-countup";
 
@@ -10,8 +12,14 @@ const Metrics = () => {
             start={100000}
             end={138747}
             duration={3}
-            className={style.preCount}
-          />
+            enableScrollSpy={true}
+            scrollSpyOnce={true}
+          >
+            {({ countUpRef }) => (
+              /* Aquí creamos nosotros el elemento y le pasamos la referencia */
+              <span ref={countUpRef} className={style.preCount} />
+            )}
+          </CountUp>
           <p className={style.subtitleMetrics}>Previsitas a la fecha</p>
         </div>
       </div>
@@ -19,9 +27,7 @@ const Metrics = () => {
       <div className={style.metricasAntenas}>
         <div className={style.lineAntenas}>
           <h3 className={style.numberAntenas}>5k+</h3>
-          <p className={style.subtitleMetrics}>
-            Más de 5 mil antenas medidas en todo Chile
-          </p>
+          <p className={style.subtitleMetrics}>Antenas medidas en todo Chile</p>
         </div>
       </div>
 
@@ -31,8 +37,14 @@ const Metrics = () => {
             start={700000}
             end={834945}
             duration={3}
-            className={style.homoCount}
-          />
+            enableScrollSpy={true}
+            scrollSpyOnce={true}
+          >
+            {({ countUpRef }) => (
+              /* Aquí creamos nosotros el elemento y le pasamos la referencia */
+              <span ref={countUpRef} className={style.homoCount} />
+            )}
+          </CountUp>
           <p className={style.subtitleMetrics}>
             Equipos homologados a la fecha
           </p>
