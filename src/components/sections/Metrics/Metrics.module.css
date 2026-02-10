@@ -7,9 +7,7 @@
   width: 100%;
   max-width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(3, 1fr); */
   grid-template-rows: 1fr;
-  /* row-gap: 32px; */
   grid-template-areas: "previsitasMetrics metricsAntenas homoMetricas";
   overflow: hidden;
   background-color: #000000;
@@ -36,7 +34,6 @@
 }
 
 .metricasAntenas {
-  /* outline: 1px solid green; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,4 +73,32 @@
 
 .subtitleMetrics{
   color: #3a5c88;
+}
+
+@media (width < 1128px){
+  .containerMetrics{
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "previsitasMetrics"
+    "metricsAntenas"
+    "homoMetricas";
+    gap: 30px;
+    
+  }
+  .previsitasMetricas{
+    display: flex;
+    align-items: flex-start;
+    grid-area: previsitasMetrics;
+  }
+  .metricasAntenas{
+    display: flex;
+    align-items: flex-start;
+    grid-area: metricsAntenas;
+  }
+  .homoMetricas{
+    display: flex;
+    align-items: flex-start;
+    grid-area: homoMetricas;
+  }
 }
