@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  overflow-y: scroll;
+}
+
+
 :root {
   --text-primary: #ffffff;
   --sombra-logo: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));

@@ -6,6 +6,7 @@ import Certifications from "@/src/components/sections/Certifications/Certificati
 import Services from "@/src/components/sections/Services/Services";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
+import Metrics from "@/src/components/sections/Metrics/Metrics";
 
 const Servicios = () => {
   const { lang } = useLanguage();
@@ -28,6 +29,9 @@ const Servicios = () => {
       </section>
       <section>
         <Services />
+      </section>
+      <section>
+        <Metrics/>
       </section>
       <section>
         <Certifications />

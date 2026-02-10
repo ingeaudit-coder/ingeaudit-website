@@ -1,0 +1,79 @@
+.containerMetrics {
+  margin: 0;
+  padding: 24px 100px 24px 100px;
+  box-sizing: border-box;
+  display: grid;
+  height: 200px;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-template-rows: 1fr;
+  /* row-gap: 32px; */
+  grid-template-areas: "previsitasMetrics metricsAntenas homoMetricas";
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.previsitasMetricas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: previsitasMetrics;
+}
+
+.preCount {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.linePrevisitas {
+  padding-left: 25px;
+  border-left: 1px solid #663936;
+  line-height: 2;
+}
+
+.metricasAntenas {
+  /* outline: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: metricsAntenas;
+}
+.numberAntenas {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.lineAntenas {
+  padding-left: 25px;
+  border-left: 1px solid #663936;
+  line-height: 2;
+}
+
+.homoMetricas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: homoMetricas;
+}
+
+.homoCount {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.lineHomo{
+  padding-left: 25px;
+  border-left: 1px solid #663936;
+  line-height: 2;
+}
+
+.subtitleMetrics{
+  color: #3a5c88;
+}
