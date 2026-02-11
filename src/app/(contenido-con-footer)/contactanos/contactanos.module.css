@@ -51,8 +51,8 @@
 
 /* CONTACT */
 .contactSection {
-  background: linear-gradient(to bottom, #000 0%, #0a0a0a 100%);
-  padding: 3rem 2rem;
+  background-image: linear-gradient(to bottom, #000008 0%, #01012b 40%, #09001b 100%);
+  padding: 5rem 2rem;
 }
 
 .contentWrapper {
@@ -224,8 +224,8 @@
 
 /* MAP */
 .mapSection {
-  background: linear-gradient(to bottom, #000 0%, #0a0a0a 60%, #111 100%);
-  padding: 2rem 2rem 3.5rem;
+  background-image: linear-gradient(to bottom, #08084b46 0%, #01012b 40%, #14013a77 100%);
+  padding: 4rem 2rem 5rem;
 }
 
 .mapContainer {
