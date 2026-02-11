@@ -30,10 +30,6 @@ const Clients = () => {
 
   return (
     <section className={style.clientContainer}>
-      {/* <p>
-        Confían en nosotros
-      </p> */}
-
       <Marquee
         gradient={true}
         gradientColor="black"
