@@ -72,7 +72,9 @@
 }
 
 .subtitleMetrics{
-  color: #3a5c88;
+  color: #455e7e;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 @media (width < 1128px){
