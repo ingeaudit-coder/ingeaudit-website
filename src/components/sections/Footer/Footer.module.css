@@ -5,11 +5,11 @@
   padding: 50px 150px 50px 150px;
   box-sizing: border-box;
   display: grid;
-  height: 300px;
+  height: 350px;
   width: 100%;
   max-width: 100%;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2fr 100px;
+  grid-template-rows: 2fr 50px;
   grid-template-areas:
     "logoP linkInteres"
     "containerRRSS derechosReserados";
@@ -28,6 +28,11 @@
   grid-area: linkInteres;
 }
 
+.containerListLink {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
 .containerLogo {
   object-fit: contain;
   width: 200px;
@@ -37,20 +42,28 @@
 }
 
 .iconosRRSS {
-    grid-area: containerRRSS;
-    display: flex;
-    align-items: end;
-    gap: 15px;
+  border-top: 1px solid #262626;
+  grid-area: containerRRSS;
+  display: flex;
+  align-items: end;
+  gap: 15px;
 }
 .containerReservados {
-    grid-area: derechosReserados;
-    display: flex;
-    align-items: end;
-    gap: 15px;
+  border-top: 1px solid #262626;
+  grid-area: derechosReserados;
+  display: flex;
+  align-items: end;
+  gap: 15px;
 }
 
-.linksFooter{
-    text-decoration: underline;
+.linksFooter {
+  text-decoration: underline;
+}
+.linkTrabajaInacap{
+  display: flex;
+}
+.linkDeInteres{
+  display: flex;
 }
 
 @media (width < 1128px) {
@@ -60,14 +73,41 @@
     height: 450px;
     gap: 15px;
   }
+  .iconosRRSS {
+    border-top: 1px solid #262626;
+    padding-top: 10px;
+    grid-area: containerRRSS;
+    display: flex;
+    align-items: end;
+    gap: 25px;
+  }
+  .containerReservados {
+    border-top: none;
+    grid-area: derechosReserados;
+    display: flex;
+    align-items: end;
+  }
 }
 
 @media (width < 768px) {
- .footerContainer {
+  .footerContainer {
     display: flex;
     flex-direction: column;
     padding: 35px;
     height: 500px;
     gap: 25px;
+  }
+  .iconosRRSS {
+    border-top: 1px solid #262626;
+    padding-top: 15px;
+    grid-area: containerRRSS;
+    display: flex;
+    align-items: end;
+  }
+  .containerReservados {
+    border-top: none;
+    grid-area: derechosReserados;
+    display: flex;
+    align-items: end;
   }
 }
