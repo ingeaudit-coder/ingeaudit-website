@@ -1,6 +1,6 @@
 .section {
   padding: 4rem 2rem;
-  background: #000;
+  background-image: linear-gradient(to bottom, #000008 0%, #01012b 40%, #09001b 100%);
   color: #fff;
 }
 
