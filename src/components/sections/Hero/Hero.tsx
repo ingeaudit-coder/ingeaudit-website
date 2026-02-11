@@ -65,7 +65,6 @@ const Hero = () => {
           />
         </div>
       </section>
-
       <div className={style.containerClientHero}>
         <Clients />
       </div>
