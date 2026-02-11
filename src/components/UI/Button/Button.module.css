@@ -11,26 +11,26 @@
   align-items: center;
   justify-content: center;
   border: 2px solid transparent; /* Para evitar saltos de tamaño en el borde */
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px); 
 }
 
 /* Variante Primaria (Sólido) */
 .primary {
-  background-color: #1e3b8ac4; /* Azul corporativo oscuro */
+  background-color: #172554; /* Azul corporativo oscuro */
   color: white;
 }
 
 .primary:hover {
-  background-color: #172554;
+  background-color: #1e3b8ac4;
   /* transition: 800ms; */
 }
 
 /* Variante Secundaria (Outline / Borde) */
 .secondary {
-  background-color: rgba(153, 194, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   border-color: #ffffff94;
   color: #ffffff;
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(90px);  */
 }
 
 .secondary:hover {
@@ -53,7 +53,7 @@
     border: 2px solid transparent; /* Para evitar saltos de tamaño en el borde */
   }
 
-  .secondary{
+  .secondary {
     border: 1px solid white;
   }
 }

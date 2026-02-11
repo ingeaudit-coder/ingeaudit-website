@@ -9,16 +9,16 @@
 }
 
 .logosClients{
-  filter: grayscale(100%) brightness(10);
-  opacity: 0.8; 
+  filter: grayscale(100%) brightness(15);
+  opacity: 1; 
 }
 
 .miMarquee{
     mask-image: linear-gradient(
     to right,
     transparent,
-    black 10%,
-    black 90%,
+    black 100%,
+    black 100%,
     transparent
   );
   
@@ -26,8 +26,8 @@
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 10%,
-    black 10%,
+    black 0%,
+    black 100%,
     transparent
   );
 }

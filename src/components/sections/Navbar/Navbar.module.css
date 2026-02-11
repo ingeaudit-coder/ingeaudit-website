@@ -128,6 +128,9 @@
   display: flex;
   gap: 15px;
 }
+.active{
+  color: #ffffff;
+}
 
 /* ─── Responsive – tablets ─── */
 @media (max-width: 1024px) {

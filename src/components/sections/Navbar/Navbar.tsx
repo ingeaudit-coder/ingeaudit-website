@@ -54,7 +54,7 @@ export const Navbar = () => {
         <div className={`${style.rightGroup} hidden md:flex`}>
           <ol className={style.listContainer}>
             {navLinks.map((link) => (
-              <li className={style.li} key={link.href}>
+              <li className={style.li}  key={link.href}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
