@@ -13,19 +13,13 @@ const translations = {
   hero: {
     typeSequence: {
       es: [
-        "Consultoría Regulatoria",
-        "Homologación de Equipos",
-        "Medición Densidad de Potencia",
-        "Auditoría Técnica",
+        "Consultoría Regulatoria, Medición y Homologación de equipos",
       ],
       en: [
-        "Regulatory Consulting",
-        "Equipment Homologation",
-        "Power Density Measurement",
-        "Technical Auditing",
+        "Regulatory Consulting, Measurement, and Equipment Certification",
       ],
     },
-    leadingLine: { es: "Lideres en", en: "Leaders in" },
+    leadingLine: { es: "Gestión integral en", en: "Comprehensive Management in" },
     subtitle: {
       es: "Más de 20 años de experiencia respaldando a la industria de las telecomunicaciones",
       en: "Over 20 years of experience supporting the telecommunications industry",
