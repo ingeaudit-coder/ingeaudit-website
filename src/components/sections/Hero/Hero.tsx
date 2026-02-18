@@ -31,15 +31,17 @@ const Hero = () => {
           <br />
           <span className="block mb-2">{t("hero.leadingLine", lang)}</span>
           <div className={style.containerAnimationHero}>
-            <span className="text-blue-1000 [text-shadow:0_0_10px_rgba(255,255,255,0.6)]">
+            <span className="text-blue-1000 ">
+              <span>{t("hero.typeSequence", lang)}</span>
               {/* key={lang} remounts TypeAnimation when language changes */}
-              <TypeAnimation
+              
+              {/* <TypeAnimation
                 key={lang}
                 sequence={sequence}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
-              />
+              /> */}
             </span>
           </div>
         </h1>
