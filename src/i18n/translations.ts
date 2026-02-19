@@ -30,13 +30,13 @@ const translations = {
   about: {
     whoTitle:   { es: "¿Quiénes Somos?",  en: "Who Are We?" },
     whoText: {
-      es: `Consultora fundada en 2004, especializada en telecomunicaciones y tecnologías de la información. Hemos trabajado con empresas líderes como WOM, Claro, Entel, EFE y Gallyas, realizando homologaciones, mediciones de densidad de potencia, recepción de obras y auditorías técnicas especializadas.`,
-      en: `Consulting firm founded in 2004, specialized in telecommunications and information technologies. We have worked with leading companies such as WOM, Claro, Entel, EFE, and Gallyas, performing homologations, power density measurements, site receptions, and specialized technical audits.`,
+      es: `Consultora fundada en 2004, especializada en telecomunicaciones y tecnologías de la información. Hemos trabajado con empresas líderes como Claro, Entel, WOM, Motorola y Otros, realizando homologaciones, mediciones de densidad de potencia, recepción de obras y auditorías técnicas especializadas.`,
+      en: `Consulting firm founded in 2004, specialized in telecommunications and information technologies. We have worked with leading companies such as Claro, Entel, WOM, Motorola and Others, performing homologations, power density measurements, site receptions, and specialized technical audits.`,
     },
     missionTitle: { es: "Misión",  en: "Mission" },
     missionText: {
-      es: "Entregar servicios de auditoría y consultoría técnica con los más altos estándares de calidad, garantizando cumplimiento normativo y optimización de procesos.",
-      en: "Deliver audit and technical consulting services with the highest quality standards, ensuring regulatory compliance and process optimization.",
+      es: "Entregar servicios de auditoría y consultoría tecnologica con los más altos estándares de calidad, garantizando cumplimiento normativo y optimización de procesos.",
+      en: "Deliver audit and technological consulting services with the highest quality standards, ensuring regulatory compliance and process optimization.",
     },
     visionTitle: { es: "Visión",  en: "Vision" },
     visionText: {
@@ -124,12 +124,12 @@ const translations = {
     },
     {
       titulo: {
-        es: "Certificación y Homologación",
-        en: "Certification & Homologation",
+        es: "Auditoria de Cumplimiento",
+        en: "Regulatory Compliance Audit",
       },
       descripcion: {
-        es: "Gestión completa del proceso de certificación ante organismos reguladores.",
-        en: "Full management of the certification process before regulatory bodies.",
+        es: "Auditoría realizada conforme a los lineamientos del SERNAC",
+        en: "Audit conducted in accordance with SERNAC guidelines.",
       },
     },
     {
