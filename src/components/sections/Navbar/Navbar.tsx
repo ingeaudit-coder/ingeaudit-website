@@ -29,8 +29,8 @@ export const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: t("nav.inicio", lang) },
-    { href: "/nosotros", label: t("nav.nosotros", lang) },
     { href: "/servicios", label: t("nav.servicios", lang) },
+    { href: "/nosotros", label: t("nav.nosotros", lang) },
     { href: "/contactanos", label: t("nav.contactanos", lang) },
   ];
 

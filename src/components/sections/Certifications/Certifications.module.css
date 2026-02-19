@@ -34,6 +34,8 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   text-align: left;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -68,8 +70,9 @@
 }
 
 .cardContent {
-  padding: 0 2rem 2rem;
+  padding: 0 2rem 1.5rem;
   color: rgba(255, 255, 255, 0.88);
+  flex: 1;
 }
 
 .description {
@@ -80,6 +83,34 @@
   line-height: 1.7;
   text-align: left;
   color: rgba(255, 255, 255, 0.82);
+}
+
+/* Logo footer */
+.cardFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
+}
+
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  max-height: 48px;
+  width: auto;
+}
+
+.card:hover .logoImage {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -96,6 +127,10 @@
   }
 
   .cardContent {
-    padding: 0 1.5rem 1.6rem;
+    padding: 0 1.5rem 1.25rem;
+  }
+
+  .cardFooter {
+    padding: 1rem 1.5rem 1.5rem;
   }
 }

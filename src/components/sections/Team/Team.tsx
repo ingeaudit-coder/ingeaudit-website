@@ -13,12 +13,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarGroupCount,
+  AvatarImage,
+} from "@/components/ui/avatar";
+
 type WorkTeam = {
   id: number;
   titleKey: string;
   descriptionKey: string;
   teamSize: number;
   icon: React.ComponentType<{ className?: string; size?: number }>;
+  avatars: { src: string; alt: string; fallback: string }[];
+  extraCount: number;
 };
 
 const workTeams: WorkTeam[] = [
@@ -28,6 +38,12 @@ const workTeams: WorkTeam[] = [
     descriptionKey: "homologationDesc",
     teamSize: 4,
     icon: Smartphone,
+    avatars: [
+      { src: "https://github.com/shadcn.png", alt: "@shadcn", fallback: "CN" },
+      { src: "https://github.com/maxleiter.png", alt: "@maxleiter", fallback: "ML" },
+      { src: "https://github.com/evilrabbit.png", alt: "@evilrabbit", fallback: "ER" },
+    ],
+    extraCount: 1,
   },
   {
     id: 2,
@@ -35,6 +51,12 @@ const workTeams: WorkTeam[] = [
     descriptionKey: "fieldMeasurementsDesc",
     teamSize: 10,
     icon: Radio,
+    avatars: [
+      { src: "https://github.com/shadcn.png", alt: "@shadcn", fallback: "CN" },
+      { src: "https://github.com/maxleiter.png", alt: "@maxleiter", fallback: "ML" },
+      { src: "https://github.com/evilrabbit.png", alt: "@evilrabbit", fallback: "ER" },
+    ],
+    extraCount: 7,
   },
   {
     id: 3,
@@ -42,6 +64,12 @@ const workTeams: WorkTeam[] = [
     descriptionKey: "regulatoryAdvisoryDesc",
     teamSize: 3,
     icon: Scale,
+    avatars: [
+      { src: "https://github.com/shadcn.png", alt: "@shadcn", fallback: "CN" },
+      { src: "https://github.com/maxleiter.png", alt: "@maxleiter", fallback: "ML" },
+      { src: "https://github.com/evilrabbit.png", alt: "@evilrabbit", fallback: "ER" },
+    ],
+    extraCount: 0,
   },
   {
     id: 4,
@@ -49,6 +77,11 @@ const workTeams: WorkTeam[] = [
     descriptionKey: "technicalAuditsDesc",
     teamSize: 2,
     icon: FileSearch,
+    avatars: [
+      { src: "https://github.com/shadcn.png", alt: "@shadcn", fallback: "CN" },
+      { src: "https://github.com/maxleiter.png", alt: "@maxleiter", fallback: "ML" },
+    ],
+    extraCount: 0,
   },
 ];
 
@@ -135,6 +168,21 @@ export default function Team() {
                         {lang === "es" ? "profesionales" : "professionals"}
                       </strong>
                     </p>
+
+                    {/* Avatar Group */}
+                    <div className={styles.avatarGroupWrapper}>
+                      <AvatarGroup className="grayscale">
+                        {team.avatars.map((avatar) => (
+                          <Avatar key={avatar.alt}>
+                            <AvatarImage src={avatar.src} alt={avatar.alt} />
+                            <AvatarFallback>{avatar.fallback}</AvatarFallback>
+                          </Avatar>
+                        ))}
+                        {team.extraCount > 0 && (
+                          <AvatarGroupCount>+{team.extraCount}</AvatarGroupCount>
+                        )}
+                      </AvatarGroup>
+                    </div>
                   </CardContent>
                 </Card>
               );
