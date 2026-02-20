@@ -1,76 +1,336 @@
+/* ── Sección principal ─────────────────────────────────────────── */
 .section {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   background-image: linear-gradient(to bottom, #000008 0%, #01012b 40%, #09001b 100%);
+  font-family: var(--font-geist-sans);
 }
 
-.grid {
-  max-width: 1200px;
+.wrapper {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.sidebarTitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.sidebarItem {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.sidebarIcon {
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.sidebarItemTitle {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+
+.sidebarItemDesc {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+/* ── Área principal ────────────────────────────────────────────── */
+.main {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.card {
-  font-family: var(--font-geist-sans);
+.mainHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.mainIcon {
+  width: 36px;
+  height: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.mainTitle {
+  color: #ffffff;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.mainSubtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ── Grid de cards H1, H2, H3 ─────────────────────────────────── */
+.homoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.homoCard {
   background: rgba(255, 255, 255, 0.05) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 14px !important;
   backdrop-filter: blur(10px);
-  transition: transform 0.25s ease, box-shadow 0.25s ease,
-  border-color 0.25s ease, background 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
+.homoCard:hover {
+  transform: translateY(-5px);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.22) !important;
 }
 
-.cardHeader {
-  padding-bottom: 0.75rem;
-  text-align: left;
+.homoCardH3 {
+  border-color: rgba(99, 130, 255, 0.35) !important;
 }
 
-.cardContent {
-  padding-top: 0;
+.homoCardH3:hover {
+  border-color: rgba(99, 130, 255, 0.55) !important;
 }
 
-.iconWrap {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
+.homoCardHeader {
+  padding-bottom: 0.5rem;
+}
+
+.homoBadge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.homoCardTitle {
+  color: #ffffff !important;
+  font-size: 1.05rem !important;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.homoCardContent {
+  padding-top: 0 !important;
+}
+
+.homoDesc {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── Toggle y detalle H3 ───────────────────────────────────────── */
+.toggleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.toggleBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.h3Details {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.h3Label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0.35rem;
+}
+
+.h3Value {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.h3ReqList {
+  padding-left: 1.1rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.h3Links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.h3LinkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.h3LinkBtn:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.h3LinkBtnSecondary {
+  background: transparent;
+}
+
+.operatorGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.operatorBtn {
+  padding: 0.3rem 0.8rem;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.78rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.operatorBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.h3Note {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.9rem;
+}
+
+/* ── Solicitud presencial / remota ─────────────────────────────── */
+.solicitudGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.solicitudBox {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1.5rem 1.75rem;
+}
+
+.solicitudTitle {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
   margin-bottom: 0.9rem;
 }
 
-.icon {
-  width: 26px;
-  height: 26px;
-  color: #ffffff;
-  opacity: 0.95;
+.solicitudText {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
 }
 
-.title {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.25;
-}
-
-.description {
-  color: rgba(255, 255, 255, 0.86);
-  line-height: 1.65;
-  font-size: 0.98rem;
-}
-
-@media (max-width: 768px) {
-  .grid {
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .solicitudGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .homoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mainTitle {
+    font-size: 1.5rem;
   }
 }

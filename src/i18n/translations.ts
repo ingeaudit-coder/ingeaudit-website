@@ -100,69 +100,210 @@ const translations = {
     }
   },
 
-  // ─── SERVICES (cards) ──────────────────────────────────
-  services: [
-    {
+  // ─── SERVICES ──────────────────────────────────────────
+  services: {
+    // Homologación (área principal)
+    homologacion: {
       titulo: {
-        es: "Homologación de terminales móviles",
+        es: "Homologación de Terminales Móviles",
         en: "Mobile Terminal Homologation",
       },
-      descripcion: {
-        es: "El servicio más común y necesario para dispositivos que entran al país.",
-        en: "The most common and necessary service for devices entering the country.",
+      subtitulo: {
+        es: "Empresa Certificadora autorizada por SUBTEL desde 2016. Certificamos dispositivos que se conectan a la Red Móvil en Chile bajo la normativa 1463 y 1474.",
+        en: "Certification company authorized by SUBTEL since 2016. We certify devices connecting to Chile's Mobile Network under regulations 1463 and 1474.",
+      },
+      h1: {
+        titulo: {
+          es: "Certificación Prototipo (H1)",
+          en: "Prototype Certification (H1)",
+        },
+        descripcion: {
+          es: "Proceso que permite certificar modelos de equipos terminales de telefonía móvil y acceso a Internet para su comercialización en Chile. Incluye pruebas en Laboratorios de Ingeaudit, Sala común SAE oficial, verificación de desbloqueo y registro de parámetros que garantizan el cumplimiento de la normativa 1463 y 1474 de 2016.",
+          en: "Process to certify mobile terminal and internet access device models for commercialization in Chile. Includes tests at Ingeaudit Laboratories, official SAE common room, unlocking verification and parameter registration ensuring compliance with regulations 1463 and 1474 of 2016.",
+        },
+      },
+      h2: {
+        titulo: {
+          es: "Certificación Embarques (H2)",
+          en: "Shipment Certification (H2)",
+        },
+        descripcion: {
+          es: "Proceso que valida los embarques asociados a modelos ya certificados mediante H1. Este proceso se realiza anualmente en base a muestreo y en laboratorio de Operador Logístico de empresa, asegurando la consistencia del lote con el modelo original certificado.",
+          en: "Process that validates shipments associated with models already certified through H1. This process is conducted annually based on sampling at the company's Logistics Operator laboratory, ensuring batch consistency with the originally certified model.",
+        },
+      },
+      h3: {
+        titulo: {
+          es: "Inscripción Administrativa (H3)",
+          en: "Administrative Registration (H3)",
+        },
+        descripcion: {
+          es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile. Si planeas permanecer más de 30 días, debes realizar este trámite.",
+          en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile. If you plan to stay more than 30 days, this registration is required.",
+        },
+        precio: {
+          label: {
+            es: "Precio por equipo",
+            en: "Price per device",
+          },
+          valor: {
+            es: "$15.000 CLP",
+            en: "$15.000 CLP",
+          },
+        },
+        plazo: {
+          label: {
+            es: "Plazo de certificación",
+            en: "Certification turnaround",
+          },
+          valor: {
+            es: "6 horas hábiles",
+            en: "6 business hours",
+          },
+        },
+        requisitos: {
+          label: {
+            es: "Documentos requeridos",
+            en: "Required documents",
+          },
+          items: {
+            es: [
+              "Copia RUN ambos lados",
+              "Imágenes del número IMEI impreso en el equipo o del obtenido por *#06#",
+              "Marca del equipo terminal",
+              "Modelo del equipo terminal",
+              "Documento de compra o acreditación de permanencia en el extranjero",
+              "Firma del Formulario de Solicitud de Inscripción Administrativa",
+            ],
+            en: [
+              "Copy of RUN (both sides)",
+              "Images of the IMEI printed on the device or obtained via *#06#",
+              "Device brand",
+              "Device model",
+              "Purchase document or proof of residence abroad",
+              "Signed Administrative Registration Request Form",
+            ],
+          },
+        },
+        links: {
+          ingresar: {
+            label: {
+              es: "Ingresar Solicitud",
+              en: "Submit Request",
+            },
+            url: "http://listotuimei.cl/tienda/",
+          },
+          buscar: {
+            label: {
+              es: "Buscar Solicitud",
+              en: "Track Request",
+            },
+            url: "http://ingeaudit.ingeauditech.cl/buscador_solicitud.php",
+          },
+        },
+        seguimiento: {
+          label: {
+            es: "Seguimiento por compañía (ingresa tu IMEI)",
+            en: "Track by carrier (enter your IMEI)",
+          },
+          operadores: [
+            { nombre: "CLARO",    url: "https://www.clarochile.cl" },
+            { nombre: "ENTEL",    url: "https://www.entel.cl" },
+            { nombre: "WOM",      url: "https://www.wom.cl" },
+            { nombre: "MOVISTAR", url: "https://www.movistar.cl" },
+          ],
+        },
+        nota: {
+          es: "Ingeaudit Ltda. está facultada para cobrar por este servicio (Res. Ex. N°1463 de SUBTEL, 2016, Art. 7°). También puedes acceder a este servicio de forma gratuita en otras Empresas Certificadoras en www.multibanda.cl.",
+          en: "Ingeaudit Ltda. is authorized to charge for this service (SUBTEL Res. Ex. N°1463, 2016, Art. 7). You can also access this service for free at other Certified Companies at www.multibanda.cl.",
+        },
+      },
+      solicitud: {
+        presencial: {
+          titulo: {
+            es: "Atención Presencial",
+            en: "In-Person Service",
+          },
+          horario: {
+            es: "Lunes a Viernes · 10:00 a 17:00 hrs",
+            en: "Monday to Friday · 10:00 to 17:00 hrs",
+          },
+          direccion: {
+            es: "Los Llanes 86B, Las Condes · (El formulario se llena en oficina)",
+            en: "Los Llanes 86B, Las Condes · (Form filled out on-site)",
+          },
+          telefono: {
+            es: "Atención telefónica: Lunes a Viernes · 10:00 a 13:00 hrs",
+            en: "Phone support: Monday to Friday · 10:00 to 13:00 hrs",
+          },
+        },
+        remota: {
+          titulo: {
+            es: "Atención Remota",
+            en: "Remote Service",
+          },
+          descripcion: {
+            es: "Ingresa o busca tu solicitud de certificación en línea a través de nuestra plataforma. Dudas: certificacion@ingeaudit.cl",
+            en: "Submit or track your certification request online through our platform. Questions: certificacion@ingeaudit.cl",
+          },
+        },
       },
     },
-    {
-      titulo: {
-        es: "Mediciones de Campo",
-        en: "Field Measurements",
+
+    // Otros servicios (sidebar)
+    otherServices: [
+      {
+        titulo: {
+          es: "Mediciones de Campo",
+          en: "Field Measurements",
+        },
+        descripcion: {
+          es: "Mediciones técnicas especializadas para garantizar el cumplimiento de estándares normativos.",
+          en: "Specialised technical measurements to ensure compliance with regulatory standards.",
+        },
       },
-      descripcion: {
-        es: "Realizamos mediciones técnicas especializadas para garantizar el cumplimiento de estándares.",
-        en: "We carry out specialised technical measurements to ensure compliance with standards.",
+      {
+        titulo: {
+          es: "Auditoría de Cumplimiento",
+          en: "Regulatory Compliance Audit",
+        },
+        descripcion: {
+          es: "Auditoría conforme a los lineamientos del SERNAC.",
+          en: "Audit conducted in accordance with SERNAC guidelines.",
+        },
       },
-    },
-    {
-      titulo: {
-        es: "Auditoria de Cumplimiento",
-        en: "Regulatory Compliance Audit",
+      {
+        titulo: {
+          es: "Obtención de Permisos y Concesiones",
+          en: "Obtaining Permits & Concessions",
+        },
+        descripcion: {
+          es: "Permisos para operadores y apoyo en fusión de competidores.",
+          en: "Permits for operators and support in competitor mergers.",
+        },
       },
-      descripcion: {
-        es: "Auditoría realizada conforme a los lineamientos del SERNAC",
-        en: "Audit conducted in accordance with SERNAC guidelines.",
+      {
+        titulo: {
+          es: "Asesorías Regulatorias",
+          en: "Regulatory Advisory",
+        },
+        descripcion: {
+          es: "Defensa regulatoria ante SUBTEL, informes y apoyo estratégico.",
+          en: "Regulatory defence before SUBTEL, reports, and strategic support.",
+        },
       },
-    },
-    {
-      titulo: {
-        es: "Obtención de Permisos y Concesiones",
-        en: "Obtaining Permits & Concessions",
+      {
+        titulo: {
+          es: "Auditorías Tecnológicas",
+          en: "Technology Audits",
+        },
+        descripcion: {
+          es: "Auditorías de cumplimiento y boletas de cobro por espectro.",
+          en: "Compliance audits and spectrum fee invoice audits.",
+        },
       },
-      descripcion: {
-        es: "Obtención de permisos variados para operadores y apoyo en fusión de competidores.",
-        en: "Obtaining various permits for operators and support in competitor mergers.",
-      },
-    },
-    {
-      titulo: {
-        es: "Asesorías Regulatorias",
-        en: "Regulatory Advisory",
-      },
-      descripcion: {
-        es: "Defensa regulatoria ante SUBTEL, informes regulatorios y apoyo estratégico.",
-        en: "Regulatory defence before SUBTEL, regulatory reports, and strategic support.",
-      },
-    },
-    {
-      titulo: {
-        es: "Auditorías Tecnológicas",
-        en: "Technology Audits",
-      },
-      descripcion: {
-        es: "Auditorías de cumplimiento regulatorio y boletas de cobro por espectro.",
-        en: "Regulatory compliance audits and spectrum fee invoice audits.",
-      },
-    },
-  ],
+    ],
+  },
 
   // ─── CERTIFICATIONS ────────────────────────────────────
   certifications: {
