@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import LogoIngeaudit from "@/public/logo-inge-vector.svg";
 import style from "@/src/components/sections/Navbar/Navbar.module.css";
@@ -19,8 +20,13 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 
+// interface navProps {
+//   href: string;
+// } 
+
 export const Navbar = () => {
   const { lang } = useLanguage();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLinkClick = () => {
@@ -53,11 +59,14 @@ export const Navbar = () => {
       <div className={style.containerToggleBurguer}>
         <div className={`${style.rightGroup} hidden md:flex`}>
           <ol className={style.listContainer}>
-            {navLinks.map((link) => (
-              <li className={style.li}  key={link.href}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+              return (
+                <li className={`${style.li} ${isActive ? style.active : ""}`} key={link.href}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              );
+            })}
           </ol>
           {/* Toggle de idioma para Desktop */}
           <LanguageToggle />
@@ -88,16 +97,19 @@ export const Navbar = () => {
         
               <div className="flex flex-col gap-6">
                 <nav className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={handleLinkClick}
-                      className="text-lg font-light tracking-wide hover:text-blue-400 transition-colors py-2 border-b border-slate-800"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                  {navLinks.map((link) => {
+                    const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={handleLinkClick}
+                        className={`text-gray-500 hover:text-blue-400 ${isActive ? "text-blue-400 font-medium" : ""}`}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  })}
                 </nav>
                 <div className="flex items-center justify-between mt-4 p-3 bg-slate-900/50 rounded-lg">
                   <span className="text-sm text-slate-400">Idioma / Language</span>

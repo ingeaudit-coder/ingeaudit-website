@@ -128,8 +128,13 @@
   display: flex;
   gap: 15px;
 }
-.active{
+.active a {
   color: #ffffff;
+  background: rgba(96, 165, 250, 0.05);
+}
+
+.active a::before {
+  width: 80%;
 }
 
 /* ─── Responsive – tablets ─── */
