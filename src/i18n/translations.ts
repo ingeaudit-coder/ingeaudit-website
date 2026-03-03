@@ -3,10 +3,12 @@ export type Lang = "es" | "en";
 const translations = {
   // ─── NAVBAR ────────────────────────────────────────────
   nav: {
-    inicio:     { es: "Inicio",      en: "Home" },
-    nosotros:   { es: "Nosotros",    en: "About Us" },
-    servicios:  { es: "Servicios",   en: "Services" },
-    contactanos:{ es: "Contactanos", en: "Contact" },
+    inicio:       { es: "Inicio",              en: "Home" },
+    nosotros:     { es: "Nosotros",            en: "About Us" },
+    servicios:    { es: "Servicios",           en: "Services" },
+    homologacion: { es: "Homologación",        en: "Homologation" },
+    mediciones:   { es: "Mediciones de Campo", en: "Field Measurements" },
+    contactanos:  { es: "Contactanos",         en: "Contact" },
   },
 
   // ─── HERO (página principal) ───────────────────────────
@@ -372,6 +374,18 @@ const translations = {
       es: "Soluciones integrales para la industria de telecomunicaciones",
       en: "Comprehensive solutions for the telecommunications industry",
     },
+  },
+
+  // ─── HOMOLOGACIÓN page hero ─────────────────────────────
+  homologacionPage: {
+    title: { es: "Homologación de Equipos", en: "Equipment Homologation" },
+    cta:   { es: "Conoce más",              en: "Learn more" },
+  },
+
+  // ─── MEDICIONES page hero ─────────────────────────────
+  medicionesPage: {
+    title: { es: "Servicio de Regulación - Mediciones de Campo", en: "Regulation Service - Field Measurements" },
+    cta:   { es: "Conoce más",              en: "Learn more" },
   },
 
   // ─── CONTACTANOS page ──────────────────────────────────
