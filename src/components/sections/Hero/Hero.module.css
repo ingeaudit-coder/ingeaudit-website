@@ -53,11 +53,12 @@
 }
 
 .subtitleHero {
-  height: 100px;
   font-family: var(--font-geist-sans);
   font-weight: 300;
-  font-size: 1.5em;
-  padding-top: 15px;
+  font-size: 1.35rem;
+  padding: 1.25rem 1rem 1.5rem;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 .content {
@@ -87,20 +88,15 @@
   z-index: 5;
 }
 
+.containerAnimationHero {
+  display: block;
+}
+
 .containerButtonHero {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 35px;
-}
-
-@media (width < 468px) {
-  .containerButtonHero {
-    width: 100%;
-    padding: 0 20px 0 20px;
-    display: flex;
-    gap: 45px;
-  }
+  gap: 1.5rem;
 }
 
 @media (width < 768px) {
@@ -125,11 +121,8 @@
     hyphens: auto;
   }
   .subtitleHero {
-    height: 100px;
-    font-family: var(--font-geist-sans);
-    font-weight: 300;
-    font-size: 1em;
-    padding: 15px 5px 0 5px;
+    font-size: 0.95rem;
+    padding: 1rem 1.25rem 1.25rem;
   }
   .content {
     height: auto; /* IMPORTANTE: Quitamos el 90vh */
@@ -150,19 +143,9 @@
     height: 55px;
   }
   .containerButtonHero {
-  width: 100%;
-  padding: 0 45px 0 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-}
-}
-
-@media (width < 2100px) {
-  .imgHero {
-    object-fit: cover;
-    height: 95% !important;
-    object-position: center 100%;
+    width: 100%;
+    padding: 0 1.25rem;
+    gap: 1rem;
   }
 }
+
