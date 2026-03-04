@@ -7,20 +7,23 @@ import { useEffect, useState } from "react";
 
 // Imagina que estos son los logos de la empresa
 const logos = [
-  { src: "/images/logos/clarovtr-logo.svg", alt: "Empresa 1", width: 200  },
-  { src: "/images/logos/entel-logo.svg", alt: "Empresa 2" },
-  { src: "/images/logos/logo-efe.svg", alt: "Empresa 3", width: 100  },
-  { src: "/images/logos/logo-wom.svg", alt: "Empresa 4", width: 70 },
-  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Empresa 5", width: 120  },
-  { src: "/images/logos/motorola-logo.png", alt: "Empresa 6", width: 100  },
-  { src: "/images/logos/komatsu-logo.webp", alt: "Empresa 7" },
-  { src: "/images/logos/codelco-logo.svg", alt: "Empresa 8" },
-  { src: "/images/logos/telefonica-logo.svg", alt: "Empresa 9", width: 150  },
-  { src: "/images/logos/sollatek-logo.png", alt: "Empresa 10" },
+  { src: "/images/logos/clarovtr-logo.svg", alt: "ClaroVTR", width: 140 },
+  { src: "/images/logos/entel-logo.svg", alt: "Entel", width: 110 },
+  { src: "/images/logos/logo-efe.svg", alt: "EFE", width: 90 },
+  { src: "/images/logos/logo-wom.svg", alt: "WOM", width: 80 },
+  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Gallyas Telecom", width: 110 },
+  { src: "/images/logos/motorola-logo.png", alt: "Motorola", width: 250 },
+  { src: "/images/logos/komatsu-logo.webp", alt: "Komatsu", width: 110 },
+  { src: "/images/logos/codelco-logo.svg", alt: "Codelco", width: 110 },
+  { src: "/images/logos/telefonica-logo.svg", alt: "Telefónica", width: 120 },
+  { src: "/images/logos/sollatek-logo.png", alt: "Sollatek", width: 110 },
 ];
 
 const Clients = () => {
   const [mounted, setMounted] = useState(false);
+
+  const logoHeight = 70; // Cambia este valor para ajustar el tamaño de los logos
+  const baseHeight = 50; // Altura original de referencia para mantener la proporción
 
   useEffect(() => {
     setMounted(true);
@@ -33,22 +36,20 @@ const Clients = () => {
       <Marquee
         gradient={true}
         gradientColor="black"
-        gradientWidth={0}
-        speed={20}
+        gradientWidth={60}
+        speed={25}
         pauseOnHover={true}
         className={style.miMarquee}
       >
         {logos.map((logo, index) => (
-          <div key={index} className="mx-8">
+          <div key={index} className={style.logoWrapper}>
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={logo.width || 120}
-              height={80}
-              className={style.logosClients}              /* className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300" */
-/*               className="grayscale opacity-120 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0"
- */              /* className="object-contain transition-all duration-300" */
-              
+              width={(logo.width || 110) * (logoHeight / baseHeight)}
+              height={logoHeight}
+              className={style.logosClients}
+              style={{ width: "auto", height: logoHeight }}
             />
           </div>
         ))}
