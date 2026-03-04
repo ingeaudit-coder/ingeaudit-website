@@ -28,22 +28,10 @@ const Hero = () => {
 
       <section className={style.content}>
         <h1 className={style.titleHero}>
-          <br />
           <span className="block mb-2">{t("hero.leadingLine", lang)}</span>
-          <div className={style.containerAnimationHero}>
-            <span className="text-blue-1000 ">
-              <span>{t("hero.typeSequence", lang)}</span>
-              {/* key={lang} remounts TypeAnimation when language changes */}
-              
-              {/* <TypeAnimation
-                key={lang}
-                sequence={sequence}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              /> */}
-            </span>
-          </div>
+          <span className={style.containerAnimationHero}>
+            <span>{t("hero.typeSequence", lang)}</span>
+          </span>
         </h1>
 
         <p className={style.subtitleHero}>

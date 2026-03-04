@@ -94,12 +94,13 @@
 .li a {
   color: rgb(255, 255, 255);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 6px;
   transition: all 0.3s ease;
   display: block;
   position: relative;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 /* subrayado animado al hover */
@@ -130,9 +131,10 @@
 }
 
 .dropdownTrigger {
-  display: flex;
+  display: inline-flex !important; /* override .li a { display: block } */
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.35rem;
+  white-space: nowrap;
 }
 
 .chevron {
