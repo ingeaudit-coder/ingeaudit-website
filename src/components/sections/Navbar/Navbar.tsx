@@ -34,7 +34,6 @@ export const Navbar = () => {
   };
 
   const serviciosSublinks = [
-    { href: "/servicios", label: t("nav.servicios", lang) },
     { href: "/homologacion", label: t("nav.homologacion", lang) },
     { href: "/mediciones", label: t("nav.mediciones", lang) },
   ];
