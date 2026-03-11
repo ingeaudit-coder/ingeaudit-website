@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown } from "lucide-react";
+import { Menu, ChevronDown, ChevronRight } from "lucide-react";
 import LogoIngeaudit from "@/public/logo-inge-vector.svg";
 import style from "@/src/components/sections/Navbar/Navbar.module.css";
 import LanguageToggle from "@/src/components/LanguageToggle/LanguageToggle";
@@ -25,17 +25,21 @@ export const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [mobileServiciosOpen, setMobileServiciosOpen] = useState(false);
+  const [mobileHomologacionOpen, setMobileHomologacionOpen] = useState(false);
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
+  const nestedDropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const [desktopNestedOpen, setDesktopNestedOpen] = useState(false);
 
   const handleLinkClick = () => {
     setIsOpen(false);
     setMobileServiciosOpen(false);
+    setMobileHomologacionOpen(false);
   };
 
-  const serviciosSublinks = [
-    { href: "/homologacion", label: t("nav.homologacion", lang) },
-    { href: "/mediciones", label: t("nav.mediciones", lang) },
+  const homologacionSublinks = [
+    { href: "/homologacion", label: t("nav.operadores", lang) },
+    { href: "/personas", label: t("nav.personas", lang) },
   ];
 
   const isServiciosActive =
@@ -43,8 +47,16 @@ export const Navbar = () => {
     pathname.startsWith("/servicios/") ||
     pathname === "/homologacion" ||
     pathname.startsWith("/homologacion/") ||
+    pathname === "/personas" ||
+    pathname.startsWith("/personas/") ||
     pathname === "/mediciones" ||
     pathname.startsWith("/mediciones/");
+
+  const isHomologacionActive =
+    pathname === "/homologacion" ||
+    pathname.startsWith("/homologacion/") ||
+    pathname === "/personas" ||
+    pathname.startsWith("/personas/");
 
   const navLinks = [
     { href: "/", label: t("nav.inicio", lang) },
@@ -60,6 +72,19 @@ export const Navbar = () => {
   const handleDropdownLeave = () => {
     dropdownTimeout.current = setTimeout(() => {
       setDesktopDropdownOpen(false);
+      setDesktopNestedOpen(false);
+    }, 150);
+  };
+
+  const handleNestedEnter = () => {
+    if (nestedDropdownTimeout.current) clearTimeout(nestedDropdownTimeout.current);
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setDesktopNestedOpen(true);
+  };
+
+  const handleNestedLeave = () => {
+    nestedDropdownTimeout.current = setTimeout(() => {
+      setDesktopNestedOpen(false);
     }, 150);
   };
 
@@ -97,15 +122,38 @@ export const Navbar = () => {
                 <ChevronDown className={`${style.chevron} ${desktopDropdownOpen ? style.chevronOpen : ""}`} />
               </Link>
               <div className={`${style.dropdownMenu} ${desktopDropdownOpen ? style.dropdownMenuOpen : ""}`}>
-                {serviciosSublinks.map((sub) => (
-                  <Link
-                    key={sub.href}
-                    href={sub.href}
-                    className={`${style.dropdownItem} ${pathname === sub.href ? style.dropdownItemActive : ""}`}
+                {/* Homologación con sub-dropdown */}
+                <div
+                  className={style.nestedDropdown}
+                  onMouseEnter={handleNestedEnter}
+                  onMouseLeave={handleNestedLeave}
+                >
+                  <span
+                    className={`${style.dropdownItem} ${style.nestedTrigger} ${isHomologacionActive ? style.dropdownItemActive : ""}`}
                   >
-                    {sub.label}
-                  </Link>
-                ))}
+                    {t("nav.homologacion", lang)}
+                    <ChevronRight className={style.nestedChevron} />
+                  </span>
+                  <div className={`${style.nestedMenu} ${desktopNestedOpen ? style.nestedMenuOpen : ""}`}>
+                    {homologacionSublinks.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className={`${style.dropdownItem} ${pathname === sub.href ? style.dropdownItemActive : ""}`}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mediciones de Campo */}
+                <Link
+                  href="/mediciones"
+                  className={`${style.dropdownItem} ${pathname === "/mediciones" ? style.dropdownItemActive : ""}`}
+                >
+                  {t("nav.mediciones", lang)}
+                </Link>
               </div>
             </li>
 
@@ -169,16 +217,41 @@ export const Navbar = () => {
                     </button>
                     {mobileServiciosOpen && (
                       <div className="flex flex-col space-y-3 mt-3 ml-4 border-l border-slate-700 pl-3">
-                        {serviciosSublinks.map((sub) => (
-                          <Link
-                            key={sub.href}
-                            href={sub.href}
-                            onClick={handleLinkClick}
-                            className={`text-sm text-gray-500 hover:text-blue-400 ${pathname === sub.href ? "text-blue-400 font-medium" : ""}`}
+                        {/* Homologación con sub-submenú */}
+                        <div>
+                          <button
+                            onClick={() => setMobileHomologacionOpen(!mobileHomologacionOpen)}
+                            className={`flex items-center justify-between w-full text-sm text-gray-500 hover:text-blue-400 ${isHomologacionActive ? "text-blue-400 font-medium" : ""}`}
                           >
-                            {sub.label}
-                          </Link>
-                        ))}
+                            {t("nav.homologacion", lang)}
+                            <ChevronDown
+                              className={`h-3 w-3 transition-transform duration-200 ${mobileHomologacionOpen ? "rotate-180" : ""}`}
+                            />
+                          </button>
+                          {mobileHomologacionOpen && (
+                            <div className="flex flex-col space-y-2 mt-2 ml-4 border-l border-slate-600 pl-3">
+                              {homologacionSublinks.map((sub) => (
+                                <Link
+                                  key={sub.href}
+                                  href={sub.href}
+                                  onClick={handleLinkClick}
+                                  className={`text-sm text-gray-500 hover:text-blue-400 ${pathname === sub.href ? "text-blue-400 font-medium" : ""}`}
+                                >
+                                  {sub.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Mediciones de Campo */}
+                        <Link
+                          href="/mediciones"
+                          onClick={handleLinkClick}
+                          className={`text-sm text-gray-500 hover:text-blue-400 ${pathname === "/mediciones" ? "text-blue-400 font-medium" : ""}`}
+                        >
+                          {t("nav.mediciones", lang)}
+                        </Link>
                       </div>
                     )}
                   </div>
