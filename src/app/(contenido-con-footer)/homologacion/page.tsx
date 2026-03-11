@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import styles from "./homologacion.module.css";
+import Certifications from "@/src/components/sections/Certifications/Certifications";
+import Services from "@/src/components/sections/Services/Services";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
-import Button from "@/src/components/UI/Button/Button";
+import Metrics from "@/src/components/sections/Metrics/Metrics";
 
 const Homologacion = () => {
   const { lang } = useLanguage();
@@ -17,13 +19,22 @@ const Homologacion = () => {
           alt="Fondo corporativo"
           fill
           priority
-          className={styles.heroImage}
+          className=""
         />
         <div className={styles.overlay} />
         <div className={styles.heroContent}>
-          <h1 className={styles.mainTitle}>{t("homologacionPage.title", lang)}</h1>
-          <Button>{t("homologacionPage.cta", lang)}</Button>
+          <h1 className={styles.mainTitle}>{t("serviciosPage.title", lang)}</h1>
+          <p className={styles.subtitle}>{t("serviciosPage.subtitle", lang)}</p>
         </div>
+      </section>
+      <section>
+        <Services />
+      </section>
+      <section>
+        <Metrics />
+      </section>
+      <section>
+        <Certifications />
       </section>
     </div>
   );

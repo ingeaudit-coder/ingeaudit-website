@@ -36,30 +36,23 @@
   color: white;
   filter: var(--drop-shadow-logo);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .mainTitle {
   font-family: var(--font-geist-sans);
   font-weight: 800;
   font-size: 3.2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
   line-height: 1.1;
-}
-
-.subtitle {
-  font-family: var(--font-geist-sans);
-  font-weight: 300;
-  font-size: 1.35rem;
-  opacity: 0.92;
 }
 
 @media (max-width: 768px) {
   .mainTitle {
     font-size: 2.2rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
   }
 
   .heroSection {
