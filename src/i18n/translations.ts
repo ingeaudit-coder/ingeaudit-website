@@ -8,6 +8,8 @@ const translations = {
     servicios:    { es: "Servicios",           en: "Services" },
     homologacion: { es: "Homologación",        en: "Homologation" },
     mediciones:   { es: "Mediciones de Campo", en: "Field Measurements" },
+    operadores:   { es: "Operadores/Empresas", en: "Operators/Companies" },
+    personas:     { es: "Personas Naturales",  en: "Individuals" },
     contactanos:  { es: "Contactanos",         en: "Contact" },
   },
 
@@ -378,6 +380,12 @@ const translations = {
 
   // ─── HOMOLOGACIÓN page hero ─────────────────────────────
   homologacionPage: {
+    title: { es: "Homologación de Equipos", en: "Equipment Homologation" },
+    cta:   { es: "Conoce más",              en: "Learn more" },
+  },
+
+  // ─── PERSONAS page hero ─────────────────────────────
+  personasPage: {
     title: { es: "Homologación de Equipos", en: "Equipment Homologation" },
     cta:   { es: "Conoce más",              en: "Learn more" },
   },
