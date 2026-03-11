@@ -396,6 +396,56 @@ const translations = {
     cta:   { es: "Conoce más",              en: "Learn more" },
   },
 
+  // ─── OPERADORES / EMPRESAS page ────────────────────────
+  operadoresPage: {
+    hero: {
+      badge:    { es: "Excelencia Técnica",  en: "Technical Excellence" },
+      title:    { es: "Operadores / Empresas", en: "Operators / Companies" },
+      subtitle: {
+        es: "Soluciones integrales de cumplimiento normativo y aseguramiento de calidad para la industria de telecomunicaciones.",
+        en: "Comprehensive regulatory compliance and quality assurance solutions for the telecommunications industry.",
+      },
+    },
+    h1: {
+      badge:      { es: "Módulo H1", en: "Module H1" },
+      specsTitle: { es: "Especificaciones Técnicas", en: "Technical Specifications" },
+      specs: [
+        {
+          label: { es: "Normativa Aplicable",   en: "Applicable Standard" },
+          value: { es: "ISO/IEC 17065 — Diseño y Fabricación", en: "ISO/IEC 17065 — Design and Manufacturing" },
+        },
+        {
+          label: { es: "Alcance del Servicio",  en: "Service Scope" },
+          value: { es: "Fase de Diseño, Análisis de Riesgos y Testeo", en: "Design Phase, Risk Analysis and Testing" },
+        },
+        {
+          label: { es: "Validez del Certificado", en: "Certificate Validity" },
+          value: { es: "24 Meses renovables mediante auditoría", en: "24 Months renewable by audit" },
+        },
+      ],
+      cta: { es: "Solicitar Auditoría H1", en: "Request H1 Audit" },
+    },
+    h2: {
+      badge:      { es: "Módulo H2", en: "Module H2" },
+      specsTitle: { es: "Especificaciones Logísticas", en: "Logistics Specifications" },
+      specs: [
+        {
+          label: { es: "Regulación Marítima",   en: "Maritime Regulation" },
+          value: { es: "Estándares Internacionales de Estiba y Carga", en: "International Loading and Cargo Standards" },
+        },
+        {
+          label: { es: "Ámbito de Aplicación",  en: "Application Scope" },
+          value: { es: "Logística, Embalaje y Carga Crítica", en: "Logistics, Packaging and Critical Cargo" },
+        },
+        {
+          label: { es: "Vigencia",              en: "Validity" },
+          value: { es: "Certificación por Embarque Individual", en: "Certification per Individual Shipment" },
+        },
+      ],
+      cta: { es: "Gestionar Embarque H2", en: "Manage H2 Shipment" },
+    },
+  },
+
   // ─── CONTACTANOS page ──────────────────────────────────
   contactPage: {
     title:    { es: "Contáctanos",  en: "Contact Us" },
