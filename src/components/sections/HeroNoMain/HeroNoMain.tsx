@@ -13,21 +13,18 @@ export const HeroNoMain =({badge, titulo, subtitulo}: textProps)=>{
   const { lang } = useLanguage();
 
   return(
-    <>
-    <section className={styles.hero}>
-          <span className={styles.heroBadge}>
-            {t(badge, lang)}
-            
-          </span>
-          <h1 className={styles.heroTitle}>
-            {t(titulo, lang)}
-            
-          </h1>
-          <p className={styles.heroSubtitle}>
-            {t(subtitulo, lang)}
-            
-          </p>
+    <div className={styles.heroWrapper}>
+      <section className={styles.hero}>
+        <span className={styles.heroBadge}>
+          {t(badge, lang)}
+        </span>
+        <h1 className={styles.heroTitle}>
+          {t(titulo, lang)}
+        </h1>
+        <p className={styles.heroSubtitle}>
+          {t(subtitulo, lang)}
+        </p>
       </section>
-    </>
+    </div>
   )
 }
