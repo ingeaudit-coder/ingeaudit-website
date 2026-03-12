@@ -6,6 +6,7 @@ import CountUp from "react-countup";
 const Metrics = () => {
   return (
     <section className={style.containerMetrics}>
+      <h2 className={style.tituloMetricas}>¿Por qué elegir INGEAUDIT?</h2>
       <div className={style.previsitasMetricas}>
         <div className={style.linePrevisitas}>
           <CountUp
