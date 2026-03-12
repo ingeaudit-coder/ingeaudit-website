@@ -3,24 +3,24 @@ export type Lang = "es" | "en";
 const translations = {
   // ─── NAVBAR ────────────────────────────────────────────
   nav: {
-    inicio:       { es: "Inicio",              en: "Home" },
-    nosotros:     { es: "Nosotros",            en: "About Us" },
-    servicios:    { es: "Servicios",           en: "Services" },
-    homologacion: { es: "Homologación",        en: "Homologation" },
-    mediciones:   { es: "Mediciones de Campo", en: "Field Measurements" },
-    operadores:   { es: "Operadores/Empresas", en: "Operators/Companies" },
-    personas:     { es: "Personas Naturales",  en: "Individuals" },
-    contactanos:  { es: "Contactanos",         en: "Contact" },
+    inicio: { es: "Inicio", en: "Home" },
+    nosotros: { es: "Nosotros", en: "About Us" },
+    servicios: { es: "Servicios", en: "Services" },
+    homologacion: { es: "Homologación", en: "Homologation" },
+    mediciones: { es: "Mediciones de Campo", en: "Field Measurements" },
+    operadores: { es: "Operadores/Empresas", en: "Operators/Companies" },
+    personas: { es: "Personas Naturales", en: "Individuals" },
+    contactanos: { es: "Contactanos", en: "Contact" },
   },
 
   // ─── HERO (página principal) ───────────────────────────
   hero: {
     typeSequence: {
       es: [
-        "Consultoría Regulatoria, Medición y Homologación de equipos",
+        "Consultoría, Medición y Homologación de equipos",
       ],
       en: [
-        "Regulatory Consulting, Measurement, and Equipment Certification",
+        "Consulting, Measurement, and Equipment Certification",
       ],
     },
     leadingLine: { es: "Gestión integral en", en: "Comprehensive Management in" },
@@ -30,19 +30,19 @@ const translations = {
     },
   },
 
-   // ─── ABOUT ─────────────────────────────────────────────
+  // ─── ABOUT ─────────────────────────────────────────────
   about: {
-    whoTitle:   { es: "¿Quiénes Somos?",  en: "Who Are We?" },
+    whoTitle: { es: "¿Quiénes Somos?", en: "Who Are We?" },
     whoText: {
       es: `Consultora fundada en 2004, especializada en telecomunicaciones y tecnologías de la información. Hemos trabajado con empresas líderes como Claro, Entel, WOM, Motorola y Otros, realizando homologaciones, mediciones de densidad de potencia, recepción de obras y auditorías técnicas especializadas.`,
       en: `Consulting firm founded in 2004, specialized in telecommunications and information technologies. We have worked with leading companies such as Claro, Entel, WOM, Motorola and Others, performing homologations, power density measurements, site receptions, and specialized technical audits.`,
     },
-    missionTitle: { es: "Misión",  en: "Mission" },
+    missionTitle: { es: "Misión", en: "Mission" },
     missionText: {
       es: "Entregar servicios de auditoría y consultoría tecnologica con los más altos estándares de calidad, garantizando cumplimiento normativo y optimización de procesos.",
       en: "Deliver audit and technological consulting services with the highest quality standards, ensuring regulatory compliance and process optimization.",
     },
-    visionTitle: { es: "Visión",  en: "Vision" },
+    visionTitle: { es: "Visión", en: "Vision" },
     visionText: {
       es: "Ser el referente en servicios técnicos y regulatorios especializados, reconocidos por la excelencia profesional y la capacidad de generar valor sostenido.",
       en: "To be the benchmark in specialized technical and regulatory services, recognized for professional excellence and ability to generate sustained value.",
@@ -51,22 +51,22 @@ const translations = {
 
   // ─── TEAM ──────────────────────────────────────────────
   team: {
-    title:    { es: "Nuestro Equipo",  en: "Our Team" },
+    title: { es: "Nuestro Equipo", en: "Our Team" },
     subtitle: {
       es: "Profesionales con amplia experiencia en telecomunicaciones y regulación.",
       en: "Professionals with extensive experience in telecommunications and regulation.",
     },
-    email:      { es: "Correo",     en: "Email" },
-    phone:      { es: "Teléfono",   en: "Phone" },
-    seniority:  { es: "Antigüedad", en: "Tenure" },
+    email: { es: "Correo", en: "Email" },
+    phone: { es: "Teléfono", en: "Phone" },
+    seniority: { es: "Antigüedad", en: "Tenure" },
     ceoQuote: {
       es: "Nuestro compromiso es entregar soluciones técnico-regulatorias que generen valor real para nuestros clientes, respaldados por más de 20 años de experiencia en la industria de las telecomunicaciones.",
       en: "Our commitment is to deliver technical-regulatory solutions that generate real value for our clients, backed by over 20 years of experience in the telecommunications industry."
     },
     roles: {
-      ceoFounder:       { es: "CEO & Fundador",         en: "CEO & Founder" },
-      fieldSupervisor:  { es: "Supervisor de Terreno", en: "Field Supervisor" },
-      chargeOf:         { es: "Encargado de",          en: "In charge of" },
+      ceoFounder: { es: "CEO & Fundador", en: "CEO & Founder" },
+      fieldSupervisor: { es: "Supervisor de Terreno", en: "Field Supervisor" },
+      chargeOf: { es: "Encargado de", en: "In charge of" },
     },
     teams: {
       homologation: {
@@ -211,9 +211,9 @@ const translations = {
             en: "Track by carrier (enter your IMEI)",
           },
           operadores: [
-            { nombre: "CLARO",    url: "https://www.clarochile.cl" },
-            { nombre: "ENTEL",    url: "https://www.entel.cl" },
-            { nombre: "WOM",      url: "https://www.wom.cl" },
+            { nombre: "CLARO", url: "https://www.clarochile.cl" },
+            { nombre: "ENTEL", url: "https://www.entel.cl" },
+            { nombre: "WOM", url: "https://www.wom.cl" },
             { nombre: "MOVISTAR", url: "https://www.movistar.cl" },
           ],
         },
@@ -253,6 +253,7 @@ const translations = {
         },
       },
     },
+    
 
     // Otros servicios (sidebar)
     otherServices: [
@@ -309,6 +310,22 @@ const translations = {
     ],
   },
 
+  //PERSONAS NATURALES
+
+  //hero
+    personasNaturales: {
+      hero: {
+        badge: {
+          es: "Registre su dispositivo con nosotros",
+          en: "Register your device with us",
+        },
+        titulo: {
+          es: "Registre su dispositivo con nosotros",
+          en: "Register your device with us",
+        }
+      },
+    },
+
   // ─── CERTIFICATIONS ────────────────────────────────────
   certifications: {
     sectionTitle: { es: "Certificaciones de Respaldo", en: "Supporting Certifications" },
@@ -352,17 +369,17 @@ const translations = {
       es: "Expertos en soluciones técnico-regulatorias, medición del espectro electromagnético y homologación de equipos.",
       en: "Experts in technical-regulatory solutions, electromagnetic spectrum measurement, and equipment homologation.",
     },
-    legal:          { es: "LEGAL",                en: "LEGAL" },
-    certifications: { es: "Certificaciones",     en: "Certifications" },
+    legal: { es: "LEGAL", en: "LEGAL" },
+    certifications: { es: "Certificaciones", en: "Certifications" },
     securityPolicy: { es: "Políticas de Seguridad", en: "Security Policies" },
-    workWithUs:     { es: "Trabaja con Nosotros", en: "Work With Us" },
-    interestLinks:  { es: "Links de Interés",    en: "Links of Interest" },
-    copyright:      { es: "Todos los derechos reservados.", en: "All rights reserved." },
+    workWithUs: { es: "Trabaja con Nosotros", en: "Work With Us" },
+    interestLinks: { es: "Links de Interés", en: "Links of Interest" },
+    copyright: { es: "Todos los derechos reservados.", en: "All rights reserved." },
   },
 
   // ─── NOSOTROS page hero ────────────────────────────────
   nosotrosPage: {
-    title:    { es: "Nosotros",  en: "About Us" },
+    title: { es: "Nosotros", en: "About Us" },
     subtitle: {
       es: "Más de 20 años liderando la consultoría técnica-regulatoria en Chile",
       en: "Over 20 years leading technical-regulatory consulting in Chile",
@@ -371,7 +388,7 @@ const translations = {
 
   // ─── SERVICIOS page hero ───────────────────────────────
   serviciosPage: {
-    title:    { es: "Portafolio de Servicios", en: "Services Portfolio" },
+    title: { es: "Portafolio de Servicios", en: "Services Portfolio" },
     subtitle: {
       es: "Soluciones integrales para la industria de telecomunicaciones",
       en: "Comprehensive solutions for the telecommunications industry",
@@ -381,41 +398,41 @@ const translations = {
   // ─── HOMOLOGACIÓN page hero ─────────────────────────────
   homologacionPage: {
     title: { es: "Homologación de Equipos", en: "Equipment Homologation" },
-    cta:   { es: "Conoce más",              en: "Learn more" },
+    cta: { es: "Conoce más", en: "Learn more" },
   },
 
   // ─── PERSONAS page hero ─────────────────────────────
   personasPage: {
     title: { es: "Homologación de Equipos", en: "Equipment Homologation" },
-    cta:   { es: "Conoce más",              en: "Learn more" },
+    cta: { es: "Conoce más", en: "Learn more" },
   },
 
   // ─── MEDICIONES page hero ─────────────────────────────
   medicionesPage: {
     title: { es: "Servicio de Regulación - Mediciones de Campo", en: "Regulation Service - Field Measurements" },
-    cta:   { es: "Conoce más",              en: "Learn more" },
+    cta: { es: "Conoce más", en: "Learn more" },
   },
 
   // ─── OPERADORES / EMPRESAS page ────────────────────────
   operadoresPage: {
     hero: {
-      badge:    { es: "Excelencia Técnica",  en: "Technical Excellence" },
-      title:    { es: "Operadores / Empresas", en: "Operators / Companies" },
+      badge: { es: "Excelencia Técnica", en: "Technical Excellence" },
+      title: { es: "Operadores / Empresas", en: "Operators / Companies" },
       subtitle: {
         es: "Soluciones integrales de cumplimiento normativo y aseguramiento de calidad para la industria de telecomunicaciones.",
         en: "Comprehensive regulatory compliance and quality assurance solutions for the telecommunications industry.",
       },
     },
     h1: {
-      badge:      { es: "Módulo H1", en: "Module H1" },
+      badge: { es: "Módulo H1", en: "Module H1" },
       specsTitle: { es: "Especificaciones Técnicas", en: "Technical Specifications" },
       specs: [
         {
-          label: { es: "Normativa Aplicable",   en: "Applicable Standard" },
+          label: { es: "Normativa Aplicable", en: "Applicable Standard" },
           value: { es: "ISO/IEC 17065 — Diseño y Fabricación", en: "ISO/IEC 17065 — Design and Manufacturing" },
         },
         {
-          label: { es: "Alcance del Servicio",  en: "Service Scope" },
+          label: { es: "Alcance del Servicio", en: "Service Scope" },
           value: { es: "Fase de Diseño, Análisis de Riesgos y Testeo", en: "Design Phase, Risk Analysis and Testing" },
         },
         {
@@ -426,19 +443,19 @@ const translations = {
       cta: { es: "Solicitar Auditoría H1", en: "Request H1 Audit" },
     },
     h2: {
-      badge:      { es: "Módulo H2", en: "Module H2" },
+      badge: { es: "Módulo H2", en: "Module H2" },
       specsTitle: { es: "Especificaciones Logísticas", en: "Logistics Specifications" },
       specs: [
         {
-          label: { es: "Regulación Marítima",   en: "Maritime Regulation" },
+          label: { es: "Regulación Marítima", en: "Maritime Regulation" },
           value: { es: "Estándares Internacionales de Estiba y Carga", en: "International Loading and Cargo Standards" },
         },
         {
-          label: { es: "Ámbito de Aplicación",  en: "Application Scope" },
+          label: { es: "Ámbito de Aplicación", en: "Application Scope" },
           value: { es: "Logística, Embalaje y Carga Crítica", en: "Logistics, Packaging and Critical Cargo" },
         },
         {
-          label: { es: "Vigencia",              en: "Validity" },
+          label: { es: "Vigencia", en: "Validity" },
           value: { es: "Certificación por Embarque Individual", en: "Certification per Individual Shipment" },
         },
       ],
@@ -448,7 +465,7 @@ const translations = {
 
   // ─── CONTACTANOS page ──────────────────────────────────
   contactPage: {
-    title:    { es: "Contáctanos",  en: "Contact Us" },
+    title: { es: "Contáctanos", en: "Contact Us" },
     subtitle: {
       es: "Estamos aquí para ayudarte con tus proyectos de telecomunicaciones",
       en: "We are here to help you with your telecommunications projects",
@@ -457,10 +474,10 @@ const translations = {
       es: "Información de Contacto",
       en: "Contact Information",
     },
-    email:     { es: "Email",      en: "Email" },
-    phone:     { es: "Teléfono",   en: "Phone" },
-    address:   { es: "Dirección",  en: "Address" },
-    schedule:  { es: "Horario",    en: "Schedule" },
+    email: { es: "Email", en: "Email" },
+    phone: { es: "Teléfono", en: "Phone" },
+    address: { es: "Dirección", en: "Address" },
+    schedule: { es: "Horario", en: "Schedule" },
     scheduleDetail: {
       es: "Lunes a Viernes",
       en: "Monday to Friday",
@@ -469,24 +486,24 @@ const translations = {
       es: "Envíanos un Mensaje",
       en: "Send Us a Message",
     },
-    fullName:       { es: "Nombre Completo *",  en: "Full Name *" },
-    fullNamePlaceholder: { es: "Tu nombre",    en: "Your name" },
-    emailLabel:     { es: "Email *",           en: "Email *" },
-    emailPlaceholder: { es: "tu@email.com",   en: "you@email.com" },
-    phoneLabel:     { es: "Teléfono",         en: "Phone" },
-    company:        { es: "Empresa",           en: "Company" },
+    fullName: { es: "Nombre Completo *", en: "Full Name *" },
+    fullNamePlaceholder: { es: "Tu nombre", en: "Your name" },
+    emailLabel: { es: "Email *", en: "Email *" },
+    emailPlaceholder: { es: "tu@email.com", en: "you@email.com" },
+    phoneLabel: { es: "Teléfono", en: "Phone" },
+    company: { es: "Empresa", en: "Company" },
     companyPlaceholder: { es: "Nombre de tu empresa", en: "Your company name" },
-    message:        { es: "Mensaje *",         en: "Message *" },
+    message: { es: "Mensaje *", en: "Message *" },
     messagePlaceholder: {
       es: "Cuéntanos sobre tu proyecto o consulta...",
       en: "Tell us about your project or inquiry...",
     },
-    sendButton:     { es: "Enviar Mensaje",    en: "Send Message" },
-    successStatus:  {
+    sendButton: { es: "Enviar Mensaje", en: "Send Message" },
+    successStatus: {
       es: "Mensaje enviado con éxito. Nos pondremos en contacto pronto.",
       en: "Message sent successfully. We will get back to you shortly.",
     },
-    ourLocation:    { es: "Nuestra Ubicación", en: "Our Location" },
+    ourLocation: { es: "Nuestra Ubicación", en: "Our Location" },
   },
 };
 
