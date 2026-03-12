@@ -1,9 +1,5 @@
 .footerContainer {
-   background: linear-gradient(
-    to bottom,
-    #000e2d 0%,
-    #00091d 100%,
-    #000000 100%);
+   background: #030013;
   border-top: 1px solid var(--border-soft);
   color: white;
   margin: 0;
