@@ -14,6 +14,31 @@
     "logo-clients";
   overflow: hidden;
   background-color: #000000;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(37, 16, 112, 0.23) 85%,
+    #00001a 100%
+  );
+  z-index: 5;
+}
+.clientsLabel {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 0;
+  right: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  z-index: 11;
 }
 
 .containerClientHero {
@@ -76,17 +101,7 @@
   color: white;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(37, 16, 112, 0.23) 85%,
-    #000000 100%
-  );
-  z-index: 5;
-}
+
 
 .containerAnimationHero {
   display: block;
@@ -146,6 +161,11 @@
     width: 100%;
     padding: 0 1.25rem;
     gap: 1rem;
+  }
+
+  .clientsLabel {
+    bottom: 0.75rem;
+    font-size: 0.65rem;
   }
 }
 

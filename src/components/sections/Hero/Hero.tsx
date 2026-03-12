@@ -55,9 +55,10 @@ const Hero = () => {
           />
         </div>
       </section>
-      <div className={style.containerClientHero}>
+      {/* <div className={style.containerClientHero}>
         <Clients />
-      </div>
+      </div> */}
+      <p className={style.clientsLabel}>{translations.clients.label[lang]}</p>
     </main>
   );
 };

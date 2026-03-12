@@ -1,19 +1,40 @@
 .containerMetrics {
   margin: 0;
-  padding: 24px 100px 24px 100px;
+  padding: 30px 100px 24px 100px;
   box-sizing: border-box;
   display: grid;
-  height: 200px;
+  height: 320px;
   width: 100%;
   max-width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-template-areas: "previsitasMetrics metricsAntenas homoMetricas";
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+  "tituloPrincipal tituloPrincipal tituloPrincipal"
+  "previsitasMetrics metricsAntenas homoMetricas";
   overflow: hidden;
-  background-color: #000000;
+  background-color: #030013;
+  outline: 1px solid #1f2024;
+}
+
+.tituloMetricas{
+  grid-area: tituloPrincipal;
+  height: 50px;
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+   font-family: var(--font-geist-sans);
+  font-weight: 600;
+  font-size: 2rem;
+  color: #fff;
+  /* margin-bottom: 2.2rem; */
+  filter: var(--drop-shadow-logo);
+  /* padding-bottom: 30px; */
 }
 
 .previsitasMetricas {
+  color: blueviolet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +55,7 @@
 }
 
 .metricasAntenas {
+  color: blueviolet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +74,7 @@
 }
 
 .homoMetricas {
+  color: blueviolet;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,30 +100,42 @@
   font-weight: 500;
 }
 
-@media (width < 1128px){
-  .containerMetrics{
-    height: 100%;
+@media (width < 1128px) {
+  .containerMetrics {
+    height: auto;
+    padding: 32px 24px 36px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "tituloPrincipal tituloPrincipal tituloPrincipal"
+      "previsitasMetrics metricsAntenas homoMetricas";
+    gap: 16px;
+  }
+}
+
+@media (width < 640px) {
+  .containerMetrics {
+    height: auto;
+    padding: 32px 20px 36px;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "previsitasMetrics"
-    "metricsAntenas"
-    "homoMetricas";
-    gap: 30px;
-    
+    grid-template-rows: auto;
+    grid-template-areas:
+      "tituloPrincipal"
+      "previsitasMetrics"
+      "metricsAntenas"
+      "homoMetricas";
+    gap: 24px;
   }
-  .previsitasMetricas{
-    display: flex;
-    align-items: flex-start;
-    grid-area: previsitasMetrics;
+
+  .tituloMetricas {
+    font-size: 1.4rem;
+    height: auto;
+    padding-bottom: 8px;
   }
-  .metricasAntenas{
-    display: flex;
+
+  .previsitasMetricas,
+  .metricasAntenas,
+  .homoMetricas {
     align-items: flex-start;
-    grid-area: metricsAntenas;
-  }
-  .homoMetricas{
-    display: flex;
-    align-items: flex-start;
-    grid-area: homoMetricas;
   }
 }

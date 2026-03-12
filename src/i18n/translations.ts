@@ -410,7 +410,7 @@ const translations = {
 
   // ─── CERTIFICATIONS ────────────────────────────────────
   certifications: {
-    sectionTitle: { es: "Certificaciones de Respaldo", en: "Supporting Certifications" },
+    sectionTitle: { es: "Certificaciones", en: "Certifications" },
     items: [
       {
         titulo: {
@@ -445,6 +445,11 @@ const translations = {
     ],
   },
 
+  // ─── CLIENTS ───────────────────────────────────────────
+  clients: {
+    label: { es: "Confían en nosotros", en: "They trust us" },
+  },
+
   // ─── FOOTER ────────────────────────────────────────────
   footer: {
     tagline: {
@@ -461,10 +466,11 @@ const translations = {
 
   // ─── NOSOTROS page hero ────────────────────────────────
   nosotrosPage: {
-    title: { es: "Nosotros", en: "About Us" },
+    badge: {es: "Expertos", en: "Experts"},
+    title: { es: "EQUIPO", en: "TEAM" },
     subtitle: {
-      es: "Más de 20 años liderando la consultoría técnica-regulatoria en Chile",
-      en: "Over 20 years leading technical-regulatory consulting in Chile",
+      es: "Experiencia comprobada en consultoría técnico-regulatoria en Chile",
+      en: "Proven experience in technical-regulatory consulting in Chile",
     },
   },
 
@@ -472,9 +478,53 @@ const translations = {
   serviciosPage: {
     title: { es: "Portafolio de Servicios", en: "Services Portfolio" },
     subtitle: {
-      es: "Soluciones integrales para la industria de telecomunicaciones",
-      en: "Comprehensive solutions for the telecommunications industry",
+      es: "Soluciones integrales en telecomunicaciones bajo cumplimiento normativo y excelencia técnica.",
+      en: "Comprehensive telecommunications solutions under regulatory compliance and technical excellence.",
     },
+    cards: [
+      {
+        badge: { es: "SERVICIOS TÉCNICOS", en: "TECHNICAL SERVICES" },
+        title: { es: "Mediciones de Campo", en: "Field Measurements" },
+        description: {
+          es: "Verificación técnica y validación de redes para asegurar la calidad y el cumplimiento.",
+          en: "Technical verification and network validation to ensure quality and compliance.",
+        },
+        items: {
+          es: ["Recepciones de Obra", "Densidad de Potencia", "Cumplimiento Normativo"],
+          en: ["Site Receptions", "Power Density", "Regulatory Compliance"],
+        },
+        cta: { es: "MÁS INFORMACIÓN", en: "MORE INFO" },
+        href: "/mediciones",
+      },
+      {
+        badge: { es: "CUMPLIMIENTO LEGAL", en: "LEGAL COMPLIANCE" },
+        title: { es: "Asesorías Regulatorias", en: "Regulatory Advisory" },
+        description: {
+          es: "Representación experta y gestión de requisitos ante organismos reguladores.",
+          en: "Expert representation and requirements management before regulatory bodies.",
+        },
+        items: {
+          es: ["Defensa ante SUBTEL", "Informes Regulatorios", "Gestión Normativa"],
+          en: ["SUBTEL Defense", "Regulatory Reports", "Normative Management"],
+        },
+        cta: { es: "SOLICITAR ASESORÍA", en: "REQUEST ADVISORY" },
+        href: "/contactanos",
+      },
+      {
+        badge: { es: "VALIDACIÓN DE DISPOSITIVOS", en: "DEVICE VALIDATION" },
+        title: { es: "Certificación y Homologación", en: "Certification & Homologation" },
+        description: {
+          es: "Acreditación de terminales móviles para su operación en el mercado nacional.",
+          en: "Accreditation of mobile terminals for operation in the national market.",
+        },
+        items: {
+          es: ["Homologación de Móviles", "Normativa Técnica", "Acceso al Mercado"],
+          en: ["Mobile Homologation", "Technical Standards", "Market Access"],
+        },
+        cta: { es: "INICIAR HOMOLOGACIÓN", en: "START HOMOLOGATION" },
+        href: "/servicios/homologacion",
+      },
+    ],
   },
 
   // ─── HOMOLOGACIÓN page hero ─────────────────────────────
