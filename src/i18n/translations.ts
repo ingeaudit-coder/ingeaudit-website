@@ -211,10 +211,10 @@ const translations = {
             en: "Track by carrier (enter your IMEI)",
           },
           operadores: [
-            { nombre: "CLARO", url: "https://www.clarochile.cl" },
-            { nombre: "ENTEL", url: "https://www.entel.cl" },
-            { nombre: "WOM", url: "https://www.wom.cl" },
-            { nombre: "MOVISTAR", url: "https://www.movistar.cl" },
+            { nombre: "CLARO", url: "https://digital.clarochile.cl/consulta_imei/" },
+            { nombre: "ENTEL", url: "https://www.entel.cl/nueva-normativa" },
+            { nombre: "WOM", url: "https://www.wom.cl/sello-multibandas/" },
+            { nombre: "MOVISTAR", url: "https://ww2.movistar.cl/terminos-regulaciones/multibanda-sae/consulta-imei/" },
           ],
         },
         nota: {
@@ -312,19 +312,101 @@ const translations = {
 
   //PERSONAS NATURALES
 
-  //hero
-    personasNaturales: {
-      hero: {
-        badge: {
-          es: "Registre su dispositivo con nosotros",
-          en: "Register your device with us",
-        },
-        titulo: {
-          es: "Registre su dispositivo con nosotros",
-          en: "Register your device with us",
-        }
+  personasNaturales: {
+  // ── Hero ────────────────────────────────────────────────────────────────
+  hero: {
+    badge: {
+      es: "Inscripción Administrativa · H3",
+      en: "Administrative Registration · H3",
+    },
+    titulo: {
+      es: "Personas Naturales",
+      en: "Individuals",
+    },
+    subtitulo: {
+      es: "Certifica documentalmente tu equipo extranjero para usarlo en Chile con cualquier operadora.",
+      en: "Documentarily certify your foreign device to use it in Chile with any carrier.",
+    },
+  },
+
+  // ── Intro ────────────────────────────────────────────────────────────────
+  intro: {
+    badge: {
+      es: "Inscripción Administrativa (H3)",
+      en: "Administrative Registration (H3)",
+    },
+    autorizada: {
+      es: "Esta Empresa Certificadora está autorizada para cobrar por todas las Inscripciones Administrativas (Res. Ex. N°1463 de SUBTEL del año 2016, Artículo 7°). El costo por cada teléfono es de $15.000.",
+      en: "This Certification Company is authorized to charge for all Administrative Registrations (SUBTEL Res. Ex. N°1463, 2016, Art. 7°). The cost per device is $15,000 CLP.",
+    },
+  },
+
+  // ── Callout (extranjero en Chile) ────────────────────────────────────────
+  callout: {
+    title: {
+      es: "Soy extranjero, viajo a Chile (o estoy en Chile) y quiero usar mi teléfono con una SIM Card local",
+      en: "I am a foreigner traveling to Chile (or already in Chile) and I want to use my phone with a local SIM Card",
+    },
+    step1: {
+      es: "1. Si su permanencia en Chile será superior a 30 días, deberá realizar una Inscripción Administrativa (IA) en el sistema, para poder seguir usando su teléfono móvil en Chile, después de los 30 días de activado su equipo en la red.",
+      en: "1. If your stay in Chile will exceed 30 days, you must complete an Administrative Registration (IA) to continue using your mobile phone in Chile after 30 days of activating your device on the network.",
+    },
+    step2: {
+      es: "2. Para realizar la IA, puede hacerlo en nuestros portales (Solicitud y Formularios → Remota → Ingresar Solicitud de Certificación) o contactarse con otra empresa homologadora en www.multibanda.cl.",
+      en: "2. To complete the IA, you can do so through our portals (Request and Forms → Remote → Submit Certification Request) or contact another certified company at www.multibanda.cl.",
+    },
+  },
+
+  // ── Requisitos ───────────────────────────────────────────────────────────
+  requisitos: {
+    titulo: {
+      es: "¿Qué debe entregar el Usuario?",
+      en: "What does the User need to provide?",
+    },
+    desc: {
+      es: "Acorde a lo instruido por SUBTEL, la información a entregar por el usuario es la siguiente:",
+      en: "According to SUBTEL's instructions, the information the user must provide is as follows:",
+    },
+    descargar: {
+      es: "Descargar Formulario",
+      en: "Download Form",
+    },
+  },
+
+  // ── Precio ───────────────────────────────────────────────────────────────
+  precio: {
+    titulo: {
+      es: "¿Qué precio tiene el Servicio de Inscripción Administrativa?",
+      en: "What is the price of the Administrative Registration Service?",
+    },
+    desc: {
+      es: "Informamos a usted que el precio del servicio de inscripción administrativa es de $15.000 por cada equipo. INGEAUDIT Ltda. de acuerdo a la regulación vigente de SUBTEL (Res. N°1463) superó el 2% de las inscripciones administrativas, por lo que está facultada para realizar el cobro por cada inscripción.",
+      en: "We inform you that the price of the administrative registration service is $15,000 per device. INGEAUDIT Ltda., in accordance with current SUBTEL regulation (Res. N°1463), exceeded 2% of administrative registrations and is therefore authorized to charge for each registration.",
+    },
+    nota: {
+      es: "Para continuar con tu inscripción te invitamos a efectuar pago a través de la plataforma de listo tu IMEI o en nuestras oficinas.",
+      en: "To proceed with your registration, we invite you to make payment through the listo tu IMEI platform or at our offices.",
+    },
+  },
+
+    // ── Solicitud y Formularios ──────────────────────────────────────────────
+  solicitud: {
+    titulo: {
+      es: "Solicitud y Formularios",
+      en: "Request and Forms",
+    },
+    presencial: {
+      docsLabel: {
+        es: "Documentos y Terminal",
+        en: "Documents and Device",
+      },
+      sucursales: {
+        es: "Sucursales",
+        en: "Branch Offices",
       },
     },
+  },
+},
 
   // ─── CERTIFICATIONS ────────────────────────────────────
   certifications: {

@@ -12,7 +12,7 @@
 
 .heroBadge {
   display: block;
-  color: var(--gold-primary);
+  color: white;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.22em;

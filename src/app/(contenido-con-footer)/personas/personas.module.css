@@ -1,65 +1,479 @@
+/* ────────────────────────────────────────────────
+   personas.module.css  –  Personas Naturales page
+   ──────────────────────────────────────────────── */
+
+/* ── Wrapper ── */
 .container {
   min-height: 100vh;
   background: linear-gradient(
-   to bottom,
+    to bottom,
     rgb(16, 10, 47) 0%,
     rgba(3, 0, 52, 0.847) 100%,
-    #000000 100%);
-  color: #fff;
+    #000000 100%
+  );
+  color: var(--text-primary);
 }
 
-.heroSection {
-  position: relative;
+/* ── Intro Section ── */
+.introSection {
+  padding: 2rem 1.5rem 2.5rem;
+}
+
+.introInner {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionBadge {
+  display: inline-block;
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-geist-sans);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.introParagraph {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  opacity: 0.72;
+  margin-bottom: 1rem;
+}
+
+.introNote {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  opacity: 0.5;
+  margin-top: 0.5rem;
+}
+
+.introLink {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.introLink:hover {
+  opacity: 0.8;
+}
+
+/* ── Callout Box ── */
+.calloutSection {
+  padding: 0 1.5rem 3rem;
+}
+
+.calloutBox {
+  max-width: 52rem;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid white;
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+}
+
+.calloutTitle {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.85rem;
+  color: var(--text-primary);
+  opacity: 0.9;
+}
+
+.calloutText {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  opacity: 0.65;
+  margin-bottom: 0.5rem;
+}
+
+.calloutText:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Two Column Section ── */
+.twoColSection {
+  padding: 0 1.5rem 4.5rem;
+}
+
+.twoColInner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* ── Card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 3rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.4s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  border-color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem;
+  border-radius: 0.5rem;
+  background: var(--blue-primary);
+  flex-shrink: 0;
+}
+
+.cardIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--text-primary);
+}
+
+.cardTitle {
+  font-family: var(--font-geist-sans);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.cardDesc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  opacity: 0.62;
+  margin-bottom: 1.5rem;
+}
+
+/* ── Requirements list ── */
+.reqList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.reqItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.reqIcon {
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* ── Pricing ── */
+.pricingRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pricingLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.pricingValue {
+  font-family: var(--font-geist-sans);
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -0.02em;
+}
+
+.pricingNote {
+  font-size: 0.78rem;
+  line-height: 1.6;
+  opacity: 0.45;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-soft);
+  padding-top: 1rem;
+}
+
+/* ── Specs inside price card ── */
+.specsBlock {
+  border-top: 1px solid var(--border-soft);
+  padding-top: 1.25rem;
+  margin-top: 0.25rem;
+  flex: 1;
+}
+
+.specRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.specRowIcon {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.specLabel {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.1rem;
+  color: var(--text-primary);
+}
+
+.specValue {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+/* ── CTA Button ── */
+.ctaBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  overflow: hidden;
-}
-
-.heroImage {
-  object-fit: cover;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(37, 16, 112, 0.23) 85%,
-    #000000 100%
-  );
-  z-index: 5;
-}
-
-.heroContent {
-  position: relative;
-  z-index: 10;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding: 0.9rem 1rem;
   text-align: center;
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaBtn:hover {
+  background: var(--blue-primary);
+  border-color: white;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 4rem;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 4rem;
+  border-radius: 2px;
+}
+
+/* ── Solicitud y Formularios ── */
+.solicitudSection {
+  padding: 0 1.5rem 6rem;
+}
+
+.solicitudInner {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.solicitudInner > .sectionTitle {
+  margin-bottom: 3rem;
+}
+
+.solicitudGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+/* ── Solicitud Cards ── */
+.solicitudCard {
+  padding: 2.5rem 3rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: border-color 0.4s ease;
+}
+
+.solicitudCard:hover {
+  border-color: rgba(201, 169, 97, 0.4);
+}
+
+.solicitudCardTitle {
+  font-family: var(--font-geist-sans);
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.solicitudSubLabel {
+  font-size: 0.78rem;
+  opacity: 0.45;
+  letter-spacing: 0.06em;
+  margin-bottom: 1rem;
+}
+
+.solicitudInfoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  opacity: 0.78;
+  margin-bottom: 0.9rem;
+}
+
+.solicitudIcon {
+  width: 1rem;
+  height: 1rem;
   color: white;
-  filter: var(--drop-shadow-logo);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.sucursalesLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin: 1.25rem 0 0.75rem;
+}
+
+/* ── Remote Buttons ── */
+.remoteBtns {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.remoteBtn {
+  display: flex;
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.mainTitle {
-  font-family: var(--font-geist-sans);
-  font-weight: 800;
-  font-size: 3.2rem;
-  margin-bottom: 0;
-  line-height: 1.1;
+.remoteBtn:hover {
+  background: var(--blue-primary);
+  border-color: white;
 }
 
+.solicitudRemotaDesc {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  opacity: 0.52;
+  margin-bottom: 1.5rem;
+}
+
+.seguimientoLabel {
+  font-size: 0.72rem;
+  opacity: 0.4;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.85rem;
+}
+
+/* ── Operadores Grid ── */
+.operadoresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.operadorBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border: 1px solid var(--border-soft);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.operadorBtn:hover {
+  background: var(--blue-primary);
+  border-color: white;
+}
+
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .mainTitle {
-    font-size: 2.2rem;
+  .twoColInner,
+  .solicitudGrid {
+    grid-template-columns: 1fr;
   }
 
-  .heroSection {
-    height: 50vh;
+  .card,
+  .solicitudCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .calloutBox {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .operadoresGrid {
+    grid-template-columns: 1fr 1fr;
   }
 }
