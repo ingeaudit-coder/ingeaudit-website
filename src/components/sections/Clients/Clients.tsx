@@ -4,6 +4,8 @@ import style from "@/src/components/sections/Clients/Clients.module.css";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/src/context/LanguageContext";
+import translations from "@/src/i18n/translations";
 
 // Imagina que estos son los logos de la empresa
 const logos = [
@@ -20,6 +22,7 @@ const logos = [
 ];
 
 const Clients = () => {
+  const { lang } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   const logoHeight = 70; // Cambia este valor para ajustar el tamaño de los logos
