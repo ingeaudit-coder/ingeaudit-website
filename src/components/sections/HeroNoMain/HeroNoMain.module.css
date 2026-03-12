@@ -1,0 +1,39 @@
+.hero {
+  height: 500px;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+  max-width: 54rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBadge {
+  display: block;
+  color: var(--gold-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.heroTitle {
+  font-family: var(--font-geist-sans);
+  font-size: clamp(2.4rem, 5vw, 3.75rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.heroSubtitle {
+  font-family: var(--font-geist-sans);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  opacity: 0.65;
+  max-width: 38rem;
+  margin: 0 auto;
+}
