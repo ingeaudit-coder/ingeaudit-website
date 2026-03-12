@@ -1,6 +1,10 @@
 .container {
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #00001a, #0400206e);
+  background: linear-gradient(
+   to bottom,
+    rgb(16, 10, 47) 0%,
+    rgba(3, 0, 52, 0.847) 100%,
+    #000000 100%);
   color: #fff;
 }
 
