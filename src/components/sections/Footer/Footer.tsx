@@ -60,7 +60,7 @@ const Footer = () => {
         <span className={style.lineFooter}></span>
         <div className={style.iconosRRSS}>
           <Link href="https://www.linkedin.com/in/ingeaudit-ltda" target="_blank">
-            <Image src={logoLinkedin} alt="LinkedIn" width={23} height={23} className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 contrast-0" />
+            <Image src={logoLinkedin} alt="LinkedIn" width={23} height={23} className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-600 contrast-0" />
           </Link>
         </div>
         <div className={style.containerReservados}>

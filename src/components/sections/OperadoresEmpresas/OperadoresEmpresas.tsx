@@ -6,6 +6,7 @@ import { t } from "@/src/i18n/translations";
 import translations from "@/src/i18n/translations";
 import { Factory, Ship, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import { HeroNoMain } from "../HeroNoMain/HeroNoMain";
 
 export default function OperadoresEmpresas() {
   const { lang } = useLanguage();
@@ -14,18 +15,12 @@ export default function OperadoresEmpresas() {
   return (
     <div className={styles.wrapper}>
       {/* ── Hero Section ── */}
-      <section className={styles.hero}>
-        <span className={styles.heroBadge}>
-          {t("operadoresPage.hero.badge", lang)}
-        </span>
-        <h1 className={styles.heroTitle}>
-          {t("operadoresPage.hero.title", lang)}
-        </h1>
-        <p className={styles.heroSubtitle}>
-          {t("operadoresPage.hero.subtitle", lang)}
-        </p>
-      </section>
-
+      <HeroNoMain
+      badge="operadoresPage.hero.badge" 
+      titulo="operadoresPage.hero.title" 
+      subtitulo="operadoresPage.hero.subtitle"
+      />
+     
       {/* ── Comparison Grid ── */}
       <section className={styles.compGrid}>
         {/* H1 Card */}
