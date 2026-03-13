@@ -2,11 +2,15 @@
 
 import style from "@/src/components/sections/Metrics/Metrics.module.css";
 import CountUp from "react-countup";
+import {t} from "@/src/i18n/translations";
+import { useLanguage } from "@/src/context/LanguageContext";
 
 const Metrics = () => {
+  const {lang} = useLanguage();
+
   return (
     <section className={style.containerMetrics}>
-      <h2 className={style.tituloMetricas}>¿Por qué elegir INGEAUDIT?</h2>
+      <h2 className={style.tituloMetricas}>{t("metricas.titulo", lang)}</h2>
       <div className={style.previsitasMetricas}>
         <div className={style.linePrevisitas}>
           <CountUp
@@ -21,14 +25,14 @@ const Metrics = () => {
               <span ref={countUpRef} className={style.preCount} />
             )}
           </CountUp>
-          <p className={style.subtitleMetrics}>Previsitas a la fecha</p>
+          <p className={style.subtitleMetrics}>{t("metricas.cantidadPrevisitas", lang)}</p>
         </div>
       </div>
 
       <div className={style.metricasAntenas}>
         <div className={style.lineAntenas}>
           <h3 className={style.numberAntenas}>5k+</h3>
-          <p className={style.subtitleMetrics}>Antenas medidas en todo Chile</p>
+          <p className={style.subtitleMetrics}>{t("metricas.cantidadAntenas", lang)}</p>
         </div>
       </div>
 
@@ -46,8 +50,7 @@ const Metrics = () => {
               <span ref={countUpRef} className={style.homoCount} />
             )}
           </CountUp>
-          <p className={style.subtitleMetrics}>
-            Equipos homologados a la fecha
+          <p className={style.subtitleMetrics}>{t("metricas.cantidadHomologacion", lang)}
           </p>
         </div>
       </div>

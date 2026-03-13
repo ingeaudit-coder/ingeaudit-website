@@ -104,6 +104,26 @@ const translations = {
     }
   },
 
+  // METRICAS
+  metricas:{
+    titulo:{
+      es: "¿Por qué elegir INGEAUDIT?",
+      en: "Why Choose INGEAUDIT?",
+    },
+    cantidadPrevisitas: {
+      es: "Previsitas a la fecha",
+      en: "Pre-site visits to date",
+    },
+    cantidadAntenas: {
+      es: "Antenas medidas en todo Chile",
+      en: "Antennas measured across Chile",
+    },
+    cantidadHomologacion: {
+      es: "Equipos homologados a la fecha",
+      en: "Devices approved to date",
+    }
+  },
+
   // ─── SERVICES ──────────────────────────────────────────
   services: {
     // Homologación (área principal)
@@ -310,22 +330,39 @@ const translations = {
     ],
   },
 
+  //MEDICIONES
+  mediciones:{
+    badge: {
+      es: "mediciones y más",
+      en: "Measurements and More",
+    },
+    titulo:{
+      es: "Mediciones de Campo",
+      en: "Field Measurements",
+    },
+    subtitulo:{
+      es: "Experto en medición de Densidad de Potencia",
+      en: "Experts in Power Density Measurement",
+    }
+  },
+
   //PERSONAS NATURALES
 
-  personasNaturales: {
   // ── Hero ────────────────────────────────────────────────────────────────
-  hero: {
-    badge: {
-      es: "Inscripción Administrativa · H3",
-      en: "Administrative Registration · H3",
-    },
-    titulo: {
-      es: "Personas Naturales",
-      en: "Individuals",
-    },
-    subtitulo: {
-      es: "Certifica documentalmente tu equipo extranjero para usarlo en Chile con cualquier operadora.",
-      en: "Documentarily certify your foreign device to use it in Chile with any carrier.",
+  personasNaturales: {
+    hero:{
+      badge: {
+        es: "Inscripción Administrativa · H3",
+        en: "Administrative Registration · H3",
+      },
+      titulo: {
+        es: "Personas Naturales",
+        en: "Individuals",
+      },
+      subtitulo: {
+        es: "Certifica documentalmente tu equipo extranjero para usarlo en Chile con cualquier operadora.",
+        en: "Documentarily certify your foreign device to use it in Chile with any carrier.",
+      }
     },
   },
 
@@ -406,7 +443,6 @@ const translations = {
       },
     },
   },
-},
 
   // ─── CERTIFICATIONS ────────────────────────────────────
   certifications: {
