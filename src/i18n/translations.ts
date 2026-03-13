@@ -122,8 +122,8 @@ const translations = {
           en: "Prototype Certification (H1)",
         },
         descripcion: {
-          es: "Proceso que permite certificar modelos de equipos terminales de telefonía móvil y acceso a Internet para su comercialización en Chile. Incluye pruebas en Laboratorios de Ingeaudit, Sala común SAE oficial, verificación de desbloqueo y registro de parámetros que garantizan el cumplimiento de la normativa 1463 y 1474 de 2016.",
-          en: "Process to certify mobile terminal and internet access device models for commercialization in Chile. Includes tests at Ingeaudit Laboratories, official SAE common room, unlocking verification and parameter registration ensuring compliance with regulations 1463 and 1474 of 2016.",
+          es: "Proceso de certificación de modelos de equipos terminales de telefonía móvil y acceso a internet para su comercialización en el país, mediante pruebas en laboratorios de Ingeaudit, sala común SAE oficial, verificación de desbloqueo y validación de parámetros conforme a la normativa 1463 y 1474 de 2016.",
+          en: "Process for certifying models of mobile telephony and internet access terminal equipment for commercialization in the country, through testing in Ingeaudit laboratories, an official SAE common room, device unlock verification, and validation of parameters in accordance with regulations 1463 and 1474 of 2016.",
         },
       },
       h2: {
@@ -132,8 +132,8 @@ const translations = {
           en: "Shipment Certification (H2)",
         },
         descripcion: {
-          es: "Proceso que valida los embarques asociados a modelos ya certificados mediante H1. Este proceso se realiza anualmente en base a muestreo y en laboratorio de Operador Logístico de empresa, asegurando la consistencia del lote con el modelo original certificado.",
-          en: "Process that validates shipments associated with models already certified through H1. This process is conducted annually based on sampling at the company's Logistics Operator laboratory, ensuring batch consistency with the originally certified model.",
+          es: "Proceso que permite realizar la validación de los embarques asociados a modelos ya certificados mediante H1. Este proceso anualmente se hace en base a muestreo y en laboratorio de Operador Logístico de empresa.",
+          en: "Process that enables the validation of shipments associated with models already certified through H1. This process is carried out annually based on sampling and at the company's Logistics Operator laboratory.",
         },
       },
       h3: {
@@ -522,7 +522,7 @@ const translations = {
           en: ["Mobile Homologation", "Technical Standards", "Market Access"],
         },
         cta: { es: "INICIAR HOMOLOGACIÓN", en: "START HOMOLOGATION" },
-        href: "/personas",
+        href: "/servicios/homologacion",
       },
     ],
   },
@@ -557,47 +557,16 @@ const translations = {
     },
     h1: {
       badge: { es: "Módulo H1", en: "Module H1" },
-      specsTitle: { es: "Especificaciones Técnicas", en: "Technical Specifications" },
-      specs: [
-        {
-          label: { es: "Normativa Aplicable", en: "Applicable Standard" },
-          value: { es: "ISO/IEC 17065 — Diseño y Fabricación", en: "ISO/IEC 17065 — Design and Manufacturing" },
-        },
-        {
-          label: { es: "Alcance del Servicio", en: "Service Scope" },
-          value: { es: "Fase de Diseño, Análisis de Riesgos y Testeo", en: "Design Phase, Risk Analysis and Testing" },
-        },
-        {
-          label: { es: "Validez del Certificado", en: "Certificate Validity" },
-          value: { es: "24 Meses renovables mediante auditoría", en: "24 Months renewable by audit" },
-        },
-      ],
-      cta: { es: "Solicitar Auditoría H1", en: "Request H1 Audit" },
+      cta: { es: "Solicitar Certificación H1", en: "Request H1 Certification" },
     },
     h2: {
       badge: { es: "Módulo H2", en: "Module H2" },
-      specsTitle: { es: "Especificaciones Logísticas", en: "Logistics Specifications" },
-      specs: [
-        {
-          label: { es: "Regulación Marítima", en: "Maritime Regulation" },
-          value: { es: "Estándares Internacionales de Estiba y Carga", en: "International Loading and Cargo Standards" },
-        },
-        {
-          label: { es: "Ámbito de Aplicación", en: "Application Scope" },
-          value: { es: "Logística, Embalaje y Carga Crítica", en: "Logistics, Packaging and Critical Cargo" },
-        },
-        {
-          label: { es: "Vigencia", en: "Validity" },
-          value: { es: "Certificación por Embarque Individual", en: "Certification per Individual Shipment" },
-        },
-      ],
       cta: { es: "Gestionar Embarque H2", en: "Manage H2 Shipment" },
     },
   },
 
   // ─── CONTACTANOS page ──────────────────────────────────
   contactPage: {
-    badge: {es: "Solicitar cotización", en: "Request a Quote"},
     title: { es: "Contáctanos", en: "Contact Us" },
     subtitle: {
       es: "Estamos aquí para ayudarte con tus proyectos de telecomunicaciones",
