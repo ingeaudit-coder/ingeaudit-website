@@ -522,7 +522,7 @@ const translations = {
           en: ["Mobile Homologation", "Technical Standards", "Market Access"],
         },
         cta: { es: "INICIAR HOMOLOGACIÓN", en: "START HOMOLOGATION" },
-        href: "/servicios/homologacion",
+        href: "/personas",
       },
     ],
   },
@@ -597,6 +597,7 @@ const translations = {
 
   // ─── CONTACTANOS page ──────────────────────────────────
   contactPage: {
+    badge: {es: "Solicitar cotización", en: "Request a Quote"},
     title: { es: "Contáctanos", en: "Contact Us" },
     subtitle: {
       es: "Estamos aquí para ayudarte con tus proyectos de telecomunicaciones",

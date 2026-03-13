@@ -117,10 +117,10 @@ export const Navbar = () => {
               onMouseEnter={handleDropdownEnter}
               onMouseLeave={handleDropdownLeave}
             >
-              <Link href="/servicios" className={style.dropdownTrigger}>
+              <span className={style.dropdownTrigger} style={{ cursor: "default" }}>
                 {t("nav.servicios", lang)}
                 <ChevronDown className={`${style.chevron} ${desktopDropdownOpen ? style.chevronOpen : ""}`} />
-              </Link>
+              </span>
               <div className={`${style.dropdownMenu} ${desktopDropdownOpen ? style.dropdownMenuOpen : ""}`}>
                 {/* Homologación con sub-dropdown */}
                 <div
