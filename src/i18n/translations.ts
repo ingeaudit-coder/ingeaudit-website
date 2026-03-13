@@ -567,6 +567,7 @@ const translations = {
 
   // ─── CONTACTANOS page ──────────────────────────────────
   contactPage: {
+    badge: {es: "Solicitar Cotización", en: "Request a Quote"},
     title: { es: "Contáctanos", en: "Contact Us" },
     subtitle: {
       es: "Estamos aquí para ayudarte con tus proyectos de telecomunicaciones",
