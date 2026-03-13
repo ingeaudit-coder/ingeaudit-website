@@ -74,7 +74,7 @@
 }
 
 .card:hover {
-  border-color: var(--gold-primary);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-4px);
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
 }
@@ -82,6 +82,7 @@
 /* ── Card Head ── */
 .cardHead {
   margin-bottom: 2rem;
+  flex: 1;
 }
 
 .iconWrap {
@@ -119,8 +120,8 @@
 
 .cardDesc {
   font-family: var(--font-geist-sans);
-  font-size: 0.92rem;
-  line-height: 1.65;
+  font-size: 1.05rem;
+  line-height: 1.7;
   opacity: 0.6;
 }
 
@@ -179,7 +180,7 @@
 /* ── CTA Button ── */
 .ctaBtn {
   display: block;
-  margin-top: 3rem;
+  margin-top: auto;
   padding: 1rem;
   text-align: center;
   border: 1px solid var(--border-soft);
@@ -194,8 +195,8 @@
 }
 
 .ctaBtn:hover {
-  background: var(--blue-primary);
-  border-color: var(--gold-primary);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* ── Responsive ── */

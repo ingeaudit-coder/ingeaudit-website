@@ -4,23 +4,27 @@ import styles from "./OperadoresEmpresas.module.css";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
 import translations from "@/src/i18n/translations";
-import { Factory, Ship, CheckCircle } from "lucide-react";
-import Link from "next/link";
+import { Factory, Ship } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { HeroNoMain } from "../HeroNoMain/HeroNoMain";
 
 export default function OperadoresEmpresas() {
   const { lang } = useLanguage();
-  const op = translations.operadoresPage;
+  const router = useRouter();
+
+  const handleCta = (tipo: "h1" | "h2") => {
+    router.push(`/contactanos?tipo=${tipo}`);
+  };
 
   return (
     <div className={styles.wrapper}>
       {/* ── Hero Section ── */}
       <HeroNoMain
-      badge="operadoresPage.hero.badge" 
-      titulo="operadoresPage.hero.title" 
-      subtitulo="operadoresPage.hero.subtitle"
+        badge="operadoresPage.hero.badge"
+        titulo="operadoresPage.hero.title"
+        subtitulo="operadoresPage.hero.subtitle"
       />
-     
+
       {/* ── Comparison Grid ── */}
       <section className={styles.compGrid}>
         {/* H1 Card */}
@@ -40,28 +44,13 @@ export default function OperadoresEmpresas() {
             </p>
           </div>
 
-          <div className={styles.specsBlock}>
-            <p className={styles.specsLabel}>
-              {t("operadoresPage.h1.specsTitle", lang)}
-            </p>
-            <ul className={styles.specsList}>
-              {op.h1.specs.map((spec, i) => (
-                <li key={i} className={styles.specItem}>
-                  <CheckCircle className={styles.specIcon} />
-                  <div>
-                    <strong className={styles.specLabel}>
-                      {spec.label[lang]}
-                    </strong>
-                    <span className={styles.specValue}>{spec.value[lang]}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <Link href="/contactanos" className={styles.ctaBtn}>
+          <button
+            type="button"
+            className={styles.ctaBtn}
+            onClick={() => handleCta("h1")}
+          >
             {t("operadoresPage.h1.cta", lang)}
-          </Link>
+          </button>
         </div>
 
         {/* H2 Card */}
@@ -81,28 +70,13 @@ export default function OperadoresEmpresas() {
             </p>
           </div>
 
-          <div className={styles.specsBlock}>
-            <p className={styles.specsLabel}>
-              {t("operadoresPage.h2.specsTitle", lang)}
-            </p>
-            <ul className={styles.specsList}>
-              {op.h2.specs.map((spec, i) => (
-                <li key={i} className={styles.specItem}>
-                  <CheckCircle className={styles.specIcon} />
-                  <div>
-                    <strong className={styles.specLabel}>
-                      {spec.label[lang]}
-                    </strong>
-                    <span className={styles.specValue}>{spec.value[lang]}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <Link href="/contactanos" className={styles.ctaBtn}>
+          <button
+            type="button"
+            className={styles.ctaBtn}
+            onClick={() => handleCta("h2")}
+          >
             {t("operadoresPage.h2.cta", lang)}
-          </Link>
+          </button>
         </div>
       </section>
     </div>
