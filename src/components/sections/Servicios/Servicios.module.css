@@ -53,8 +53,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 500px;
   gap: 2rem;
+  align-items: stretch;
 }
 
 /* ── Card ────────────────────────────────────────────────────── */
@@ -84,7 +84,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: none;
+  filter: grayscale(100%) brightness(0.7);
+  transition: filter 0.3s ease;
+}
+
+.card:hover .image {
+  filter: grayscale(60%) brightness(0.75);
 }
 
 .iconBadge {
