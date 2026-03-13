@@ -1,9 +1,5 @@
 .wrapper {
-  background: linear-gradient(
-    to bottom,
-    rgb(16, 10, 47) 0%,
-    rgba(3, 0, 52, 0.847) 100%,
-    #000000 100%);
+  background: #00001a;
   min-height: 60vh;
   color: var(--text-primary);
 }
