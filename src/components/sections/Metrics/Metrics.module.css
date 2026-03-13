@@ -34,7 +34,7 @@
 }
 
 .previsitasMetricas {
-  color: blueviolet;
+  color: #135bec;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,7 +55,7 @@
 }
 
 .metricasAntenas {
-  color: blueviolet;
+  color: #135bec;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,7 +74,7 @@
 }
 
 .homoMetricas {
-  color: blueviolet;
+  color: #135bec;
   display: flex;
   flex-direction: column;
   align-items: center;
