@@ -13,6 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { HeroNoMain } from "@/src/components/sections/HeroNoMain/HeroNoMain";
 
 // Mensajes pre-establecidos según el tipo de solicitud
 const PRESET_MESSAGES: Record<string, { es: string; en: string }> = {
@@ -149,7 +150,8 @@ export default function Contactanos() {
   return (
     <main className={styles.container}>
       {/* HERO */}
-      <section className={styles.heroSection}>
+      <HeroNoMain badge="contactPage.badge" titulo="contactPage.title" subtitulo="contactPage.subtitle"/>
+      {/* <section className={styles.heroSection}>
         <Image
           src="/img-hero-oficial.jpg"
           alt="Fondo corporativo"
@@ -162,7 +164,7 @@ export default function Contactanos() {
           <h1 className={styles.mainTitle}>{t("contactPage.title", lang)}</h1>
           <p className={styles.subtitle}>{t("contactPage.subtitle", lang)}</p>
         </div>
-      </section>
+      </section> */}
 
       {/* CONTACT */}
       <section className={styles.contactSection}>
