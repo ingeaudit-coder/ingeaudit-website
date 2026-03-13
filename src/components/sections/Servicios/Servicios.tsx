@@ -16,7 +16,7 @@ export const Servicioss = () => {
   const { title, subtitle, cards } = translations.serviciosPage;
 
   return (
-    <section className={styles.section}>
+    <section id="seccion-servicios" className={styles.section}>
       <div className={styles.container}>
         {/* Header */}
         <div className={styles.header}>
