@@ -7,8 +7,34 @@ import Clients from "../Clients/Clients";
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations, { t } from "@/src/i18n/translations";
 import Button from "../../UI/Button/Button";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
+
+  const hacerScroll = () => {
+    const seccion = document.getElementById("seccion-servicios");
+    if (!seccion) return;
+
+    const destino = seccion.getBoundingClientRect().top + window.scrollY;
+    const inicio = window.scrollY;
+    const distancia = destino - inicio;
+    const duracion = 800;
+    let tiempoInicio: number | null = null;
+
+    const easeInOutCubic = (t: number) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const animar = (tiempo: number) => {
+      if (tiempoInicio === null) tiempoInicio = tiempo;
+      const progreso = Math.min((tiempo - tiempoInicio) / duracion, 1);
+      window.scrollTo(0, inicio + distancia * easeInOutCubic(progreso));
+      if (progreso < 1) requestAnimationFrame(animar);
+    };
+
+    requestAnimationFrame(animar);
+  };
+  
   const { lang } = useLanguage();
 
   // Build the TypeAnimation sequence from the active language array
@@ -47,11 +73,13 @@ const Hero = () => {
             variant="primary"
             children={lang === "es" ? "Servicios" : "Services"}
             className={style.btn}
+            onClick={hacerScroll}
           />
           <Button
             variant="secondary"
             children={lang === "es" ? "Contactanos" : "Contact"}
             className={style.btn}
+            onClick={() => router.push("/contactanos")}
           />
         </div>
       </section>
