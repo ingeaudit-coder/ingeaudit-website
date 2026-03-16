@@ -34,7 +34,7 @@ const Hero = () => {
 
     requestAnimationFrame(animar);
   };
-  
+
   const { lang } = useLanguage();
 
   // Build the TypeAnimation sequence from the active language array
@@ -68,6 +68,7 @@ const Hero = () => {
             ? "de experiencia respaldando a la industria de las telecomunicaciones"
             : "of experience supporting the telecommunications industry"}
         </p>
+
         <div className={style.containerButtonHero}>
           <Button
             variant="primary"
@@ -77,16 +78,24 @@ const Hero = () => {
           />
           <Button
             variant="secondary"
-            children={lang === "es" ? "Contactanos" : "Contact"}
+            children={lang === "es" ? "Homologar aquí" : "Certify here"}
+            className={`${style.btn} ${style.btnHomologar}`}
+            onClick={() => router.push("/personas")}
+          />
+          <Button
+            variant="secondary"
+            children={lang === "es" ? "Contáctanos" : "Contact"}
             className={style.btn}
             onClick={() => router.push("/contactanos")}
           />
         </div>
       </section>
-      {/* <div className={style.containerClientHero}>
+
+      {/* Clients strip visible at bottom of hero on load */}
+      <div className={style.containerClientHero}>
+        <p className={style.clientsLabel}>{translations.clients.label[lang]}</p>
         <Clients />
-      </div> */}
-      <p className={style.clientsLabel}>{translations.clients.label[lang]}</p>
+      </div>
     </main>
   );
 };

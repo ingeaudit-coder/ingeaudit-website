@@ -350,7 +350,7 @@ const translations = {
 
   // ── Hero ────────────────────────────────────────────────────────────────
   personasNaturales: {
-    hero:{
+    hero: {
       badge: {
         es: "Inscripción Administrativa · H3",
         en: "Administrative Registration · H3",
@@ -362,84 +362,84 @@ const translations = {
       subtitulo: {
         es: "Certifica documentalmente tu equipo extranjero para usarlo en Chile con cualquier operadora.",
         en: "Documentarily certify your foreign device to use it in Chile with any carrier.",
-      }
-    },
-  },
-
-  // ── Intro ────────────────────────────────────────────────────────────────
-  intro: {
-    badge: {
-      es: "Inscripción Administrativa (H3)",
-      en: "Administrative Registration (H3)",
-    },
-    autorizada: {
-      es: "Esta Empresa Certificadora está autorizada para cobrar por todas las Inscripciones Administrativas (Res. Ex. N°1463 de SUBTEL del año 2016, Artículo 7°). El costo por cada teléfono es de $15.000.",
-      en: "This Certification Company is authorized to charge for all Administrative Registrations (SUBTEL Res. Ex. N°1463, 2016, Art. 7°). The cost per device is $15,000 CLP.",
-    },
-  },
-
-  // ── Callout (extranjero en Chile) ────────────────────────────────────────
-  callout: {
-    title: {
-      es: "Soy extranjero, viajo a Chile (o estoy en Chile) y quiero usar mi teléfono con una SIM Card local",
-      en: "I am a foreigner traveling to Chile (or already in Chile) and I want to use my phone with a local SIM Card",
-    },
-    step1: {
-      es: "1. Si su permanencia en Chile será superior a 30 días, deberá realizar una Inscripción Administrativa (IA) en el sistema, para poder seguir usando su teléfono móvil en Chile, después de los 30 días de activado su equipo en la red.",
-      en: "1. If your stay in Chile will exceed 30 days, you must complete an Administrative Registration (IA) to continue using your mobile phone in Chile after 30 days of activating your device on the network.",
-    },
-    step2: {
-      es: "2. Para realizar la IA, puede hacerlo en nuestros portales (Solicitud y Formularios → Remota → Ingresar Solicitud de Certificación) o contactarse con otra empresa homologadora en www.multibanda.cl.",
-      en: "2. To complete the IA, you can do so through our portals (Request and Forms → Remote → Submit Certification Request) or contact another certified company at www.multibanda.cl.",
-    },
-  },
-
-  // ── Requisitos ───────────────────────────────────────────────────────────
-  requisitos: {
-    titulo: {
-      es: "¿Qué debe entregar el Usuario?",
-      en: "What does the User need to provide?",
-    },
-    desc: {
-      es: "Acorde a lo instruido por SUBTEL, la información a entregar por el usuario es la siguiente:",
-      en: "According to SUBTEL's instructions, the information the user must provide is as follows:",
-    },
-    descargar: {
-      es: "Descargar Formulario",
-      en: "Download Form",
-    },
-  },
-
-  // ── Precio ───────────────────────────────────────────────────────────────
-  precio: {
-    titulo: {
-      es: "¿Qué precio tiene el Servicio de Inscripción Administrativa?",
-      en: "What is the price of the Administrative Registration Service?",
-    },
-    desc: {
-      es: "Informamos a usted que el precio del servicio de inscripción administrativa es de $15.000 por cada equipo. INGEAUDIT Ltda. de acuerdo a la regulación vigente de SUBTEL (Res. N°1463) superó el 2% de las inscripciones administrativas, por lo que está facultada para realizar el cobro por cada inscripción.",
-      en: "We inform you that the price of the administrative registration service is $15,000 per device. INGEAUDIT Ltda., in accordance with current SUBTEL regulation (Res. N°1463), exceeded 2% of administrative registrations and is therefore authorized to charge for each registration.",
-    },
-    nota: {
-      es: "Para continuar con tu inscripción te invitamos a efectuar pago a través de la plataforma de listo tu IMEI o en nuestras oficinas.",
-      en: "To proceed with your registration, we invite you to make payment through the listo tu IMEI platform or at our offices.",
-    },
-  },
-
-    // ── Solicitud y Formularios ──────────────────────────────────────────────
-  solicitud: {
-    titulo: {
-      es: "Solicitud y Formularios",
-      en: "Request and Forms",
-    },
-    presencial: {
-      docsLabel: {
-        es: "Documentos y Terminal",
-        en: "Documents and Device",
       },
-      sucursales: {
-        es: "Sucursales",
-        en: "Branch Offices",
+    },
+
+    // ── Intro ──────────────────────────────────────────────────────────────
+    intro: {
+      badge: {
+        es: "Inscripción Administrativa (H3)",
+        en: "Administrative Registration (H3)",
+      },
+      autorizada: {
+        es: "Esta Empresa Certificadora está autorizada para cobrar por todas las Inscripciones Administrativas (Res. Ex. N°1463 de SUBTEL del año 2016, Artículo 7°). El costo por cada teléfono es de $15.000.",
+        en: "This Certification Company is authorized to charge for all Administrative Registrations (SUBTEL Res. Ex. N°1463, 2016, Art. 7°). The cost per device is $15,000 CLP.",
+      },
+    },
+
+    // ── Callout (extranjero en Chile) ──────────────────────────────────────
+    callout: {
+      title: {
+        es: "Soy extranjero, viajo a Chile (o estoy en Chile) y quiero usar mi teléfono con una SIM Card local",
+        en: "I am a foreigner traveling to Chile (or already in Chile) and I want to use my phone with a local SIM Card",
+      },
+      step1: {
+        es: "1. Si su permanencia en Chile será superior a 30 días, deberá realizar una Inscripción Administrativa (IA) en el sistema, para poder seguir usando su teléfono móvil en Chile, después de los 30 días de activado su equipo en la red.",
+        en: "1. If your stay in Chile will exceed 30 days, you must complete an Administrative Registration (IA) to continue using your mobile phone in Chile after 30 days of activating your device on the network.",
+      },
+      step2: {
+        es: "2. Para realizar la IA, puede hacerlo en nuestros portales (Solicitud y Formularios → Remota → Ingresar Solicitud de Certificación) o contactarse con otra empresa homologadora en www.multibanda.cl.",
+        en: "2. To complete the IA, you can do so through our portals (Request and Forms → Remote → Submit Certification Request) or contact another certified company at www.multibanda.cl.",
+      },
+    },
+
+    // ── Requisitos ─────────────────────────────────────────────────────────
+    requisitos: {
+      titulo: {
+        es: "¿Qué debe entregar el Usuario?",
+        en: "What does the User need to provide?",
+      },
+      desc: {
+        es: "Acorde a lo instruido por SUBTEL, la información a entregar por el usuario es la siguiente:",
+        en: "According to SUBTEL's instructions, the information the user must provide is as follows:",
+      },
+      descargar: {
+        es: "Descargar Formulario",
+        en: "Download Form",
+      },
+    },
+
+    // ── Precio ─────────────────────────────────────────────────────────────
+    precio: {
+      titulo: {
+        es: "¿Qué precio tiene el Servicio de Inscripción Administrativa?",
+        en: "What is the price of the Administrative Registration Service?",
+      },
+      desc: {
+        es: "Informamos a usted que el precio del servicio de inscripción administrativa es de $15.000 por cada equipo. INGEAUDIT Ltda. de acuerdo a la regulación vigente de SUBTEL (Res. N°1463) superó el 2% de las inscripciones administrativas, por lo que está facultada para realizar el cobro por cada inscripción.",
+        en: "We inform you that the price of the administrative registration service is $15,000 per device. INGEAUDIT Ltda., in accordance with current SUBTEL regulation (Res. N°1463), exceeded 2% of administrative registrations and is therefore authorized to charge for each registration.",
+      },
+      nota: {
+        es: "Para continuar con tu inscripción te invitamos a efectuar pago a través de la plataforma de listo tu IMEI o en nuestras oficinas.",
+        en: "To proceed with your registration, we invite you to make payment through the listo tu IMEI platform or at our offices.",
+      },
+    },
+
+    // ── Solicitud y Formularios ────────────────────────────────────────────
+    solicitud: {
+      titulo: {
+        es: "Solicitud y Formularios",
+        en: "Request and Forms",
+      },
+      presencial: {
+        docsLabel: {
+          es: "Documentos y Terminal",
+          en: "Documents and Device",
+        },
+        sucursales: {
+          es: "Sucursales",
+          en: "Branch Offices",
+        },
       },
     },
   },
@@ -598,6 +598,54 @@ const translations = {
     h2: {
       badge: { es: "Módulo H2", en: "Module H2" },
       cta: { es: "Gestionar Embarque H2", en: "Manage H2 Shipment" },
+    },
+  },
+
+  // ─── IMEI GUIDE ────────────────────────────────────────
+  imeiGuide: {
+    heading: {
+      es: "Cómo obtener el IMEI de tu equipo",
+      en: "How to get your device IMEI",
+    },
+    prev: { es: "Anterior", en: "Previous" },
+    next: { es: "Siguiente", en: "Next" },
+    steps: {
+      step1: {
+        lbl: { es: "Paso 1", en: "Step 1" },
+        dsc: {
+          es: "Abre el marcador de tu teléfono y escribe el código *#06# — el IMEI aparece automáticamente sin necesidad de llamar.",
+          en: "Open the dialer on your phone and dial *#06# — the IMEI appears automatically without needing to call.",
+        },
+        screenLabel: { es: "Marcador", en: "Dialer" },
+      },
+      step2: {
+        lbl: { es: "Paso 2", en: "Step 2" },
+        dsc: {
+          es: "El número IMEI de 15 dígitos aparece en pantalla. Si tienes dual SIM verás dos números.",
+          en: "A 15-digit IMEI number will appear on screen. If your device has dual SIM, you will see two numbers.",
+        },
+        screenTitle: { es: "Información del dispositivo", en: "Device information" },
+        screenImei: { es: "IMEI", en: "IMEI" },
+        screenImei2: { es: "IMEI 2 (dual SIM)", en: "IMEI 2 (dual SIM)" },
+      },
+      step3: {
+        lbl: { es: "Paso 3", en: "Step 3" },
+        dsc: {
+          es: "Anota o toma una captura del número IMEI. Lo necesitarás para el trámite de Inscripción Administrativa.",
+          en: "Write down or screenshot the IMEI number. You will need it for the Administrative Registration process.",
+        },
+        screenLabel: { es: "Tu IMEI es:", en: "Your IMEI is:" },
+        screenHint: { es: "Toma una captura de pantalla", en: "Take a screenshot" },
+      },
+      step4: {
+        lbl: { es: "Paso 4", en: "Step 4" },
+        dsc: {
+          es: "Con tu IMEI listo, ingresa tu solicitud en el portal de Ingeaudit o visítanos presencialmente en nuestras sucursales.",
+          en: "With your IMEI ready, submit your request through the Ingeaudit portal or visit one of our offices in person.",
+        },
+        screenSuccess: { es: "¡IMEI obtenido!", en: "IMEI obtained!" },
+        screenHint: { es: "Ingresa tu solicitud en nuestro portal", en: "Submit your request on our portal" },
+      },
     },
   },
 
