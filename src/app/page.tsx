@@ -10,7 +10,6 @@ export default function Home() {
     <>
       <section>
         <Hero />
-        <Clients/>
         <Servicioss/>
         <Metrics/>
         <Certifications/>

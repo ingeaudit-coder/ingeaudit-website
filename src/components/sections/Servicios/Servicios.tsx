@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Wifi, Scale, Smartphone, Check } from "lucide-react";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations from "@/src/i18n/translations";
 import styles from "./Servicios.module.css";
@@ -18,46 +19,88 @@ export const Servicioss = () => {
   return (
     <section id="seccion-servicios" className={styles.section}>
       <div className={styles.container}>
-        {/* Header */}
-        <div className={styles.header}>
+        
+        {/* HEADER */}
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
           <h2 className={styles.title}>{title[lang]}</h2>
           <p className={styles.subtitle}>{subtitle[lang]}</p>
-        </div>
+        </motion.div>
 
-        {/* Cards grid */}
+        {/* CARDS */}
         <div className={styles.grid}>
           {cards.map((card, i) => {
             const Icon = ICONS[i];
+
             return (
-              <article key={i} className={styles.card}>
-                {/* Image */}
+              <motion.article
+                key={i}
+                className={styles.card}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2, duration: 0.7 }}
+                whileHover={{ y: -10 }}
+              >
+
+                {/* IMAGE */}
                 <div className={styles.imageWrap}>
-                  <Image
-                    src={IMAGES[i]}
-                    alt={card.title[lang]}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className={styles.image}
-                  />
+                  
+                  <div className={styles.imageMotion}>
+                    
+                    <motion.div
+                      className={styles.imageInner}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      <Image
+                        src={IMAGES[i]}
+                        alt={card.title[lang]}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className={styles.image}
+                      />
+                    </motion.div>
+
+                  </div>
+
                   <span className={styles.iconBadge}>
                     <Icon />
                   </span>
+
                 </div>
 
-                {/* Body */}
+                {/* BODY */}
                 <div className={styles.cardBody}>
                   <p className={`${styles.badge} ${BADGE_CLASSES[i]}`}>
                     {card.badge[lang]}
                   </p>
-                  <h3 className={styles.cardTitle}>{card.title[lang]}</h3>
-                  <p className={styles.cardDesc}>{card.description[lang]}</p>
+
+                  <h3 className={styles.cardTitle}>
+                    {card.title[lang]}
+                  </h3>
+
+                  <p className={styles.cardDesc}>
+                    {card.description[lang]}
+                  </p>
 
                   <ul className={styles.featureList}>
                     {card.items[lang].map((item, j) => (
-                      <li key={j} className={styles.featureItem}>
+                      <motion.li
+                        key={j}
+                        className={styles.featureItem}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3 + j * 0.1 }}
+                      >
                         <Check className={styles.checkIcon} />
                         {item}
-                      </li>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>
@@ -67,7 +110,8 @@ export const Servicioss = () => {
                   {card.cta[lang]}
                   <span className={styles.ctaArrow}>→</span>
                 </Link>
-              </article>
+
+              </motion.article>
             );
           })}
         </div>
