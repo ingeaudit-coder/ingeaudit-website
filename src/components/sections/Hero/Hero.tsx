@@ -1,7 +1,7 @@
 "use client";
 
 import style from "@/src/components/sections/Hero/Hero.module.css";
-import Image from "next/image";
+
 import { TypeAnimation } from "react-type-animation";
 import Clients from "../Clients/Clients";
 import { useLanguage } from "@/src/context/LanguageContext";
@@ -43,13 +43,16 @@ const Hero = () => {
 
   return (
     <main className={style.heroContainer}>
-      <Image
-        src="/img-hero-oficial.jpg"
-        alt="Fondo corporativo"
-        fill
-        priority
-        className={style.imgHero}
-      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className={style.videoHero}
+      >
+        <source src="/video/comunication-tower.mp4" type="video/mp4" />
+      </video>
       <div className={style.overlay} />
 
       <section className={style.content}>
