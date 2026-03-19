@@ -9,24 +9,23 @@ import translations from "@/src/i18n/translations";
 
 // Imagina que estos son los logos de la empresa
 const logos = [
-  { src: "/images/logos/clarovtr-logo.svg", alt: "ClaroVTR", width: 140 },
-  { src: "/images/logos/entel-logo.svg", alt: "Entel", width: 110 },
-  { src: "/images/logos/logo-efe.svg", alt: "EFE", width: 90 },
-  { src: "/images/logos/logo-wom.svg", alt: "WOM", width: 80 },
-  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Gallyas Telecom", width: 110 },
-  { src: "/images/logos/motorola-logo.png", alt: "Motorola", width: 250 },
-  { src: "/images/logos/komatsu-logo.webp", alt: "Komatsu", width: 110 },
-  { src: "/images/logos/codelco-logo.svg", alt: "Codelco", width: 110 },
-  { src: "/images/logos/telefonica-logo.svg", alt: "Telefónica", width: 120 },
-  { src: "/images/logos/sollatek-logo.png", alt: "Sollatek", width: 110 },
+  { src: "/images/logos/clarovtr-logo(22).png", alt: "ClaroVTR", scale: 1.1 },
+  { src: "/images/logos/entel-logo.svg", alt: "Entel" },
+  { src: "/images/logos/logo-efe.svg", alt: "EFE" },
+  { src: "/images/logos/logo-wom.webp", alt: "WOM", scale: 0.8 },
+  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Gallyas Telecom"},
+  { src: "/images/logos/motorola-logo.png", alt: "Motorola", scale: 2 },
+  { src: "/images/logos/komatsu-logo.webp", alt: "Komatsu", scale: 2.8 },
+  { src: "/images/logos/codelco-logo.svg", alt: "Codelco"},
+  { src: "/images/logos/telefonica-logo.svg", alt: "Telefónica", scale: 3.5 },
+  { src: "/images/logos/sollatek-logo.png", alt: "Sollatek"},
 ];
 
 const Clients = () => {
   const { lang } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
-  const logoHeight = 70; // Cambia este valor para ajustar el tamaño de los logos
-  const baseHeight = 50; // Altura original de referencia para mantener la proporción
+  
 
   useEffect(() => {
     setMounted(true);
@@ -43,16 +42,18 @@ const Clients = () => {
         speed={25}
         pauseOnHover={true}
         className={style.miMarquee}
+        autoFill={true}
       >
         {logos.map((logo, index) => (
           <div key={index} className={style.logoWrapper}>
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={(logo.width || 110) * (logoHeight / baseHeight)}
-              height={logoHeight}
+              width={140}
+              height={50}
               className={style.logosClients}
-              style={{ width: "auto", height: logoHeight }}
+               style={logo.scale ? { transform: `scale(${logo.scale})` } : undefined}
+              /* style={{ width: width, height: logoHeight }} */
             />
           </div>
         ))}

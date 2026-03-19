@@ -30,11 +30,11 @@
 /* ── Clients strip at bottom of hero ── */
 .containerClientHero {
   grid-area: logo-clients;
+  background: transparent;
   position: relative;
   z-index: 10;
   padding: 0;
   margin: 0;
-  background: #030013;
   display: flex;
   flex-direction: column;
   align-items: center;
