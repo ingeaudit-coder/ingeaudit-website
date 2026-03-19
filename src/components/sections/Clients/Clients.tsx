@@ -37,7 +37,7 @@ const Clients = () => {
     <section className={style.clientContainer}>
       <Marquee
         gradient={true}
-        gradientColor="black"
+        gradientColor="transparent"
         gradientWidth={60}
         speed={25}
         pauseOnHover={true}
