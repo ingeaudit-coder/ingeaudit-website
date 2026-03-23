@@ -330,6 +330,22 @@ const translations = {
     ],
   },
 
+  // ─── NECESITAS COMUNICARTE ─────────────────────────────
+  necesitasCertificacion: {
+    titulo: {
+      es: "¿Interesado en mediciones de campo?",
+      en: "Interested in field measurements?",
+    },
+    subtitulo: {
+      es: "Contáctanos para asesoría experta en normativas SUBTEL y CMF. Nuestro equipo te guiará en todo el proceso.",
+      en: "Contact us for expert advice on SUBTEL and CMF regulations. Our team will guide you through the entire process.",
+    },
+    cta: {
+      es: "Contactar ahora",
+      en: "Contact now",
+    },
+  },
+
   //MEDICIONES
   mediciones:{
     badge: {
@@ -343,7 +359,50 @@ const translations = {
     subtitulo:{
       es: "Experto en medición de Densidad de Potencia",
       en: "Experts in Power Density Measurement",
-    }
+    },
+    cards: {
+      saberMas: { es: "Saber más →", en: "Learn more →" },
+      card1: {
+        title: {
+          es: "Mediciones de Densidad de Potencia",
+          en: "Power Density Measurements",
+        },
+        description: {
+          es: "Ejecución continua de procesos de medición de emisiones electromagnéticas para Chiletelcos y WOM S.A., garantizando la conformidad técnica e ingresos sin atrasos ante la SUBTEL.",
+          en: "Continuous execution of electromagnetic emission measurement processes for Chiletelcos and WOM S.A., ensuring technical compliance and timely revenue registration with SUBTEL.",
+        },
+      },
+      card2: {
+        title: {
+          es: "Recepciones de Obra y Validación 5G",
+          en: "Site Acceptance & 5G Validation",
+        },
+        description: {
+          es: "Despliegue y validación técnica en terreno para recepciones de obra en múltiples bandas del espectro (700 MHz, 850 MHz, 900 MHz, 1900 MHz, 2100 MHz, 2600 MHz). Destacan los recientes casos de éxito para CLARO VTR en las bandas milimétricas y sub-6GHz (3500 MHz y 26 GHz).",
+          en: "Field deployment and technical validation for site acceptance across multiple spectrum bands (700 MHz, 850 MHz, 900 MHz, 1900 MHz, 2100 MHz, 2600 MHz). Highlights include recent successes for CLARO VTR in millimeter-wave and sub-6GHz bands (3500 MHz and 26 GHz).",
+        },
+      },
+      card3: {
+        title: {
+          es: "Caza y Resolución de Interferencias",
+          en: "Interference Hunting & Resolution",
+        },
+        description: {
+          es: "Gestión, detección y mitigación de interferencias de radiofrecuencia en terreno. Incluye casos de éxito críticos, como la limpieza y caza de interferencias para WOM S.A. en la banda de 3500 MHz, asegurando la calidad del servicio de la red.",
+          en: "Field management, detection, and mitigation of radio frequency interference. Includes critical success cases such as interference hunting and clearance for WOM S.A. in the 3500 MHz band, ensuring network service quality.",
+        },
+      },
+      card4: {
+        title: {
+          es: "Estudios de Cobertura y Homologación",
+          en: "Coverage Studies & Homologation",
+        },
+        description: {
+          es: "Análisis detallado de cobertura de estaciones base y procesos técnicos de medición para la homologación de terminales móviles y certificación de equipos de comunicación especiales.",
+          en: "Detailed base station coverage analysis and technical measurement processes for mobile terminal homologation and certification of special communication equipment.",
+        },
+      },
+    },
   },
 
   //PERSONAS NATURALES
