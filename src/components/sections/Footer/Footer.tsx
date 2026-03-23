@@ -17,11 +17,11 @@ const Footer = () => {
   return (
     <footer className={style.footerContainer}>
       <div className={style.logoP}>
-        <Link href="/">
+        <Link href="/" style={{ display: "block" }}>
           <Image
             className={style.containerLogo}
-            width={100}
-            height={25}
+            width={650}
+            height={160}
             src={LogoIngeaudit}
             alt="Logo de Ingeaudit"
             priority
