@@ -330,22 +330,6 @@ const translations = {
     ],
   },
 
-  // ─── NECESITAS COMUNICARTE ─────────────────────────────
-  necesitasCertificacion: {
-    titulo: {
-      es: "¿Interesado en mediciones de campo?",
-      en: "Interested in field measurements?",
-    },
-    subtitulo: {
-      es: "Contáctanos para asesoría experta en normativas SUBTEL y CMF. Nuestro equipo te guiará en todo el proceso.",
-      en: "Contact us for expert advice on SUBTEL and CMF regulations. Our team will guide you through the entire process.",
-    },
-    cta: {
-      es: "Contactar ahora",
-      en: "Contact now",
-    },
-  },
-
   //MEDICIONES
   mediciones:{
     badge: {
@@ -359,50 +343,7 @@ const translations = {
     subtitulo:{
       es: "Experto en medición de Densidad de Potencia",
       en: "Experts in Power Density Measurement",
-    },
-    cards: {
-      saberMas: { es: "Saber más →", en: "Learn more →" },
-      card1: {
-        title: {
-          es: "Mediciones de Densidad de Potencia",
-          en: "Power Density Measurements",
-        },
-        description: {
-          es: "Ejecución continua de procesos de medición de emisiones electromagnéticas para Chiletelcos y WOM S.A., garantizando la conformidad técnica e ingresos sin atrasos ante la SUBTEL.",
-          en: "Continuous execution of electromagnetic emission measurement processes for Chiletelcos and WOM S.A., ensuring technical compliance and timely revenue registration with SUBTEL.",
-        },
-      },
-      card2: {
-        title: {
-          es: "Recepciones de Obra y Validación 5G",
-          en: "Site Acceptance & 5G Validation",
-        },
-        description: {
-          es: "Despliegue y validación técnica en terreno para recepciones de obra en múltiples bandas del espectro (700 MHz, 850 MHz, 900 MHz, 1900 MHz, 2100 MHz, 2600 MHz). Destacan los recientes casos de éxito para CLARO VTR en las bandas milimétricas y sub-6GHz (3500 MHz y 26 GHz).",
-          en: "Field deployment and technical validation for site acceptance across multiple spectrum bands (700 MHz, 850 MHz, 900 MHz, 1900 MHz, 2100 MHz, 2600 MHz). Highlights include recent successes for CLARO VTR in millimeter-wave and sub-6GHz bands (3500 MHz and 26 GHz).",
-        },
-      },
-      card3: {
-        title: {
-          es: "Caza y Resolución de Interferencias",
-          en: "Interference Hunting & Resolution",
-        },
-        description: {
-          es: "Gestión, detección y mitigación de interferencias de radiofrecuencia en terreno. Incluye casos de éxito críticos, como la limpieza y caza de interferencias para WOM S.A. en la banda de 3500 MHz, asegurando la calidad del servicio de la red.",
-          en: "Field management, detection, and mitigation of radio frequency interference. Includes critical success cases such as interference hunting and clearance for WOM S.A. in the 3500 MHz band, ensuring network service quality.",
-        },
-      },
-      card4: {
-        title: {
-          es: "Estudios de Cobertura y Homologación",
-          en: "Coverage Studies & Homologation",
-        },
-        description: {
-          es: "Análisis detallado de cobertura de estaciones base y procesos técnicos de medición para la homologación de terminales móviles y certificación de equipos de comunicación especiales.",
-          en: "Detailed base station coverage analysis and technical measurement processes for mobile terminal homologation and certification of special communication equipment.",
-        },
-      },
-    },
+    }
   },
 
   //PERSONAS NATURALES
@@ -419,8 +360,8 @@ const translations = {
         en: "Individuals",
       },
       subtitulo: {
-        es: "Certifica documentalmente tu equipo extranjero para usarlo en Chile con cualquier operadora.",
-        en: "Documentarily certify your foreign device to use it in Chile with any carrier.",
+        es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile. Si planeas permanecer más de 30 días, debes realizar este trámite.",
+        en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile. If you plan to stay more than 30 days, you must complete this process.",
       },
     },
 
@@ -661,6 +602,11 @@ const translations = {
   },
 
   // ─── IMEI GUIDE ────────────────────────────────────────
+  imeiNote: {
+    es: "Ingeaudit Ltda. está facultada para cobrar por este servicio (Res. Ex. N°1463 de SUBTEL, 2016, Art. 7°). También puedes acceder a este servicio de forma gratuita en otras Empresas Certificadoras en www.multibanda.cl (multibanda.cl/empresas-certificadoras).",
+    en: "Ingeaudit Ltda. is authorized to charge for this service (SUBTEL Res. Ex. N°1463, 2016, Art. 7). You can also access this service for free at other certified companies at www.multibanda.cl (multibanda.cl/empresas-certificadoras).",
+  },
+
   imeiGuide: {
     heading: {
       es: "Cómo obtener el IMEI de tu equipo",
@@ -683,7 +629,7 @@ const translations = {
           es: "El número IMEI de 15 dígitos aparece en pantalla. Si tienes dual SIM verás dos números.",
           en: "A 15-digit IMEI number will appear on screen. If your device has dual SIM, you will see two numbers.",
         },
-        screenTitle: { es: "Información del dispositivo", en: "Device information" },
+        screenTitle: { es: "Información del \ndispositivo", en: "Device \ninformation" },
         screenImei: { es: "IMEI", en: "IMEI" },
         screenImei2: { es: "IMEI 2 (dual SIM)", en: "IMEI 2 (dual SIM)" },
       },
