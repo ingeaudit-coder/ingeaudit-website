@@ -16,6 +16,7 @@
     "containerRRSS derechosReserados";
   overflow: hidden;
   font-family: var(--font-geist-sans);
+  font-size: clamp(10px, 2rem, 13px);
 }
 
 .logoP {

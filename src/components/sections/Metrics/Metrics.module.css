@@ -24,9 +24,9 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-   font-family: var(--font-geist-sans);
+  font-family: var(--font-geist-sans);
   font-weight: 600;
-  font-size: 2rem;
+  font-size: clamp(2rem, 1rem, 2rem);
   color: #fff;
   /* margin-bottom: 2.2rem; */
   filter: var(--drop-shadow-logo);
@@ -43,7 +43,7 @@
 }
 
 .preCount {
-  font-size: 3rem;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
   font-weight: 700;
   line-height: 1;
 }
@@ -63,7 +63,7 @@
   grid-area: metricsAntenas;
 }
 .numberAntenas {
-  font-size: 3rem;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
   font-weight: 700;
   line-height: 1;
 }
@@ -83,7 +83,7 @@
 }
 
 .homoCount {
-  font-size: 3rem;
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
   font-weight: 700;
   line-height: 1;
 }
@@ -96,7 +96,7 @@
 
 .subtitleMetrics{
   color: #455e7e;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
