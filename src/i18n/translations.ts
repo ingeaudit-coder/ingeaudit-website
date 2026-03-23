@@ -17,10 +17,10 @@ const translations = {
   hero: {
     typeSequence: {
       es: [
-        "Consultoría, Medición y Homologación de equipos",
+        "Homologación, Consultoría y Mediciones de Campo",
       ],
       en: [
-        "Consulting, Measurement, and Equipment Certification",
+        "Certification, Consulting & Field Measurements",
       ],
     },
     leadingLine: { es: "Gestión integral en", en: "Comprehensive Management in" },
