@@ -1,9 +1,10 @@
 .btn {
-  width: 13rem;
-  padding: 0.7rem 1.5rem;
+  width: 12rem;
+  padding: clamp(0.5rem, 1vw, 0.1rem) clamp(0.5rem, 2.5vw, 1.5rem);
   border-radius: var(--radius);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(0.80rem, 0.50vw, 0.95rem);
+  /* font-size: 0.95rem; */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   display: inline-flex;
