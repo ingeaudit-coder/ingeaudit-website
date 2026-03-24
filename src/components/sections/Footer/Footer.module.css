@@ -3,10 +3,10 @@
   border-top: 1px solid var(--border-soft);
   color: white;
   margin: 0;
-  padding: 50px 150px 50px 150px;
+  padding: 50px 150px 30px 150px;
   box-sizing: border-box;
   display: grid;
-  height: 350px;
+  height: 300px;
   width: 100%;
   max-width: 100%;
   grid-template-columns: repeat(2, 1fr);
@@ -21,6 +21,13 @@
 
 .logoP {
   grid-area: logoP;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.parrafo{
+  padding-right: 30px;
 }
 
 .containerLinkInteres {

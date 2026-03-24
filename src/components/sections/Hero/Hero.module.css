@@ -66,19 +66,33 @@
   z-index: 1;
 }
 
+.containerBadgeHero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .titleHero {
   grid-area: principal-title;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   white-space: normal;
   font-family: var(--font-geist-sans);
   font-weight: 800;
-  font-size: clamp(28px, 3.5vw, 40px);
-  /* font-size: 48px; */
+  font-size: clamp(28px, 3.5vw, 48px);
+  gap: 10px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .titleHero::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 50%;
   height: 1px;
   background: linear-gradient(
     90deg,
@@ -92,8 +106,8 @@
 .subtitleHero {
   font-family: var(--font-geist-sans);
   font-weight: 300;
-  font-size: clamp(1rem, 3vw, 1rem);
-  font-size: 1.35rem;
+  font-size: clamp(20px, 3.5vw, 5px);
+  /* font-size: 1.35rem; */
   padding: 1.25rem 1rem 1.5rem;
   max-width: 600px;
   line-height: 1.5;
@@ -115,6 +129,7 @@
 
 .containerAnimationHero {
   display: block;
+  padding-top: 0px;
 }
 
 .containerButtonHero {

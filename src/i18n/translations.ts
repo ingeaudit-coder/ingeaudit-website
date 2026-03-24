@@ -17,13 +17,21 @@ const translations = {
   hero: {
     typeSequence: {
       es: [
-        "Homologación, Consultoría y Mediciones de Campo",
+        "Homologación, Consultoría",
       ],
       en: [
-        "Certification, Consulting & Field Measurements",
+        "Certification, Consulting",
       ],
     },
-    leadingLine: { es: "Gestión integral en", en: "Comprehensive Management in" },
+    SaltoLineaType: {
+      es: [
+        "y Mediciones de Campo",
+      ],
+      en: [
+        "& Field Measurements",
+      ],
+    },
+    leadingLine: { es: "Expertos en", en: "Experts in" },
     subtitle: {
       es: "Más de 20 años de experiencia respaldando a la industria de las telecomunicaciones",
       en: "Over 20 years of experience supporting the telecommunications industry",
