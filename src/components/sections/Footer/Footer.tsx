@@ -20,14 +20,14 @@ const Footer = () => {
         <Link href="/" style={{ display: "block" }}>
           <Image
             className={style.containerLogo}
-            width={650}
+            width={900}
             height={160}
             src={LogoIngeaudit}
             alt="Logo de Ingeaudit"
             priority
           />
         </Link>
-        <p>{t("footer.tagline", lang)}</p>
+        <p className={style.parrafo}>{t("footer.tagline", lang)}</p>
       </div>
 
       <div className={style.containerLinkInteres}>
