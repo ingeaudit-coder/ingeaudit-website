@@ -7,6 +7,7 @@ import translations from "@/src/i18n/translations";
 import { Factory, Ship } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { HeroNoMain } from "../HeroNoMain/HeroNoMain";
+import Image from "next/image";
 
 export default function OperadoresEmpresas() {
   const { lang } = useLanguage();
@@ -29,10 +30,21 @@ export default function OperadoresEmpresas() {
       <section className={styles.compGrid}>
         {/* H1 Card */}
         <div className={styles.card}>
-          <div className={styles.cardHead}>
+          <div className={styles.imageWrap}>
+            <Image
+              src="/images/h1h2/prototipo.webp"
+              alt="Prototipo H1"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={styles.cardImage}
+            />
             <span className={styles.iconWrap}>
               <Factory className={styles.cardIcon} />
             </span>
+            <div className={styles.imageGradient} />
+          </div>
+
+          <div className={styles.cardHead}>
             <p className={styles.cardBadge}>
               {t("operadoresPage.h1.badge", lang)}
             </p>
@@ -55,10 +67,21 @@ export default function OperadoresEmpresas() {
 
         {/* H2 Card */}
         <div className={styles.card}>
-          <div className={styles.cardHead}>
+          <div className={styles.imageWrap}>
+            <Image
+              src="/images/h1h2/portacontenedores.webp"
+              alt="Portacontenedores H2"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={styles.cardImage}
+            />
             <span className={styles.iconWrap}>
               <Ship className={styles.cardIcon} />
             </span>
+            <div className={styles.imageGradient} />
+          </div>
+
+          <div className={styles.cardHead}>
             <p className={styles.cardBadge}>
               {t("operadoresPage.h2.badge", lang)}
             </p>
