@@ -343,7 +343,51 @@ const translations = {
     subtitulo:{
       es: "Experto en medición de Densidad de Potencia",
       en: "Experts in Power Density Measurement",
-    }
+    },
+    cards: {
+      saberMas: { es: "Saber más", en: "Learn more" },
+      card1: {
+        title: { es: "Recepciones de Obra", en: "Site Receptions" },
+        description: {
+          es: "Verificación técnica de infraestructura de telecomunicaciones para garantizar el cumplimiento normativo en nuevas instalaciones.",
+          en: "Technical verification of telecommunications infrastructure to ensure regulatory compliance in new installations.",
+        },
+      },
+      card2: {
+        title: { es: "Medición 5G", en: "5G Measurement" },
+        description: {
+          es: "Mediciones especializadas en redes 5G y bandas de alta frecuencia para validar cobertura y calidad de señal.",
+          en: "Specialized measurements on 5G networks and high-frequency bands to validate coverage and signal quality.",
+        },
+      },
+      card3: {
+        title: { es: "Densidad de Potencia", en: "Power Density" },
+        description: {
+          es: "Medición de densidad de potencia en todas las bandas (700 MHz a 26 GHz) con equipos de última generación R&S y Aaronia.",
+          en: "Power density measurement across all bands (700 MHz to 26 GHz) with state-of-the-art R&S and Aaronia equipment.",
+        },
+      },
+      card4: {
+        title: { es: "Auditoría en Terreno", en: "Field Audit" },
+        description: {
+          es: "Inspección técnica en sitio para validar el cumplimiento de estándares normativos y condiciones de operación.",
+          en: "On-site technical inspection to validate compliance with regulatory standards and operating conditions.",
+        },
+      },
+    },
+  },
+
+  // NECESITAS CERTIFICACION
+  necesitasCertificacion: {
+    titulo: {
+      es: "¿Necesitas una certificación o asesoría técnica?",
+      en: "Do you need a certification or technical advisory?",
+    },
+    subtitulo: {
+      es: "Contáctanos y uno de nuestros especialistas te orientará en el proceso.",
+      en: "Contact us and one of our specialists will guide you through the process.",
+    },
+    cta: { es: "Contáctanos", en: "Contact Us" },
   },
 
   //PERSONAS NATURALES

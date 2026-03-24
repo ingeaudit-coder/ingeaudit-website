@@ -40,6 +40,12 @@
   align-items: center;
   justify-content: center;
   grid-area: previsitasMetrics;
+  transition: transform 0.25s ease;
+  cursor: default;
+}
+
+.previsitasMetricas:hover {
+  transform: scale(1.05);
 }
 
 .preCount {
@@ -61,6 +67,12 @@
   align-items: center;
   justify-content: center;
   grid-area: metricsAntenas;
+  transition: transform 0.25s ease;
+  cursor: default;
+}
+
+.metricasAntenas:hover {
+  transform: scale(1.05);
 }
 .numberAntenas {
   font-size: clamp(1.7rem, 2.5vw, 2.2rem);
@@ -80,6 +92,12 @@
   align-items: center;
   justify-content: center;
   grid-area: homoMetricas;
+  transition: transform 0.25s ease;
+  cursor: default;
+}
+
+.homoMetricas:hover {
+  transform: scale(1.05);
 }
 
 .homoCount {

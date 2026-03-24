@@ -30,7 +30,6 @@ const Metrics = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.7 }}
-        whileHover={{ scale: 1.05 }}
       >
         <div className={style.linePrevisitas}>
           <CountUp
@@ -58,7 +57,6 @@ const Metrics = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.4, duration: 0.7 }}
-        whileHover={{ scale: 1.05 }}
       >
         <div className={style.lineAntenas}>
           <h3 className={style.numberAntenas}>5k+</h3>
@@ -76,7 +74,6 @@ const Metrics = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.6, duration: 0.7 }}
-        whileHover={{ scale: 1.05 }}
       >
         <div className={style.lineHomo}>
           <CountUp

@@ -45,7 +45,6 @@ export const Servicioss = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2, duration: 0.7 }}
-                whileHover={{ y: -10 }}
               >
 
                 {/* IMAGE */}
@@ -55,8 +54,7 @@ export const Servicioss = () => {
                     
                     <motion.div
                       className={styles.imageInner}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.4 }}
+                      transition={{ duration: 0.25 }}
                     >
                       <Image
                         src={IMAGES[i]}

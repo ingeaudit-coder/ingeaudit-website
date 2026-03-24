@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════
-   IMEI GUIDE — Redesigned Layout
+   IMEI GUIDE — Colores alineados con Contact
    ═══════════════════════════════════════════ */
 
 /* ── Section wrapper ── */
@@ -7,6 +7,7 @@
   padding: 3rem 1.5rem 3.5rem;
   width: 100%;
   box-sizing: border-box;
+  background: #00001a;
 }
 
 .container {
@@ -15,22 +16,24 @@
   gap: 2rem;
   max-width: 1100px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch;
 }
 
 /* ══════════════════════════════════════
    GUIDE CARD (left column)
 ══════════════════════════════════════ */
 .guideCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
   padding: 2rem 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  height: 100%;
 }
 
 /* ── Badge header ── */
@@ -49,9 +52,9 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgb(160, 152, 255);
-  background: rgba(99, 102, 241, 0.12);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 6px 14px;
   border-radius: 999px;
 }
@@ -70,9 +73,9 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent;
-  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.9);
   opacity: 0.5;
   font-size: 13px;
   font-weight: 600;
@@ -83,16 +86,16 @@
 
 .stepTab:hover:not(.stepTabOn) {
   opacity: 0.8;
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .stepTabOn {
   opacity: 1;
-  background: rgba(99, 102, 241, 0.18);
-  border-color: rgba(139, 92, 246, 0.55);
-  color: rgb(180, 172, 255);
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.08);
 }
 
 .stepNumber {
@@ -104,12 +107,12 @@
   border-radius: 50%;
   font-size: 11px;
   font-weight: 800;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   flex-shrink: 0;
 }
 
 .stepTabOn .stepNumber {
-  background: rgba(139, 92, 246, 0.4);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .stepLabel {
@@ -235,15 +238,15 @@
   font-size: clamp(9px, 1.6vw, 13px);
   font-weight: 900;
   color: #1a1a3e;
-  background: rgba(99, 102, 241, 0.14);
-  border: 1.5px solid rgba(99, 102, 241, 0.45);
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
   border-radius: 5px;
   padding: 5px 10px;
   letter-spacing: 0.04em;
   word-break: break-all;
   max-width: 100%;
   text-align: center;
-  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.15);
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
 }
 
 .sHint {
@@ -267,13 +270,14 @@
 /* ── Description ── */
 .desc {
   font-size: 14px;
-  color: var(--text-primary);
+  color: rgba(255, 255, 255, 0.92);
   opacity: 0.65;
   line-height: 1.75;
   margin: 1.25rem auto 0;
   max-width: 500px;
   text-align: center;
   min-height: 48px;
+  white-space: pre-line;
 }
 
 /* ── Nav row ── */
@@ -288,9 +292,9 @@
 
 .navBtn {
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: transparent;
-  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.9);
   opacity: 0.55;
   font-size: 13px;
   font-weight: 600;
@@ -303,7 +307,7 @@
 .navBtn:hover:not(:disabled) {
   opacity: 1;
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .navBtn:disabled {
@@ -335,7 +339,7 @@
 }
 
 .dotOn {
-  background: rgb(160, 152, 255);
+  background: rgba(255, 255, 255, 0.9);
   transform: scale(1.25);
 }
 
@@ -343,21 +347,23 @@
    REMOTE CARD (right column)
 ══════════════════════════════════════ */
 .remoteCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 1.5rem;
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* ── Remote header ── */
 .remoteHeader {
   padding: 1.75rem 1.75rem 1.5rem;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.06) 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -371,16 +377,16 @@
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: rgba(99, 102, 241, 0.2);
-  border: 1px solid rgba(139, 92, 246, 0.35);
-  color: rgb(180, 172, 255);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
   flex-shrink: 0;
 }
 
 .remoteTitle {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #fff;
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -389,6 +395,7 @@
 .remoteDesc {
   font-size: 13px;
   line-height: 1.65;
+  color: rgba(255, 255, 255, 0.86);
   opacity: 0.5;
   margin: 0;
 }
@@ -399,7 +406,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .actionBtn {
@@ -407,39 +414,39 @@
   align-items: center;
   gap: 8px;
   padding: 0.85rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s ease;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .actionBtn:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.16);
   transform: translateY(-1px);
 }
 
 .actionBtnPrimary {
-  background: rgba(99, 102, 241, 0.15);
-  border-color: rgba(139, 92, 246, 0.4);
-  color: rgb(200, 196, 255);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .actionBtnPrimary:hover {
-  background: rgba(99, 102, 241, 0.28);
-  border-color: rgba(139, 92, 246, 0.65);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-1px);
 }
 
 /* ── Divider ── */
 .divider {
-  display: none; /* handled by border-bottom on sections */
+  display: none;
 }
 
 /* ── Operadores section ── */
@@ -452,6 +459,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
   opacity: 0.38;
   margin: 0 0 0.85rem;
 }
@@ -467,23 +475,63 @@
   align-items: center;
   justify-content: center;
   padding: 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 9px;
-  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.92);
   font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s ease;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .operadorBtn:hover {
-  background: rgba(99, 102, 241, 0.14);
-  border-color: rgba(139, 92, 246, 0.4);
-  color: rgb(200, 196, 255);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.95);
   transform: translateY(-1px);
+}
+
+/* ── Meta block ── */
+.remoteMeta {
+  padding: 0 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.metaItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metaLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0.5;
+  letter-spacing: 0.08em;
+}
+
+.metaValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ── Note ── */
+.note {
+  max-width: 900px;
+  margin: 1.75rem auto 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.86);
+  opacity: 0.5;
 }
 
 /* ══════════════════════════════════════
@@ -505,6 +553,11 @@
 
   .remoteCard {
     position: static;
+    height: auto;
+  }
+
+  .guideCard {
+    height: auto;
   }
 
   .section {
@@ -533,75 +586,4 @@
   .stepLabel {
     font-size: 12px;
   }
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-
-  /* 👇 CLAVE */
-  align-items: stretch;
-}
-
-/* Igualar altura */
-.guideCard,
-.remoteCard {
-  height: 100%;
-}
-
-/* Remote card FIX */
-.remoteCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
-
-  display: flex;
-  flex-direction: column;
-}
-
-/* 👇 NUEVO BLOQUE */
-.remoteMeta {
-  padding: 0 1.75rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-}
-
-.metaItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.metaLabel {
-  font-size: 11px;
-  text-transform: uppercase;
-  opacity: 0.5;
-  letter-spacing: 0.08em;
-}
-
-.metaValue {
-  font-size: 13px;
-  font-weight: 700;
-  color: rgb(200, 196, 255);
-}
-
-.note {
-  max-width: 900px;
-  margin: 1.75rem auto 0;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.6;
-  opacity: 0.5;
-}
-
-.desc {
-  white-space: pre-line;
 }
