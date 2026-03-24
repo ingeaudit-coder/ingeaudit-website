@@ -65,12 +65,12 @@
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
 }
 
 /* ── Image container ─────────────────────────────────────────── */
@@ -85,11 +85,12 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%) brightness(0.7);
-  transition: filter 0.3s ease;
+  transition: filter 0.25s ease, transform 0.25s ease;
 }
 
 .card:hover .image {
   filter: grayscale(60%) brightness(0.75);
+  transform: scale(1.05);
 }
 
 .iconBadge {
