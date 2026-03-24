@@ -1,20 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Wifi, Scale, Smartphone, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations from "@/src/i18n/translations";
 import styles from "./Servicios.module.css";
+import Button from "@/src/components/UI/Button/Button";
+import { useRouter } from "next/navigation";
 
 const ICONS = [Wifi, Scale, Smartphone];
 const BADGE_CLASSES = [styles.badgeBlue, styles.badgeGreen, styles.badgeGold];
-const IMAGES = ["/web-ing.webp", "/img-hero-oficial.jpg", "/personal0.png"];
+const IMAGES = [
+  "/images/servicios/Mediciones-de-campo.webp",
+  "/images/servicios/asesorias-regulatorias.webp",
+  "/images/servicios/homologacion-dispositivos.webp",
+];
 
 export const Servicioss = () => {
   const { lang } = useLanguage();
   const { title, subtitle, cards } = translations.serviciosPage;
+  const router = useRouter();
 
   return (
     <section id="seccion-servicios" className={styles.section}>
@@ -104,10 +110,16 @@ export const Servicioss = () => {
                 </div>
 
                 {/* CTA */}
-                <Link href={card.href} className={styles.ctaBtn}>
-                  {card.cta[lang]}
-                  <span className={styles.ctaArrow}>→</span>
-                </Link>
+                <div className={styles.ctaWrapper}>
+                  <Button
+                    variant="primary"
+                    className={styles.ctaBtn}
+                    onClick={() => router.push(card.href)}
+                  >
+                    {card.cta[lang]}
+                    <span className={styles.ctaArrow}>→</span>
+                  </Button>
+                </div>
 
               </motion.article>
             );

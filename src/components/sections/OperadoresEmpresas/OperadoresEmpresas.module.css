@@ -59,12 +59,12 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 3rem;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-soft);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
   transition: border-color 0.45s ease, transform 0.25s ease,
     box-shadow 0.25s ease;
 }
@@ -75,9 +75,32 @@
   box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
 }
 
+/* ── Card Image ── */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.imageGradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(to bottom, transparent, rgba(15, 18, 35, 0.95));
+  pointer-events: none;
+}
+
 /* ── Card Head ── */
 .cardHead {
-  margin-bottom: 2rem;
+  padding: 1.5rem 2rem 0;
+  margin-bottom: 1.5rem;
   flex: 1;
 }
 
@@ -89,7 +112,10 @@
   border-radius: 0.5rem;
   background: var(--blue-primary);
   color: var(--text-primary);
-  margin-bottom: 1.5rem;
+  position: absolute;
+  top: 0.875rem;
+  left: 0.875rem;
+  z-index: 2;
 }
 
 .cardIcon {
@@ -176,7 +202,7 @@
 /* ── CTA Button ── */
 .ctaBtn {
   display: block;
-  margin-top: auto;
+  margin: auto 2rem 1.5rem;
   padding: 1rem;
   text-align: center;
   border: 1px solid var(--border-soft);
@@ -188,6 +214,8 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  background: transparent;
 }
 
 .ctaBtn:hover {
@@ -202,8 +230,12 @@
     padding: 1.5rem 1rem 4rem;
   }
 
-  .card {
-    padding: 2rem 1.5rem;
+  .cardHead {
+    padding: 1.25rem 1.25rem 0;
+  }
+
+  .ctaBtn {
+    margin: auto 1.25rem 1.25rem;
   }
 
   .heroTitle {
