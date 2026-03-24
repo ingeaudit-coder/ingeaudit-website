@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styles from "./servicios.module.css";
 import Certifications from "@/src/components/sections/Certifications/Certifications";
-import Services from "@/src/components/sections/Services/Services";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
 import Metrics from "@/src/components/sections/Metrics/Metrics";

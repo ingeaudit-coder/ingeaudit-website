@@ -610,7 +610,7 @@ const translations = {
           en: ["Mobile Homologation", "Technical Standards", "Market Access"],
         },
         cta: { es: "INICIAR HOMOLOGACIÓN", en: "START HOMOLOGATION" },
-        href: "/servicios/homologacion",
+        href: "/personas",
       },
     ],
   },
