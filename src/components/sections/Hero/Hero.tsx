@@ -8,6 +8,7 @@ import { useLanguage } from "@/src/context/LanguageContext";
 import translations, { t } from "@/src/i18n/translations";
 import Button from "../../UI/Button/Button";
 import { useRouter } from "next/navigation";
+import { BadgeTitle } from "../Badge/Badge";
 
 const Hero = () => {
   const router = useRouter();
@@ -57,9 +58,9 @@ const Hero = () => {
 
       <section className={style.content}>
         <h1 className={style.titleHero}>
-          <span className="block mb-2">{t("hero.leadingLine", lang)}</span>
+          <BadgeTitle/>
           <span className={style.containerAnimationHero}>
-            <span>{t("hero.typeSequence", lang)}</span>
+            <span>{t("hero.typeSequence", lang)}<br/>{t("hero.SaltoLineaType", lang)}</span>
           </span>
         </h1>
 
@@ -85,12 +86,12 @@ const Hero = () => {
             className={`${style.btn} ${style.btnHomologar}`}
             onClick={() => router.push("/personas")}
           />
-          <Button
+          {/* <Button
             variant="secondary"
             children={lang === "es" ? "Contáctanos" : "Contact"}
             className={style.btn}
             onClick={() => router.push("/contactanos")}
-          />
+          /> */}
         </div>
       </section>
 
