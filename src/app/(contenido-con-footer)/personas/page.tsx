@@ -23,9 +23,6 @@ const PersonasNaturales = () => {
       />
 
       <ImeiGuide />
-
-      <Homologacion />
-      
     </div>
   );
 };

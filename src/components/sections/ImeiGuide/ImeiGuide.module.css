@@ -1,62 +1,132 @@
-.wrapper {
+/* ═══════════════════════════════════════════
+   IMEI GUIDE — Redesigned Layout
+   ═══════════════════════════════════════════ */
+
+/* ── Section wrapper ── */
+.section {
+  padding: 3rem 1.5rem 3.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* ══════════════════════════════════════
+   GUIDE CARD (left column)
+══════════════════════════════════════ */
+.guideCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.25rem 0 1rem;
-  gap: 0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
 }
 
-.heading {
+/* ── Badge header ── */
+.guideHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.4);
-  margin: 0 0 1rem;
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 500;
+  color: rgb(160, 152, 255);
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 6px 14px;
+  border-radius: 999px;
 }
 
-/* ── Pills ── */
-.pills {
+/* ── Step Tabs ── */
+.stepTabs {
   display: flex;
   gap: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.pill {
+.stepTab {
   cursor: pointer;
-  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: transparent;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-primary);
+  opacity: 0.5;
   font-size: 13px;
-  padding: 6px 18px;
-  border-radius: 8px;
-  transition: background 0.15s, color 0.15s;
+  font-weight: 600;
+  padding: 7px 16px 7px 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
 }
 
-.pill:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.07);
+.stepTab:hover:not(.stepTabOn) {
+  opacity: 0.8;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
 }
 
-.pill:disabled {
-  opacity: 0.3;
-  cursor: default;
-  pointer-events: none;
+.stepTabOn {
+  opacity: 1;
+  background: rgba(99, 102, 241, 0.18);
+  border-color: rgba(139, 92, 246, 0.55);
+  color: rgb(180, 172, 255);
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.2);
 }
 
-.pillOn {
-  background: rgba(99, 102, 241, 0.2);
-  color: rgba(165, 160, 255, 1);
-  border-color: rgba(120, 90, 255, 0.5);
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
 }
 
-/* ── Phone ── */
+.stepTabOn .stepNumber {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+.stepLabel {
+  font-size: 13px;
+}
+
+/* ── Phone mockup area ── */
+.phoneArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .phoneWrap {
   position: relative;
-  /* ↓ TAMAÑO DE LA IMAGEN — modifica este valor para agrandar/reducir */
-  width: 600px;
-  max-width: 96vw;
+  width: 100%;
+  max-width: 540px;
 }
 
 .phoneImg {
@@ -67,14 +137,6 @@
   user-select: none;
 }
 
-/*
-  Overlay sobre la pantalla blanca del teléfono.
-  Si el texto se sale, ajusta estos 4 valores:
-    top    → sube o baja el contenido
-    left   → mueve a izquierda/derecha
-    width  → ancho del área de pantalla
-    height → alto del área de pantalla
-*/
 .screenOverlay {
   position: absolute;
   top: 10%;
@@ -86,152 +148,460 @@
   justify-content: center;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 5% 6%;
+  padding: 8% 10%;
   animation: fadeIn 0.22s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(3px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ── Contenido dentro de la pantalla ── */
+/* ── Screen inner content ── */
 .screenInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 3px;
+  justify-content: center;
+  gap: 7px;
   width: 100%;
-}
-
-/* Emoji grande (paso 4) */
-.sEmoji {
-  font-size: clamp(26px, 5vw, 40px);
-  line-height: 1;
-  margin-bottom: 4px;
+  overflow: hidden;
 }
 
 .sCode {
-  font-size: clamp(15px, 3vw, 24px);
-  font-weight: 700;
-  color: #111;
-  letter-spacing: 0.08em;
-  margin: 4px 0 0;
+  font-size: clamp(18px, 3.5vw, 26px);
+  font-weight: 900;
+  color: #0f0f1a;
+  letter-spacing: 0.06em;
+  text-align: center;
+  line-height: 1.1;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 
 .sLabel {
-  font-size: clamp(8px, 1.5vw, 11px);
-  color: #888;
-  margin: 0;
+  font-size: clamp(10px, 1.6vw, 13px);
+  color: #2a2a3a;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .sTitle {
-  font-size: clamp(7px, 1.4vw, 10px);
-  color: #444;
-  font-weight: 600;
-  margin: 0 0 4px;
+  font-size: clamp(10px, 1.6vw, 13px);
+  font-weight: 800;
+  color: #0f0f1a;
+  text-align: center;
+  margin-bottom: 5px;
+  letter-spacing: -0.01em;
 }
 
-/* ── Filas del paso 2 — width:80% para que las líneas no se salgan ── */
 .sRow {
-  width: 80%;
-  border-top: 0.5px solid #ccc;
-  padding: 3px 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2px;
+  overflow: hidden;
 }
 
 .sFieldLbl {
-  font-size: clamp(7px, 1.3vw, 10px);
-  color: #999;
-  margin: 0;
+  font-size: clamp(8px, 1.3vw, 10px);
+  color: #5a5a7a;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  text-align: center;
+  width: 100%;
 }
 
 .sImei {
-  font-size: clamp(10px, 2vw, 14px);
-  font-weight: 700;
-  color: #111;
-  margin: 1px 0 0;
+  font-size: clamp(9px, 1.5vw, 13px);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.03em;
   word-break: break-all;
+  max-width: 100%;
+  text-align: center;
+  line-height: 1.25;
 }
 
 .sImeiSub {
-  font-size: clamp(9px, 1.8vw, 13px);
+  font-size: clamp(8px, 1.3vw, 11px);
   font-weight: 600;
-  color: #333;
-  margin: 1px 0 0;
+  color: #3a3a5a;
+  letter-spacing: 0.02em;
   word-break: break-all;
+  max-width: 100%;
+  text-align: center;
 }
 
 .sImeiBox {
-  font-size: clamp(9px, 1.8vw, 12px);
-  font-weight: 700;
-  color: #1a56db;
-  border: 0.5px solid #1a56db;
+  font-size: clamp(9px, 1.6vw, 13px);
+  font-weight: 900;
+  color: #1a1a3e;
+  background: rgba(99, 102, 241, 0.14);
+  border: 1.5px solid rgba(99, 102, 241, 0.45);
   border-radius: 5px;
-  padding: 3px 6px;
-  margin: 2px 0;
+  padding: 5px 10px;
+  letter-spacing: 0.04em;
   word-break: break-all;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(99, 102, 241, 0.15);
 }
 
 .sHint {
-  font-size: clamp(7px, 1.3vw, 10px);
-  color: #888;
-  line-height: 1.5;
-  margin: 4px 0 0;
-  margin: 25px;
+  font-size: clamp(8px, 1.3vw, 10px);
+  color: #4a4a6a;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .sSuccess {
-  font-size: clamp(9px, 1.8vw, 12px);
-  font-weight: 600;
-  color: #15803d;
-  margin: 4px 0;
+  font-size: clamp(10px, 1.7vw, 13px);
+  font-weight: 800;
+  color: #068a3e;
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
 }
 
-/* ── Descripción ── */
+/* ── Description ── */
 .desc {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.65;
-  margin: 0.85rem 0 0;
-  max-width: 380px;
+  font-size: 14px;
+  color: var(--text-primary);
+  opacity: 0.65;
+  line-height: 1.75;
+  margin: 1.25rem auto 0;
+  max-width: 500px;
   text-align: center;
-  min-height: 52px;
-  padding: 0 1rem;
+  min-height: 48px;
+}
+
+/* ── Nav row ── */
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 1.25rem;
+}
+
+.navBtn {
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--text-primary);
+  opacity: 0.55;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  min-width: 90px;
+}
+
+.navBtn:hover:not(:disabled) {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navBtn:disabled {
+  opacity: 0.2;
+  cursor: default;
+  pointer-events: none;
 }
 
 /* ── Dots ── */
 .dots {
   display: flex;
   gap: 8px;
-  margin-top: 0.85rem;
+  align-items: center;
 }
 
 .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
   cursor: pointer;
-  transition: background 0.2s;
-  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .dotOn {
-  background: rgba(165, 160, 255, 1);
+  background: rgb(160, 152, 255);
+  transform: scale(1.25);
 }
 
-/* ── Nav ── */
-.nav {
+/* ══════════════════════════════════════
+   REMOTE CARD (right column)
+══════════════════════════════════════ */
+.remoteCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 1.5rem;
+}
+
+/* ── Remote header ── */
+.remoteHeader {
+  padding: 1.75rem 1.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.06) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
-  gap: 12px;
-  margin-top: 0.85rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
 }
 
-/* ── Mobile ── */
-@media (max-width: 520px) {
-  .phoneWrap { width: 100%; }
-  .desc { font-size: 12px; }
-  .pill { font-size: 12px; padding: 5px 12px; }
+.remoteIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: rgb(180, 172, 255);
+  flex-shrink: 0;
+}
+
+.remoteTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.remoteDesc {
+  font-size: 13px;
+  line-height: 1.65;
+  opacity: 0.5;
+  margin: 0;
+}
+
+/* ── Action buttons ── */
+.remoteActions {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.actionBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.actionBtnPrimary {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: rgb(200, 196, 255);
+}
+
+.actionBtnPrimary:hover {
+  background: rgba(99, 102, 241, 0.28);
+  border-color: rgba(139, 92, 246, 0.65);
+  transform: translateY(-1px);
+}
+
+/* ── Divider ── */
+.divider {
+  display: none; /* handled by border-bottom on sections */
+}
+
+/* ── Operadores section ── */
+.operadoresSection {
+  padding: 1.5rem 1.75rem 1.75rem;
+}
+
+.operadoresLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.38;
+  margin: 0 0 0.85rem;
+}
+
+.operadoresGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.operadorBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 9px;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.operadorBtn:hover {
+  background: rgba(99, 102, 241, 0.14);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: rgb(200, 196, 255);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .remoteCard {
+    position: static;
+  }
+
+  .section {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+
+  .guideCard {
+    padding: 1.5rem 1.25rem 1.5rem;
+  }
+
+  .navRow {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stepTabs {
+    gap: 6px;
+  }
+
+  .stepTab {
+    padding: 6px 12px 6px 8px;
+    font-size: 12px;
+  }
+
+  .stepLabel {
+    font-size: 12px;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* 👇 CLAVE */
+  align-items: stretch;
+}
+
+/* Igualar altura */
+.guideCard,
+.remoteCard {
+  height: 100%;
+}
+
+/* Remote card FIX */
+.remoteCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 👇 NUEVO BLOQUE */
+.remoteMeta {
+  padding: 0 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.metaItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metaLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  letter-spacing: 0.08em;
+}
+
+.metaValue {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(200, 196, 255);
+}
+
+.note {
+  max-width: 900px;
+  margin: 1.75rem auto 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.5;
+}
+
+.desc {
+  white-space: pre-line;
 }
