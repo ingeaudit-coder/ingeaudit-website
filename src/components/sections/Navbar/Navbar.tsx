@@ -94,7 +94,7 @@ export const Navbar = () => {
       <Link href="/" className={style.linkImg}>
         <Image
           className={style.imgNavbar}
-          width={650}
+          width={900}
           height={160}
           src={LogoIngeaudit}
           alt="Logo de Ingeaudit"
