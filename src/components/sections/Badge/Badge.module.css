@@ -1,0 +1,43 @@
+.containerBadge{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+    width: 27%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.circleBadge{
+    width: 10px;
+    height: 10px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    background-color: #10b981;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+    animation: pulse-soft 3s ease-in-out infinite;
+    backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(10px);
+}
+@keyframes pulse-soft {
+  0% {
+    opacity: 1;
+    transform: scale(1); /* Tamaño normal */
+  }
+  50% {
+    opacity: 0.5; /* Baja la intensidad a la mitad */
+    transform: scale(1.05); /* Se agranda un 5% (casi imperceptible) */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Vuelve a lo normal */
+  }
+}
+
+.textParrafo{
+    font-size: clamp(10px, 3.5vw, 15px);
+    letter-spacing: 0;
+}
