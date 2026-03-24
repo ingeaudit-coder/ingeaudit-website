@@ -160,9 +160,10 @@ export const Navbar = () => {
             {/* Nosotros y Contactanos */}
             {navLinks.filter(l => l.href !== "/").map((link) => {
               const isActive = pathname.startsWith(link.href);
+              const isCta = link.href === "/contactanos";
               return (
                 <li className={`${style.li} ${isActive ? style.active : ""}`} key={link.href}>
-                  <Link href={link.href}>{link.label}</Link>
+                  <Link href={link.href} className={isCta ? style.ctaLink : ""}>{link.label}</Link>
                 </li>
               );
             })}
@@ -259,12 +260,17 @@ export const Navbar = () => {
                   {/* Nosotros y Contactanos */}
                   {navLinks.filter(l => l.href !== "/").map((link) => {
                     const isActive = pathname.startsWith(link.href);
+                    const isCta = link.href === "/contactanos";
                     return (
                       <Link
                         key={link.href}
                         href={link.href}
                         onClick={handleLinkClick}
-                        className={`text-gray-500 hover:text-blue-400 ${isActive ? "text-blue-400 font-medium" : ""}`}
+                        className={
+                          isCta
+                            ? `self-start border border-[#4ade80]/40 rounded-md px-3 py-1.5 text-[#4ade80] hover:bg-[#4ade80]/8 hover:border-[#4ade80]/70 transition-all ${isActive ? "border-[#4ade80]/55" : ""}`
+                            : `text-gray-500 hover:text-blue-400 ${isActive ? "text-blue-400 font-medium" : ""}`
+                        }
                       >
                         {link.label}
                       </Link>
