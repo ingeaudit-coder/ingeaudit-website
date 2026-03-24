@@ -46,6 +46,17 @@
   display: block;
 }
 
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, #1a1f2e);
+  pointer-events: none;
+}
+
 .iconBadge {
   position: absolute;
   top: 0.875rem;

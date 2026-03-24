@@ -3,12 +3,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* height: 100%; */
-    width: 27%;
-    height: 25px;
+    width: fit-content;
+    min-width: max-content;
+    height: 28px;
+    padding: 0 14px;
     border: 1px solid grey;
     border-radius: 15px;
-    gap: 10px;
+    gap: 8px;
+    white-space: nowrap;
 }
 
 .circleBadge{
