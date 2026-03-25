@@ -582,7 +582,7 @@ const translations = {
           en: ["Site Receptions", "Power Density", "Regulatory Compliance"],
         },
         cta: { es: "MÁS INFORMACIÓN", en: "MORE INFO" },
-        href: "/mediciones",
+        href: "/servicios/mediciones",
       },
       {
         badge: { es: "CUMPLIMIENTO LEGAL", en: "LEGAL COMPLIANCE" },
@@ -610,7 +610,7 @@ const translations = {
           en: ["Mobile Homologation", "Technical Standards", "Market Access"],
         },
         cta: { es: "INICIAR HOMOLOGACIÓN", en: "START HOMOLOGATION" },
-        href: "/personas",
+        href: "/servicios/homologacion/personas",
       },
     ],
   },
