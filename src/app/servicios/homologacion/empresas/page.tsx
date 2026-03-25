@@ -6,8 +6,8 @@ import { t } from "@/src/i18n/translations";
 import translations from "@/src/i18n/translations";
 import { Factory, Ship } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { HeroNoMain } from "../HeroNoMain/HeroNoMain";
 import Image from "next/image";
+import { HeroNoMain } from "@/src/components/sections/HeroNoMain/HeroNoMain";
 
 export default function OperadoresEmpresas() {
   const { lang } = useLanguage();

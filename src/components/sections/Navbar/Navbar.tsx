@@ -38,8 +38,8 @@ export const Navbar = () => {
   };
 
   const homologacionSublinks = [
-    { href: "/homologacion", label: t("nav.operadores", lang) },
-    { href: "/personas", label: t("nav.personas", lang) },
+    { href: "/servicios/homologacion/empresas/", label: t("nav.operadores", lang) },
+    { href: "/servicios/homologacion/personas/", label: t("nav.personas", lang) },
   ];
 
   const isServiciosActive =
@@ -149,7 +149,7 @@ export const Navbar = () => {
 
                 {/* Mediciones de Campo */}
                 <Link
-                  href="/mediciones"
+                  href="/servicios/mediciones"
                   className={`${style.dropdownItem} ${pathname === "/mediciones" ? style.dropdownItemActive : ""}`}
                 >
                   {t("nav.mediciones", lang)}
