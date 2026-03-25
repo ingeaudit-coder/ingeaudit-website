@@ -39,9 +39,9 @@ const workTeams: WorkTeam[] = [
     teamSize: 4,
     icon: Smartphone,
     avatars: [
-      { src: "/images/personal/gonza2.png", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Alberto.png", alt: "@maxleiter", fallback: "ML" },
-      { src: "/images/personal/Claudio.png", alt: "@evilrabbit", fallback: "ER" },
+      { src: "/images/personal/gonza2.webp", alt: "@shadcn", fallback: "CN" },
+      { src: "/images/personal/Alberto.webp", alt: "@maxleiter", fallback: "ML" },
+      { src: "/images/personal/Claudio.webp", alt: "@evilrabbit", fallback: "ER" },
     ],
     extraCount: 1,
   },
@@ -52,9 +52,9 @@ const workTeams: WorkTeam[] = [
     teamSize: 10,
     icon: Radio,
     avatars: [
-      { src: "/images/personal/Javier.png", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Ruben.png", alt: "@maxleiter", fallback: "ML" },
-      { src: "/images/personal/Carola.png", alt: "@evilrabbit", fallback: "ER" },
+      { src: "/images/personal/Javier.webp", alt: "@shadcn", fallback: "CN" },
+      { src: "/images/personal/Ruben.webp", alt: "@maxleiter", fallback: "ML" },
+      { src: "/images/personal/Carola.webp", alt: "@evilrabbit", fallback: "ER" },
     ],
     extraCount: 7,
   },
@@ -65,9 +65,9 @@ const workTeams: WorkTeam[] = [
     teamSize: 3,
     icon: Scale,
     avatars: [
-      { src: "/images/personal/Camila.png", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Omar.png", alt: "@maxleiter", fallback: "ML" },
-      { src: "/images/personal/Felipe.png", alt: "@evilrabbit", fallback: "ER" },
+      { src: "/images/personal/Camila.webp", alt: "@shadcn", fallback: "CN" },
+      { src: "/images/personal/Omar.webp", alt: "@maxleiter", fallback: "ML" },
+      { src: "/images/personal/Felipe.webp", alt: "@evilrabbit", fallback: "ER" },
     ],
     extraCount: 0,
   },
@@ -78,8 +78,8 @@ const workTeams: WorkTeam[] = [
     teamSize: 2,
     icon: FileSearch,
     avatars: [
-      { src: "/images/personal/Erick.png", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Hector.png", alt: "@maxleiter", fallback: "ML" },
+      { src: "/images/personal/Erick.webp", alt: "@shadcn", fallback: "CN" },
+      { src: "/images/personal/Hector.webp", alt: "@maxleiter", fallback: "ML" },
     ],
     extraCount: 0,
   },
@@ -100,7 +100,7 @@ export default function Team() {
             <CardHeader className={styles.cardHeader}>
               <div className={styles.imgBox}>
                 <Image
-                  src="/JL.png"
+                  src="/images/personal/JL.webp"
                   alt="Juan Luis Pérez"
                   fill
                   className={styles.img}
@@ -171,15 +171,15 @@ export default function Team() {
 
                     {/* Avatar Group */}
                     <div className={styles.avatarGroupWrapper}>
-                      <AvatarGroup className="grayscale">
+                      <AvatarGroup>
                         {team.avatars.map((avatar) => (
-                          <Avatar key={avatar.alt}>
-                            <AvatarImage src={avatar.src} alt={avatar.alt} />
+                          <Avatar key={avatar.alt} className="size-12">
+                            <AvatarImage src={avatar.src} alt={avatar.alt} className="object-cover" />
                             <AvatarFallback>{avatar.fallback}</AvatarFallback>
                           </Avatar>
                         ))}
                         {team.extraCount > 0 && (
-                          <AvatarGroupCount>+{team.extraCount}</AvatarGroupCount>
+                          <AvatarGroupCount className="size-12 bg-[#251070] text-white">+{team.extraCount}</AvatarGroupCount>
                         )}
                       </AvatarGroup>
                     </div>
