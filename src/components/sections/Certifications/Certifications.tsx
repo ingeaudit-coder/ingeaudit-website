@@ -13,9 +13,9 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 const icons = [BarChart3, Shield, Smartphone];
 
 const logos = [
-  { src: "/images/logos/logosubtel.png", alt: "SUBTEL" },
-  { src: "/images/logos/logocmf.png",    alt: "CMF" },
-  { src: "/images/logos/logohomologacion.png", alt: "Homologación SUBTEL" },
+  { src: "/images/logos/logosubtel.webp", alt: "SUBTEL" },
+  { src: "/images/logos/cmf_logo.svg",    alt: "CMF" },
+  { src: "/images/logos/logohomologacion.webp", alt: "Homologación SUBTEL" },
 ];
 
 export default function Certifications() {
@@ -68,8 +68,7 @@ export default function Certifications() {
                     <Image
                       src={logo.src}
                       alt={logo.alt}
-                      width={120}
-                      height={48}
+                      fill
                       className={styles.logoImage}
                     />
                   </div>
