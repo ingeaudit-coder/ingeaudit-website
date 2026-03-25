@@ -7,6 +7,7 @@ import styles from "./ImeiGuide.module.css";
 import { t } from "@/src/i18n/translations";
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations from "@/src/i18n/translations";
+import HomologacionFAQ from "../HomologacionFAQ/HomologacionFAQ";
 
 export default function ImeiGuide() {
   const { lang } = useLanguage();
@@ -151,7 +152,8 @@ export default function ImeiGuide() {
             </div>
           </div>
         </div>
-      </div>
+      </div><br></br>
+      <HomologacionFAQ />
       <p className={styles.note}>{note[lang]}</p>
     </section>
   );

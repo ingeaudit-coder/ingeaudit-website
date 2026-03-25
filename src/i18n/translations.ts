@@ -582,7 +582,7 @@ const translations = {
           en: ["Site Receptions", "Power Density", "Regulatory Compliance"],
         },
         cta: { es: "MÁS INFORMACIÓN", en: "MORE INFO" },
-        href: "/servicios/mediciones",
+        href: "/mediciones",
       },
       {
         badge: { es: "CUMPLIMIENTO LEGAL", en: "LEGAL COMPLIANCE" },
@@ -610,7 +610,7 @@ const translations = {
           en: ["Mobile Homologation", "Technical Standards", "Market Access"],
         },
         cta: { es: "INICIAR HOMOLOGACIÓN", en: "START HOMOLOGATION" },
-        href: "/servicios/homologacion/personas",
+        href: "/personas",
       },
     ],
   },
@@ -655,8 +655,8 @@ const translations = {
 
   // ─── IMEI GUIDE ────────────────────────────────────────
   imeiNote: {
-    es: "Ingeaudit Ltda. está facultada para cobrar por este servicio (Res. Ex. N°1463 de SUBTEL, 2016, Art. 7°). También puedes acceder a este servicio de forma gratuita en otras Empresas Certificadoras en www.multibanda.cl (multibanda.cl/empresas-certificadoras).",
-    en: "Ingeaudit Ltda. is authorized to charge for this service (SUBTEL Res. Ex. N°1463, 2016, Art. 7). You can also access this service for free at other certified companies at www.multibanda.cl (multibanda.cl/empresas-certificadoras).",
+    es: "Ingeaudit Ltda. está facultada para cobrar por este servicio (Res. Ex. N°1463 de SUBTEL, 2016, Art. 7°).",
+    en: "Ingeaudit Ltda. is authorized to charge for this service (SUBTEL Res. Ex. N°1463, 2016, Art. 7).",
   },
 
   imeiGuide: {
@@ -705,6 +705,66 @@ const translations = {
       },
     },
   },
+
+  // ─── FAQ HOMOLOGACIÓN ───────────────────────────
+faqHomologacion: {
+  titulo: {
+    es: "Preguntas Frecuentes",
+    en: "Frequently Asked Questions",
+  },
+  preguntas: [
+    {
+      pregunta: {
+        es: "¿Qué es la Inscripción Administrativa (H3) y cuándo la necesito?",
+        en: "What is Administrative Registration (H3) and when do I need it?",
+      },
+      respuesta: {
+        es: "La Inscripción Administrativa H3 es el trámite que debes realizar si trajiste un teléfono u otro dispositivo móvil desde el extranjero para uso personal, o si compraste un equipo en Chile que no estaba previamente homologado. Sin este trámite, el equipo puede quedar bloqueado o sin servicio en las redes chilenas.",
+        en: "Administrative Registration H3 is the process you need to complete if you brought a phone or mobile device from abroad for personal use, or if you purchased a device in Chile that was not previously homologated. Without this registration, the device may be blocked or unable to access Chilean networks.",
+      },
+    },
+    {
+      pregunta: {
+        es: "¿Qué necesito para hacer el trámite H3?",
+        en: "What do I need to complete the H3 process?",
+      },
+      respuesta: {
+        es: "Solo necesitas el IMEI de tu equipo (código de 15 dígitos que obtienes marcando *#06# en tu teléfono), tu RUT y los datos básicos del dispositivo como marca y modelo. Con esa información puedes iniciar la solicitud directamente en nuestro portal o visitándonos en sucursal.",
+        en: "You only need your device's IMEI (the 15-digit code obtained by dialing *#06# on your phone), your national ID (RUT), and basic device details such as brand and model. With that information you can start the request directly on our portal or by visiting one of our offices.",
+      },
+    },
+    {
+      pregunta: {
+        es: "¿Cuánto cuesta y cuánto demora el trámite?",
+        en: "How much does it cost and how long does it take?",
+      },
+      respuesta: {
+        es: "Ingeaudit está facultada por SUBTEL para cobrar un arancel por este servicio según la Resolución Exenta N°1463 de 2016. El proceso suele resolverse en pocos días hábiles una vez que la documentación está completa.",
+        en: "Ingeaudit is authorized by SUBTEL to charge a fee for this service under Resolution N°1463 of 2016. The process is usually completed within a few business days once the documentation is complete.",
+      },
+    },
+    {
+      pregunta: {
+        es: "¿Mi equipo puede quedar bloqueado si no hago el trámite?",
+        en: "Can my device get blocked if I don't complete the registration?",
+      },
+      respuesta: {
+        es: "Sí. Los operadores móviles en Chile (Claro, Entel, WOM, Movistar) están obligados a bloquear los equipos que no cuenten con homologación vigente. Si tu dispositivo no está inscrito, puede perder señal o quedar sin servicio en cualquier momento. Realizar el trámite H3 es la única forma de regularizarlo.",
+        en: "Yes. Mobile operators in Chile (Claro, Entel, WOM, Movistar) are required to block devices that do not have valid homologation. If your device is not registered, it may lose signal or stop working at any time. Completing the H3 registration is the only way to regularize it.",
+      },
+    },
+    {
+      pregunta: {
+        es: "¿El trámite H3 sirve para cualquier marca o modelo de teléfono?",
+        en: "Does H3 registration work for any phone brand or model?",
+      },
+      respuesta: {
+        es: "En la mayoría de los casos sí. La Inscripción Administrativa H3 aplica para teléfonos, tablets y otros dispositivos móviles de uso personal, independientemente de la marca. Sin embargo, si el modelo de tu equipo no existe en el registro de SUBTEL, es posible que sea necesario un proceso diferente. En Ingeaudit revisamos tu caso y te orientamos sin costo.",
+        en: "In most cases, yes. H3 Administrative Registration applies to phones, tablets, and other personal mobile devices regardless of brand. However, if your device model does not exist in SUBTEL's registry, a different process may be required. At Ingeaudit we review your case and guide you at no cost.",
+      },
+    },
+  ],
+},
 
   // ─── CONTACTANOS page ──────────────────────────────────
   contactPage: {
