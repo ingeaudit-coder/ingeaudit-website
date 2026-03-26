@@ -136,7 +136,7 @@ export default function Team() {
                 className={styles.linkedinBtn}
                 aria-label="LinkedIn CEO"
               >
-                <Image src="/linkedin.png" alt="LinkedIn" width={84} height={84} />
+                <Image src="/images/logos-rrss/linkedin.svg" alt="LinkedIn" width={30} height={30} />
               </a>
             </CardContent>
           </Card>
