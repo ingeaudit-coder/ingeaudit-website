@@ -82,7 +82,7 @@ export default function ImeiGuide() {
 
           <div className={styles.phoneArea}>
             <div className={styles.phoneWrap}>
-              <Image src="/smartphone1.png" alt="Smartphone" width={600} height={338} className={styles.phoneImg} priority />
+              <Image src="/smartphone1.webp" alt="Smartphone" width={600} height={338} className={styles.phoneImg} priority />
               <div className={styles.screenOverlay} key={cur}>
                 {screens[cur]}
               </div>
