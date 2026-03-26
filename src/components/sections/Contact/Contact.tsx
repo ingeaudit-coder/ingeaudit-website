@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState, useEffect, useRef } from "react";
+// 1. IMPORTAMOS Suspense de react
+import { useMemo, useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
@@ -24,7 +25,8 @@ const PRESET_MESSAGES: Record<string, { es: string; en: string }> = {
   },
 };
 
-export default function Contact() {
+// 2. RENOMBRAMOS la función original y le quitamos el "export default"
+function ContactContent() {
   const { lang } = useLanguage();
   const searchParams = useSearchParams();
   const formRef = useRef<HTMLDivElement>(null);
@@ -313,5 +315,15 @@ export default function Contact() {
 
       </div>
     </section>
+  );
+}
+
+// 3. CREAMOS el nuevo export default que envuelve todo en Suspense
+export default function Contact() {
+  return (
+    // Puedes personalizar el div del fallback con tus clases de estilos si quieres que se vea mejor mientras carga
+    <Suspense fallback={<div className="min-h-125 flex items-center justify-center">Cargando...</div>}>
+      <ContactContent />
+    </Suspense>
   );
 }
