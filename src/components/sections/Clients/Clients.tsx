@@ -9,16 +9,16 @@ import translations from "@/src/i18n/translations";
 
 // Imagina que estos son los logos de la empresa
 const logos = [
-  { src: "/images/logos/clarovtr-logo(22).png", alt: "ClaroVTR", scale: 1.1 },
+  { src: "/images/logos/clarovtr-logo(22).webp", alt: "ClaroVTR", scale: 1.1 },
   { src: "/images/logos/entel-logo.svg", alt: "Entel" },
   { src: "/images/logos/logo-efe.svg", alt: "EFE" },
   { src: "/images/logos/logo-wom.webp", alt: "WOM", scale: 0.8 },
-  { src: "/images/logos/logotipo-gallyas-telecom2.png", alt: "Gallyas Telecom"},
-  { src: "/images/logos/motorola-logo.png", alt: "Motorola", scale: 2 },
+  { src: "/images/logos/logotipo-gallyas-telecom2.webp", alt: "Gallyas Telecom"},
+  { src: "/images/logos/motorola-logo.webp", alt: "Motorola", scale: 2 },
   { src: "/images/logos/komatsu-logo.webp", alt: "Komatsu", scale: 2.8 },
   { src: "/images/logos/codelco-logo.svg", alt: "Codelco"},
   { src: "/images/logos/telefonica-logo.svg", alt: "Telefónica", scale: 3.5 },
-  { src: "/images/logos/sollatek-logo.png", alt: "Sollatek"},
+  { src: "/images/logos/sollatek-logo.webp", alt: "Sollatek"},
 ];
 
 const Clients = () => {
