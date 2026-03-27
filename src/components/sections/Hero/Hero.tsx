@@ -84,7 +84,7 @@ const Hero = () => {
             variant="secondary"
             children={lang === "es" ? "Homologar aquí" : "Certify here"}
             className={`${style.btn} ${style.btnHomologar}`}
-            onClick={() => router.push("/personas")}
+            onClick={() => router.push("/servicios/homologacion/personas")}
           />
           {/* <Button
             variant="secondary"
