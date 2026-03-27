@@ -21,28 +21,28 @@ const cards: CardMedicionesData[] = [
     image: "/images/medicion/medicion1.webp",
     titleKey: "mediciones.cards.card1.title",
     descriptionKey: "mediciones.cards.card1.description",
-    href: "/servicios",
+    href: "/contactanos",
   },
   {
     icon: <ClipboardCheck size={22} />,
     image: "/images/medicion/medicion2.webp",
     titleKey: "mediciones.cards.card2.title",
     descriptionKey: "mediciones.cards.card2.description",
-    href: "/servicios",
+    href: "/contactanos",
   },
   {
     icon: <SlidersHorizontal size={22} />,
     image: "/images/medicion/medicion3.webp",
     titleKey: "mediciones.cards.card3.title",
     descriptionKey: "mediciones.cards.card3.description",
-    href: "/servicios",
+    href: "/contactanos",
   },
   {
     icon: <Smartphone size={22} />,
     image: "/images/medicion/medicion4.webp",
     titleKey: "mediciones.cards.card4.title",
     descriptionKey: "mediciones.cards.card4.description",
-    href: "/servicios",
+    href: "/contactanos",
   },
 ];
 

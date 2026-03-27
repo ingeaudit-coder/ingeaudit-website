@@ -151,6 +151,7 @@ export const Navbar = () => {
                 <Link
                   href="/servicios/mediciones"
                   className={`${style.dropdownItem} ${pathname === "/servicios/mediciones" ? style.dropdownItemActive : ""}`}
+                  style={{ paddingLeft: "1.2rem" }}
                 >
                   {t("nav.mediciones", lang)}
                 </Link>
