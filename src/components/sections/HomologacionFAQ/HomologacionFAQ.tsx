@@ -10,17 +10,9 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const HomologacionFAQ = () => {
   const { lang } = useLanguage();
 
-  const [faqOpen, setFaqOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqItems = translations.faqHomologacion.preguntas;
-
-  const toggleFaq = () => {
-    setFaqOpen((prev) => {
-      if (prev) setOpenIndex(null);
-      return !prev;
-    });
-  };
 
   const toggleQuestion = (i: number) => {
     setOpenIndex(openIndex === i ? null : i);
@@ -34,29 +26,16 @@ const HomologacionFAQ = () => {
         <div className={styles.faqCard}>
 
           {/* HEADER */}
-          <button
-            className={styles.headerRow}
-            onClick={toggleFaq}
-          >
+          <div className={styles.headerRow}>
             <HelpCircle className={styles.titleIcon} />
 
             <h2 className={styles.title}>
               {t("faqHomologacion.titulo", lang)}
             </h2>
-
-            <ChevronDown
-              className={`${styles.mainChevron} ${
-                faqOpen ? styles.mainChevronOpen : ""
-              }`}
-            />
-          </button>
+          </div>
 
           {/* CONTENIDO */}
-          <div
-            className={`${styles.accordionWrapper} ${
-              faqOpen ? styles.accordionWrapperOpen : ""
-            }`}
-          >
+          <div className={`${styles.accordionWrapper} ${styles.accordionWrapperOpen}`}>
             <div className={styles.accordionList}>
               {faqItems.map((item, i) => {
                 const isOpen = openIndex === i;
@@ -64,9 +43,7 @@ const HomologacionFAQ = () => {
                 return (
                   <div
                     key={i}
-                    className={`${styles.accordionItem} ${
-                      isOpen ? styles.open : ""
-                    }`}
+                    className={`${styles.accordionItem} ${isOpen ? styles.open : ""}`}
                   >
                     <button
                       className={styles.accordionTrigger}
@@ -77,19 +54,17 @@ const HomologacionFAQ = () => {
                       </span>
 
                       <ChevronDown
-                        className={`${styles.chevron} ${
-                          isOpen ? styles.chevronOpen : ""
-                        }`}
+                        className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}
                       />
                     </button>
 
-                    {isOpen && (
-                      <div className={styles.accordionBody}>
+                    <div className={`${styles.accordionBody} ${isOpen ? styles.accordionBodyOpen : ""}`}>
+                      <div className={styles.accordionBodyInner}>
                         <p className={styles.answerText}>
                           {item.respuesta[lang]}
                         </p>
                       </div>
-                    )}
+                    </div>
                   </div>
                 );
               })}
