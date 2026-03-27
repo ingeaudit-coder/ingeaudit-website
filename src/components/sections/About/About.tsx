@@ -15,6 +15,11 @@ const About = () => {
       <div className={styles.container}>
         {/* Main Description */}
         <div className={styles.mainContent}>
+          <div className={styles.statBlock}>
+            <span className={styles.statNumber}>20+</span>
+            <span className={styles.statLabel}>{lang === "es" ? "AÑOS" : "YEARS"}</span>
+          </div>
+          <div className={styles.verticalDivider} />
           <p className={styles.description}>{t("about.whoText", lang)}</p>
         </div>
 
