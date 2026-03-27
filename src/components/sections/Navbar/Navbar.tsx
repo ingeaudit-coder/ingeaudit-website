@@ -150,7 +150,7 @@ export const Navbar = () => {
                 {/* Mediciones de Campo */}
                 <Link
                   href="/servicios/mediciones"
-                  className={`${style.dropdownItem} ${pathname === "/mediciones" ? style.dropdownItemActive : ""}`}
+                  className={`${style.dropdownItem} ${pathname === "/servicios/mediciones" ? style.dropdownItemActive : ""}`}
                 >
                   {t("nav.mediciones", lang)}
                 </Link>
@@ -247,9 +247,9 @@ export const Navbar = () => {
 
                         {/* Mediciones de Campo */}
                         <Link
-                          href="/mediciones"
+                          href="/servicios/mediciones"
                           onClick={handleLinkClick}
-                          className={`text-sm text-gray-500 hover:text-blue-400 ${pathname === "/mediciones" ? "text-blue-400 font-medium" : ""}`}
+                          className={`text-sm text-gray-500 hover:text-blue-400 ${pathname === "/servicios/mediciones" ? "text-blue-400 font-medium" : ""}`}
                         >
                           {t("nav.mediciones", lang)}
                         </Link>
