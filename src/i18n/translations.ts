@@ -557,8 +557,8 @@ const translations = {
     badge: {es: "Expertos", en: "Experts"},
     title: { es: "EQUIPO", en: "TEAM" },
     subtitle: {
-      es: "Experiencia comprobada en consultoría técnico-regulatoria en Chile",
-      en: "Proven experience in technical-regulatory consulting in Chile",
+      es: "Más de 20 años de experiencia en consultoría técnico-regulatoria para el sector de telecomunicaciones en Chile",
+      en: "Over 20 years of experience in technical-regulatory consulting for the telecommunications industry in Chile",
     },
   },
 
