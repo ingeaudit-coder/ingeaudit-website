@@ -76,7 +76,7 @@ const Hero = () => {
         <div className={style.containerButtonHero}>
           <Button
             variant="primary"
-            children={lang === "es" ? "Servicios de Ingenieria" : "Engineering Services"}
+            children={lang === "es" ? "Servicios de Ingeniería" : "Engineering Services"}
             className={style.btn}
             onClick={hacerScroll}
           />
