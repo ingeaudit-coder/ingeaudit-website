@@ -160,8 +160,8 @@ const translations = {
           en: "Shipment Certification (H2)",
         },
         descripcion: {
-          es: "Proceso que permite realizar la validación de los embarques asociados a modelos ya certificados mediante H1. Este proceso anualmente se hace en base a muestreo y en laboratorio de Operador Logístico de empresa.",
-          en: "Process that enables the validation of shipments associated with models already certified through H1. This process is carried out annually based on sampling and at the company's Logistics Operator laboratory.",
+          es: "Proceso que permite realizar la validación de los embarques asociados a modelos ya certificados mediante H1. Este proceso se hace en base a muestreo y en laboratorio de Operador Logístico de empresa.",
+          en: "Process that enables the validation of shipments associated with models already certified through H1. This process is carried out based on sampling and at the company's Logistics Operator laboratory.",
         },
       },
       h3: {
@@ -170,8 +170,8 @@ const translations = {
           en: "Administrative Registration (H3)",
         },
         descripcion: {
-          es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile. Si planeas permanecer más de 30 días, debes realizar este trámite.",
-          en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile. If you plan to stay more than 30 days, this registration is required.",
+          es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile.",
+          en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile.",
         },
         precio: {
           label: {
@@ -412,8 +412,8 @@ const translations = {
         en: "Individuals",
       },
       subtitulo: {
-        es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile. Si planeas permanecer más de 30 días, debes realizar este trámite.",
-        en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile. If you plan to stay more than 30 days, you must complete this process.",
+        es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile.",
+        en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile.",
       },
     },
 
@@ -688,8 +688,8 @@ const translations = {
       step3: {
         lbl: { es: "Paso 3", en: "Step 3" },
         dsc: {
-          es: "Anota o toma una captura del número IMEI. Lo necesitarás para el trámite de Inscripción Administrativa.",
-          en: "Write down or screenshot the IMEI number. You will need it for the Administrative Registration process.",
+          es: "Toma una captura de pantalla del número IMEI. Lo necesitarás para el trámite de Inscripción Administrativa.",
+          en: "Take a screenshot of the IMEI number. You will need it for the Administrative Registration process.",
         },
         screenLabel: { es: "Tu IMEI es:", en: "Your IMEI is:" },
         screenHint: { es: "Toma una captura de pantalla", en: "Take a screenshot" },
@@ -719,8 +719,8 @@ faqHomologacion: {
         en: "What is Administrative Registration (H3) and when do I need it?",
       },
       respuesta: {
-        es: "La Inscripción Administrativa H3 es el trámite que debes realizar si trajiste un teléfono u otro dispositivo móvil desde el extranjero para uso personal, o si compraste un equipo en Chile que no estaba previamente homologado. Sin este trámite, el equipo puede quedar bloqueado o sin servicio en las redes chilenas.",
-        en: "Administrative Registration H3 is the process you need to complete if you brought a phone or mobile device from abroad for personal use, or if you purchased a device in Chile that was not previously homologated. Without this registration, the device may be blocked or unable to access Chilean networks.",
+        es: "La Inscripción Administrativa H3 es el trámite que debes realizar si trajiste un teléfono u otro dispositivo móvil desde el extranjero para uso personal. Sin este trámite, el equipo puede quedar bloqueado o sin servicio en las redes chilenas.",
+        en: "The H3 Administrative Registration is the procedure you must complete if you brought a phone or another mobile device from abroad for personal use. Without this process, the device may be blocked or unable to access Chilean mobile networks.",
       },
     },
     {
@@ -739,8 +739,8 @@ faqHomologacion: {
         en: "How much does it cost and how long does it take?",
       },
       respuesta: {
-        es: "Ingeaudit está facultada por SUBTEL para cobrar un arancel por este servicio según la Resolución Exenta N°1463 de 2016. El proceso suele resolverse en pocos días hábiles una vez que la documentación está completa.",
-        en: "Ingeaudit is authorized by SUBTEL to charge a fee for this service under Resolution N°1463 of 2016. The process is usually completed within a few business days once the documentation is complete.",
+        es: "Ingeaudit está facultada por SUBTEL para cobrar un arancel por este servicio según la Resolución Exenta N°1463 de 2016. Una vez que la documentación esté completa, el proceso de homologación tardará 6 horas hábiles.",
+        en: "Ingeaudit is authorized by SUBTEL to charge a fee for this service under Resolution N°1463 of 2016. Once the documentation is complete, the homologation process will take 6 business hours.",
       },
     },
     {
@@ -759,8 +759,8 @@ faqHomologacion: {
         en: "Does H3 registration work for any phone brand or model?",
       },
       respuesta: {
-        es: "En la mayoría de los casos sí. La Inscripción Administrativa H3 aplica para teléfonos, tablets y otros dispositivos móviles de uso personal, independientemente de la marca. Sin embargo, si el modelo de tu equipo no existe en el registro de SUBTEL, es posible que sea necesario un proceso diferente. En Ingeaudit revisamos tu caso y te orientamos sin costo.",
-        en: "In most cases, yes. H3 Administrative Registration applies to phones, tablets, and other personal mobile devices regardless of brand. However, if your device model does not exist in SUBTEL's registry, a different process may be required. At Ingeaudit we review your case and guide you at no cost.",
+        es: "En la mayoría de los casos sí. La Inscripción Administrativa H3 aplica para teléfonos, tablets y otros dispositivos móviles de uso personal, independientemente de la marca. En Ingeaudit revisamos tu caso y te orientamos sin costo.",
+        en: "In most cases, yes. H3 Administrative Registration applies to phones, tablets, and other personal mobile devices regardless of brand. At Ingeaudit we review your case and guide you at no cost.",
       },
     },
   ],
