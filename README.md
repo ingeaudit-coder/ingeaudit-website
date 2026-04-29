@@ -4,7 +4,7 @@
 
 Este proyecto tiene como objetivo construir una presencia digital moderna, rápida y profesional para Ingeaudit, utilizando las últimas tecnologías de desarrollo web frontend. El enfoque se centra en el rendimiento, la experiencia de usuario y una arquitectura escalable y mantenible.
 
-![Vista previa del proyecto en desarrollo](public/web-ing.webp)
+![Vista previa del proyecto en desarrollo](public/screen_shots.webp)
 *Estado actual del desarrollo (Navegación y Layout base).*
 
 ## Stack Tecnológico
