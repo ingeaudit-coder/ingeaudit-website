@@ -52,7 +52,7 @@ const Hero = () => {
         preload="auto"
         className={style.videoHero}
       >
-        <source src="/video/video-project-web-inge.mp4" type="video/mp4" />
+        <source src="/video/video-hero-ingeweb.mp4" type="video/mp4" />
       </video>
       <div className={style.overlay} />
 
