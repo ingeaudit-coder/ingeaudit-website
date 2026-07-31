@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "@/src/components/sections/Certifications/Certifications.module.css";
-import { BarChart3, Shield, Smartphone } from "lucide-react";
+import { BarChart3, Shield, Smartphone, FileText } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
@@ -72,6 +72,23 @@ export default function Certifications() {
                       className={styles.logoImage}
                     />
                   </div>
+
+                  {cert.enlaces && (
+                    <div className={styles.certLinks}>
+                      {cert.enlaces.map((enlace, linkIdx) => (
+                        <a
+                          key={linkIdx}
+                          href={enlace.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.certLink}
+                        >
+                          <FileText aria-hidden="true" />
+                          {enlace.label[lang]}
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>

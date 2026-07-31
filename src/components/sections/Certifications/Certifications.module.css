@@ -100,8 +100,10 @@
 /* Logo footer */
 .cardFooter {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.1rem;
   padding: 1rem 2rem 1.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: auto;
@@ -121,6 +123,56 @@
 
 .card:hover .logoImage {
   opacity: 1;
+}
+
+/* Certificate PDF links */
+.certLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.certLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-geist-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certLink svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.certLink:hover {
+  background: rgba(201, 169, 97, 0.16);
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 169, 97, 0.25);
+}
+
+/* Keeps the divider line above the logo aligned across all three cards on
+   desktop: the "Auditoría de Cumplimiento" footer is taller because it has
+   the certificate links below the logo, so the other two footers need the
+   same min-height to push their divider line up to match. */
+@media (min-width: 769px) {
+  .cardFooter {
+    min-height: 143px;
+  }
 }
 
 @media (max-width: 768px) {

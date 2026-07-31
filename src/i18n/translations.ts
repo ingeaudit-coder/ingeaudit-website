@@ -516,9 +516,19 @@ const translations = {
           en: "Compliance Audit",
         },
         descripcion: {
-          es: "Desde enero de 2025, inscrita en el Registro de Inspectores de Cuentas y Auditores Externos, y certificada por la Comisión para el Mercado Financiero (CMF).",
-          en: "Since January 2025, registered in the Registry of Account Inspectors and External Auditors, and certified by the Financial Market Commission (CMF).",
+          es: "Prestamos servicios de auditoría contable y tributaria a empresas del sector de telecomunicaciones, con énfasis en la verificación del cumplimiento normativo sectorial. Contamos con experiencia en auditorías realizadas ante CERNAC y otros organismos estatales. Ingeaudit Ltda. y el auditor responsable de asesorar a nuestra empresa cuentan con certificación vigente ante la Comisión para el Mercado Financiero (CMF). Ambos certificados están disponibles para su consulta en el siguiente enlace.",
+          en: "We provide accounting and tax audit services to companies in the telecommunications sector, with an emphasis on verifying sector-specific regulatory compliance. We have experience conducting audits before CERNAC and other state agencies. Ingeaudit Ltda. and the auditor responsible for advising our company hold current certification with the Financial Market Commission (CMF). Both certificates are available for review at the following link.",
         },
+        enlaces: [
+          {
+            label: { es: "Ver certificado Ingeaudit", en: "View Ingeaudit certificate" },
+            href: "/certificaciones/ingeaudit-cmf.pdf",
+          },
+          {
+            label: { es: "Ver certificado auditor", en: "View auditor certificate" },
+            href: "/certificaciones/auditor-cmf.pdf",
+          },
+        ],
       },
       {
         titulo: {
