@@ -40,6 +40,7 @@ function ContactContent() {
   });
 
   const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
   const [addressCopied, setAddressCopied] = useState(false);
   const [mensajeEsPreset, setMensajeEsPreset] = useState(false);
 
@@ -82,14 +83,37 @@ function ContactContent() {
     setFormData((p) => ({ ...p, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus(t("contactPage.successStatus", lang));
-    console.log("Form data:", formData);
-    setTimeout(() => {
+    setIsSending(true);
+    setStatus("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data?.error || "send_failed");
+      }
+
+      setStatus(t("contactPage.successStatus", lang));
       setFormData({ nombre: "", email: "", telefono: "", empresa: "", mensaje: "" });
-      setStatus("");
-    }, 3000);
+    } catch (error) {
+      console.error("Error al enviar el formulario de contacto:", error);
+      setStatus(
+        lang === "es"
+          ? "Ocurrió un error al enviar tu mensaje. Por favor intenta nuevamente o escríbenos directamente a contacto@ingeaudit.cl."
+          : "There was an error sending your message. Please try again or email us directly at contacto@ingeaudit.cl."
+      );
+    } finally {
+      setIsSending(false);
+      setTimeout(() => setStatus(""), 6000);
+    }
   };
 
   const copyText = async (text: string) => {
@@ -304,8 +328,12 @@ function ContactContent() {
 
                 {status && <p className={styles.status}>{status}</p>}
 
-                <Button type="submit" className={styles.submit}>
-                  {t("contactPage.sendButton", lang)}
+                <Button type="submit" className={styles.submit} disabled={isSending}>
+                  {isSending
+                    ? lang === "es"
+                      ? "Enviando..."
+                      : "Sending..."
+                    : t("contactPage.sendButton", lang)}
                 </Button>
 
               </form>
