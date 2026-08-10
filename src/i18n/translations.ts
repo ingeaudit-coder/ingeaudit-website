@@ -66,7 +66,7 @@ const translations = {
     },
     email: { es: "Correo", en: "Email" },
     phone: { es: "Teléfono", en: "Phone" },
-    seniority: { es: "Antigüedad", en: "Tenure" },
+    seniority: { es: "Experiencia", en: "Experience" },
     ceoQuote: {
       es: "Nuestro compromiso es entregar soluciones técnico-regulatorias que generen valor real para nuestros clientes, respaldados por más de 20 años de experiencia en la industria de las telecomunicaciones.",
       en: "Our commitment is to deliver technical-regulatory solutions that generate real value for our clients, backed by over 20 years of experience in the telecommunications industry."
@@ -146,22 +146,22 @@ const translations = {
       },
       h1: {
         titulo: {
-          es: "Certificación Prototipo (H1)",
-          en: "Prototype Certification (H1)",
+          es: "Homologación de Prototipos (H1)",
+          en: "Prototype Homologation (H1)",
         },
         descripcion: {
-          es: "Proceso de certificación de modelos de equipos terminales de telefonía móvil y acceso a internet para su comercialización en el país, mediante pruebas en laboratorios de Ingeaudit, sala común SAE oficial, verificación de desbloqueo y validación de parámetros conforme a la normativa 1463 y 1474 de 2016.",
-          en: "Process for certifying models of mobile telephony and internet access terminal equipment for commercialization in the country, through testing in Ingeaudit laboratories, an official SAE common room, device unlock verification, and validation of parameters in accordance with regulations 1463 and 1474 of 2016.",
+          es: "Proceso de homologación de modelos de equipos terminales de telefonía móvil y acceso a internet para su comercialización en el país, mediante pruebas en laboratorios de Ingeaudit, sala común SAE oficial, verificación de desbloqueo y validación de parámetros conforme a la normativa 1463 y 1474 de 2016.",
+          en: "Process for homologation models of mobile telephony and internet access terminal equipment for commercialization in the country, through testing in Ingeaudit laboratories, an official SAE common room, device unlock verification, and validation of parameters in accordance with regulations 1463 and 1474 of 2016.",
         },
       },
       h2: {
         titulo: {
-          es: "Certificación Embarques (H2)",
-          en: "Shipment Certification (H2)",
+          es: "Homologación de Embarques (H2)",
+          en: "Shipment Homologation (H2)",
         },
         descripcion: {
-          es: "Proceso que permite realizar la validación de los embarques asociados a modelos ya certificados mediante H1. Este proceso se hace en base a muestreo y en laboratorio de Operador Logístico de empresa.",
-          en: "Process that enables the validation of shipments associated with models already certified through H1. This process is carried out based on sampling and at the company's Logistics Operator laboratory.",
+          es: "Proceso que permite realizar la validación de los embarques asociados a modelos ya homologados mediante H1. Este proceso se hace en base a muestreo y en laboratorio de Operador Logístico de empresa.",
+          en: "Process that enables the validation of shipments associated with models already homologated through H1. This process is carried out based on sampling and at the company's Logistics Operator laboratory.",
         },
       },
       h3: {
@@ -170,8 +170,8 @@ const translations = {
           en: "Administrative Registration (H3)",
         },
         descripcion: {
-          es: "Proceso excepcional que permite a personas naturales certificar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile.",
-          en: "Exceptional process that allows individuals to documentarily certify mobile terminal equipment purchased abroad for use in Chile.",
+          es: "Proceso excepcional que permite a personas naturales homologar documentalmente equipos terminales de telefonía móvil comprados en el extranjero, para su uso en Chile.",
+          en: "Exceptional process that allows individuals to documentarily homologate mobile terminal equipment purchased abroad for use in Chile.",
         },
         precio: {
           label: {
@@ -375,7 +375,7 @@ const translations = {
           item5: { es: "Coordinación con el mandante y disponibilidad de acceso al sitio.", en: "Coordination with the client and site access availability." },
         },
         duracion: { es: "1 a 2 días por sitio, según complejidad.", en: "1 to 2 days per site, depending on complexity." },
-        equipamiento: { es: "Cámara termográfica, telémetro láser y medidor de puesta a tierra.", en: "Thermal camera, laser rangefinder, and grounding tester." },
+        equipamiento: {es: "Cámara, notebook, herramientas de acceso específicas y cables de conexión a equipos.", en: "Camera, laptop, specialized access tools, and equipment connection cables."},
         normativa: { es: "Conforme al proyecto técnico aprobado y normativa SUBTEL vigente.", en: "In accordance with the approved technical project and current SUBTEL regulations." },
       },
       card2: {
@@ -426,7 +426,7 @@ const translations = {
           item5: { es: "Levantamiento fotográfico y registro de evidencias en terreno.", en: "Photographic survey and on-site evidence recording." },
         },
         duracion: { es: "Aproximadamente 1 día por sitio auditado.", en: "Approximately 1 day per audited site." },
-        equipamiento: { es: "Equipos de medición certificados y checklist normativo.", en: "Certified measurement equipment and regulatory checklist." },
+        equipamiento: {es: "Cámara, notebook, herramientas de acceso específicas y cables de conexión a equipos.", en: "Camera, laptop, specialized access tools, and equipment connection cables."},
         normativa: { es: "Cumplimiento del proyecto técnico y normativa vigente aplicable.", en: "Compliance with the technical project and applicable current regulations." },
       },
     },
@@ -611,8 +611,8 @@ const translations = {
 
   // ─── NOSOTROS page hero ────────────────────────────────
   nosotrosPage: {
-    badge: {es: "Expertos", en: "Experts"},
-    title: { es: "EQUIPO", en: "TEAM" },
+    badge: {es: "QUEIENS SOMOS", en: "WHO WE ARE"},
+    title: { es: "NOSOTROS", en: "ABOUT US" },
     subtitle: {
       es: "Más de 20 años de experiencia en consultoría técnico-regulatoria para el sector de telecomunicaciones en Chile",
       en: "Over 20 years of experience in technical-regulatory consulting for the telecommunications industry in Chile",
