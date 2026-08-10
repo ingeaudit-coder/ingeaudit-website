@@ -23,7 +23,6 @@ interface CardMedicionesData {
   titleKey: string;
   descriptionKey: string;
   detailKeys: string[];
-  duracionKey: string;
   equipamientoKey: string;
   normativaKey: string;
   href: string;
@@ -42,7 +41,6 @@ const cards: CardMedicionesData[] = [
       "mediciones.cards.card1.details.item4",
       "mediciones.cards.card1.details.item5",
     ],
-    duracionKey: "mediciones.cards.card1.duracion",
     equipamientoKey: "mediciones.cards.card1.equipamiento",
     normativaKey: "mediciones.cards.card1.normativa",
     href: "/contactanos",
@@ -59,7 +57,6 @@ const cards: CardMedicionesData[] = [
       "mediciones.cards.card2.details.item4",
       "mediciones.cards.card2.details.item5",
     ],
-    duracionKey: "mediciones.cards.card2.duracion",
     equipamientoKey: "mediciones.cards.card2.equipamiento",
     normativaKey: "mediciones.cards.card2.normativa",
     href: "/contactanos",
@@ -76,7 +73,6 @@ const cards: CardMedicionesData[] = [
       "mediciones.cards.card3.details.item4",
       "mediciones.cards.card3.details.item5",
     ],
-    duracionKey: "mediciones.cards.card3.duracion",
     equipamientoKey: "mediciones.cards.card3.equipamiento",
     normativaKey: "mediciones.cards.card3.normativa",
     href: "/contactanos",
@@ -93,7 +89,6 @@ const cards: CardMedicionesData[] = [
       "mediciones.cards.card4.details.item4",
       "mediciones.cards.card4.details.item5",
     ],
-    duracionKey: "mediciones.cards.card4.duracion",
     equipamientoKey: "mediciones.cards.card4.equipamiento",
     normativaKey: "mediciones.cards.card4.normativa",
     href: "/contactanos",
@@ -231,17 +226,6 @@ export const CardMediciones = () => {
                         </h4>
 
                         <ul className={styles.extraList}>
-                          <li>
-                            <Clock size={16} aria-hidden="true" />
-                            <span>
-                              <span className={styles.extraLabel}>
-                                {t("mediciones.cards.duracionLabel", lang)}
-                              </span>
-                              <span className={styles.extraValue}>
-                                {t(card.duracionKey, lang)}
-                              </span>
-                            </span>
-                          </li>
                           <li>
                             <Wrench size={16} aria-hidden="true" />
                             <span>

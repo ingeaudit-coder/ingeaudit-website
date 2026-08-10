@@ -14,7 +14,7 @@ const icons = [BarChart3, Shield, Smartphone];
 
 const logos = [
   { src: "/images/logos/logosubtel.webp", alt: "SUBTEL" },
-  { src: "/images/logos/cmf_logo.svg",    alt: "CMF" },
+  { src: "/images/logos/cmf_logo.svg", alt: "CMF" },
   { src: "/images/logos/logohomologacion.webp", alt: "Homologación SUBTEL" },
 ];
 
@@ -36,17 +36,86 @@ export default function Certifications() {
       </motion.h2>
 
       <div className={styles.grid}>
-        {items.map((cert, idx) => {
+        {/* Columna izquierda: Espectro + Homologación apiladas */}
+        <div className={styles.leftColumn}>
+          {[0, 2].map((idx) => {
+            const cert = items[idx];
+            const Icon = icons[idx] ?? Shield;
+            const logo = logos[idx];
+
+            return (
+              <motion.div
+                key={idx}
+                className={styles.cardWrapper}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15, duration: 0.7 }}
+              >
+                <Card className={styles.card}>
+                  <CardHeader className={styles.cardHeader}>
+                    <div className={styles.iconWrap} aria-hidden="true">
+                      <Icon className={styles.icon} />
+                    </div>
+
+                    <CardTitle className={styles.cardTitle}>
+                      {cert.titulo[lang]}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className={styles.cardContent}>
+                    <p className={styles.description}>
+                      {cert.descripcion[lang]}
+                    </p>
+                  </CardContent>
+
+                  <CardFooter className={styles.cardFooter}>
+                    <div className={styles.logoWrap}>
+                      <Image
+                        src={logo.src}
+                        alt={logo.alt}
+                        fill
+                        className={styles.logoImage}
+                      />
+                    </div>
+
+                    {cert.enlaces && (
+                      <div className={styles.certLinks}>
+                        {cert.enlaces.map((enlace, linkIdx) => (
+                          <a
+                            key={linkIdx}
+                            href={enlace.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.certLink}
+                          >
+                            <FileText aria-hidden="true" />
+                            {enlace.label[lang]}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Auditoría — columna derecha, define la altura total */}
+        {(() => {
+          const idx = 1;
+          const cert = items[idx];
           const Icon = icons[idx] ?? Shield;
           const logo = logos[idx];
 
           return (
             <motion.div
-              key={idx}
+              className={styles.cardWrapper}
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.2, duration: 0.7 }}
+              transition={{ delay: 0.15, duration: 0.7 }}
             >
               <Card className={styles.card}>
                 <CardHeader className={styles.cardHeader}>
@@ -60,7 +129,9 @@ export default function Certifications() {
                 </CardHeader>
 
                 <CardContent className={styles.cardContent}>
-                  <p className={styles.description}>{cert.descripcion[lang]}</p>
+                  <p className={styles.description}>
+                    {cert.descripcion[lang]}
+                  </p>
                 </CardContent>
 
                 <CardFooter className={styles.cardFooter}>
@@ -93,7 +164,7 @@ export default function Certifications() {
               </Card>
             </motion.div>
           );
-        })}
+        })()}
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./Team.module.css";
 import { useLanguage } from "@/src/context/LanguageContext";
 import { t } from "@/src/i18n/translations";
-import { Smartphone, Radio, Scale, FileSearch } from "lucide-react";
+import { Smartphone, Radio, Scale, FileSearch, UserRound } from "lucide-react";
 
 import {
   Card,
@@ -18,7 +18,6 @@ import {
   AvatarFallback,
   AvatarGroup,
   AvatarGroupCount,
-  AvatarImage,
 } from "@/components/ui/avatar";
 
 type WorkTeam = {
@@ -27,7 +26,7 @@ type WorkTeam = {
   descriptionKey: string;
   teamSize: number;
   icon: React.ComponentType<{ className?: string; size?: number }>;
-  avatars: { src: string; alt: string; fallback: string }[];
+  visibleUsers: number;
   extraCount: number;
 };
 
@@ -38,12 +37,8 @@ const workTeams: WorkTeam[] = [
     descriptionKey: "homologationDesc",
     teamSize: 4,
     icon: Smartphone,
-    avatars: [
-      { src: "/images/personal/gonza2.webp", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Alberto.webp", alt: "@maxleiter", fallback: "ML" },
-      { src: "/images/personal/Claudio.webp", alt: "@evilrabbit", fallback: "ER" },
-    ],
-    extraCount: 1,
+    visibleUsers: 2,
+    extraCount: 2,
   },
   {
     id: 2,
@@ -51,37 +46,26 @@ const workTeams: WorkTeam[] = [
     descriptionKey: "fieldMeasurementsDesc",
     teamSize: 10,
     icon: Radio,
-    avatars: [
-      { src: "/images/personal/Javier.webp", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Ruben.webp", alt: "@maxleiter", fallback: "ML" },
-      { src: "/images/personal/Carola.webp", alt: "@evilrabbit", fallback: "ER" },
-    ],
-    extraCount: 7,
+    visibleUsers: 2,
+    extraCount: 8,
   },
   {
     id: 3,
     titleKey: "regulatoryAdvisory",
     descriptionKey: "regulatoryAdvisoryDesc",
-    teamSize: 3,
+    teamSize: 4,
     icon: Scale,
-    avatars: [
-      { src: "/images/personal/Camila.webp", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Omar.webp", alt: "@maxleiter", fallback: "ML" },
-      { src: "/images/personal/Felipe.webp", alt: "@evilrabbit", fallback: "ER" },
-    ],
-    extraCount: 0,
+    visibleUsers: 2,
+    extraCount: 2,
   },
   {
     id: 4,
     titleKey: "technicalAudits",
     descriptionKey: "technicalAuditsDesc",
-    teamSize: 2,
+    teamSize: 4,
     icon: FileSearch,
-    avatars: [
-      { src: "/images/personal/Erick.webp", alt: "@shadcn", fallback: "CN" },
-      { src: "/images/personal/Hector.webp", alt: "@maxleiter", fallback: "ML" },
-    ],
-    extraCount: 0,
+    visibleUsers: 2,
+    extraCount: 2,
   },
 ];
 
@@ -120,7 +104,7 @@ export default function Team() {
               </p>
               <p className={styles.meta}>
                 <strong>{t("team.seniority", lang)}:</strong>{" "}
-                {lang === "es" ? "20 años en la empresa" : "20 years at the company"}
+                {lang === "es" ? "+25 años de experiencia" : "+25 years of experience"}
               </p>
 
               <blockquote className={styles.quote}>
@@ -169,13 +153,14 @@ export default function Team() {
                       </strong>
                     </p>
 
-                    {/* Avatar Group */}
+                    {/* Avatar Group - icon only, no images */}
                     <div className={styles.avatarGroupWrapper}>
                       <AvatarGroup>
-                        {team.avatars.map((avatar) => (
-                          <Avatar key={avatar.alt} className="size-12">
-                            <AvatarImage src={avatar.src} alt={avatar.alt} className="object-cover" />
-                            <AvatarFallback>{avatar.fallback}</AvatarFallback>
+                        {Array.from({ length: team.visibleUsers }).map((_, index) => (
+                          <Avatar key={`${team.id}-${index}`} className="size-12">
+                            <AvatarFallback>
+                              <UserRound size={20} />
+                            </AvatarFallback>
                           </Avatar>
                         ))}
                         {team.extraCount > 0 && (
