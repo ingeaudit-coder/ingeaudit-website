@@ -18,6 +18,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ingeaudit",
   description: "Consultoría técnica-regulatoria en telecomunicaciones",
+
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+    ],
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +41,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Navbar />
           <main>{children}</main>
-          <Footer/>
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
