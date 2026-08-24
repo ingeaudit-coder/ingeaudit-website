@@ -169,8 +169,8 @@ function ContactContent() {
                 </span>
                 <div className={styles.itemBody}>
                   <p className={styles.label}>{t("contactPage.email", lang)}</p>
-                  <a href="mailto:contacto@ingeaudit.cl" className={styles.link}>
-                    contacto@ingeaudit.cl
+                  <a href="mailto:certificacion@ingeaudit.cl" className={styles.link}>
+                    certificacion@ingeaudit.cl
                   </a>
                 </div>
               </div>
