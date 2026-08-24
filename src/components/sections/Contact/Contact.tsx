@@ -107,8 +107,8 @@ function ContactContent() {
       console.error("Error al enviar el formulario de contacto:", error);
       setStatus(
         lang === "es"
-          ? "Ocurrió un error al enviar tu mensaje. Por favor intenta nuevamente o escríbenos directamente a contacto@ingeaudit.cl."
-          : "There was an error sending your message. Please try again or email us directly at contacto@ingeaudit.cl."
+          ? "Ocurrió un error al enviar tu mensaje. Por favor intenta nuevamente o escríbenos directamente a certificacion@ingeaudit.cl."
+          : "There was an error sending your message. Please try again or email us directly at certificacion@ingeaudit.cl."
       );
     } finally {
       setIsSending(false);
