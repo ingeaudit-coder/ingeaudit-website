@@ -100,9 +100,6 @@ export default function Team() {
                 <strong>{t("team.email", lang)}:</strong> jlperez@ingeaudit.cl
               </p>
               <p className={styles.meta}>
-                <strong>{t("team.phone", lang)}:</strong> +56 9 7709 7383
-              </p>
-              <p className={styles.meta}>
                 <strong>{t("team.seniority", lang)}:</strong>{" "}
                 {lang === "es" ? "+25 años de experiencia" : "+25 years of experience"}
               </p>
