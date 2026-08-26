@@ -786,8 +786,8 @@ faqHomologacion: {
         en: "What do I need to complete the H3 process?",
       },
       respuesta: {
-        es: "Solo necesitas el IMEI de tu equipo (código de 15 dígitos que obtienes marcando *#06# en tu teléfono), tu RUT y los datos básicos del dispositivo como marca y modelo. Con esa información puedes iniciar la solicitud directamente en nuestro portal o visitándonos en sucursal.",
-        en: "You only need your device's IMEI (the 15-digit code obtained by dialing *#06# on your phone), your national ID (RUT), and basic device details such as brand and model. With that information you can start the request directly on our portal or by visiting one of our offices.",
+        es: "Solo necesitas el IMEI de tu equipo (código de 15 dígitos que obtienes marcando *#06# en tu teléfono), tu RUT y los datos básicos del dispositivo como marca y modelo. Con esa información puedes iniciar la solicitud directamente en nuestro portal.",
+        en: "You only need your device's IMEI (the 15-digit code obtained by dialing *#06# on your phone), your national ID (RUT), and basic device details such as brand and model. With that information you can start the request directly on our portal.",
       },
     },
     {
