@@ -544,6 +544,16 @@ const translations = {
   },
 
   // ─── CERTIFICATIONS ────────────────────────────────────
+  linkedin: {
+    sectionTitle: { es: "Síguenos en LinkedIn", en: "Follow us on LinkedIn" },
+    tagline: {
+      es: "Ingeniería y Auditoría en Telecomunicaciones | Certificados por SUBTEL",
+      en: "Telecommunications Engineering & Auditing | SUBTEL Certified",
+    },
+    location: { es: "Gran Santiago, Región Metropolitana de Chile", en: "Greater Santiago, Chile" },
+    follow: { es: "Seguir en LinkedIn", en: "Follow on LinkedIn" },
+  },
+
   certifications: {
     sectionTitle: { es: "Certificaciones", en: "Certifications" },
     items: [
