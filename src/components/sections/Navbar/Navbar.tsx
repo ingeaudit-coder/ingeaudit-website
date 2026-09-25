@@ -155,6 +155,15 @@ export const Navbar = () => {
                 >
                   {t("nav.mediciones", lang)}
                 </Link>
+
+                {/* Nuevo servicio LTE/5G Privado */}
+                <Link
+                  href="/servicios/cobertura-lte-5g-privado"
+                  className={`${style.dropdownItem} ${style.newServiceItem} ${pathname === "/servicios/cobertura-lte-5g-privado" ? style.dropdownItemActive : ""}`}
+                >
+                  <span>{t("nav.coberturaPrivada", lang)}</span>
+                  <span className={style.newPill}>{t("nav.nuevo", lang)}</span>
+                </Link>
               </div>
             </li>
 
@@ -253,6 +262,15 @@ export const Navbar = () => {
                           className={`text-sm text-gray-500 hover:text-blue-400 ${pathname === "/servicios/mediciones" ? "text-blue-400 font-medium" : ""}`}
                         >
                           {t("nav.mediciones", lang)}
+                        </Link>
+
+                        <Link
+                          href="/servicios/cobertura-lte-5g-privado"
+                          onClick={handleLinkClick}
+                          className={`${style.mobileNewService} ${pathname === "/servicios/cobertura-lte-5g-privado" ? style.mobileNewServiceActive : ""}`}
+                        >
+                          <span>{t("nav.coberturaPrivada", lang)}</span>
+                          <span className={style.newPill}>{t("nav.nuevo", lang)}</span>
                         </Link>
                       </div>
                     )}

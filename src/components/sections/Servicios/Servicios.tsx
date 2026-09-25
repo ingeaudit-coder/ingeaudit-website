@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Wifi, Scale, Smartphone, Check } from "lucide-react";
+import { ArrowRight, Check, RadioTower, Scale, Smartphone, Wifi } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/src/context/LanguageContext";
 import translations from "@/src/i18n/translations";
@@ -19,14 +19,12 @@ const IMAGES = [
 
 export const Servicioss = () => {
   const { lang } = useLanguage();
-  const { title, subtitle, cards } = translations.serviciosPage;
+  const { title, subtitle, featured, cards } = translations.serviciosPage;
   const router = useRouter();
 
   return (
     <section id="seccion-servicios" className={styles.section}>
       <div className={styles.container}>
-        
-        {/* HEADER */}
         <motion.div
           className={styles.header}
           initial={{ opacity: 0, y: 40 }}
@@ -38,7 +36,51 @@ export const Servicioss = () => {
           <p className={styles.subtitle}>{subtitle[lang]}</p>
         </motion.div>
 
-        {/* CARDS */}
+        <motion.div
+          className={styles.featuredBorder}
+          initial={{ opacity: 0, y: 34 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.65 }}
+        >
+          <article className={styles.featuredCard}>
+            <div className={styles.featuredContent}>
+              <span className={styles.newBadge}>{featured.badge[lang]}</span>
+              <h3 className={styles.featuredTitle}>{featured.title[lang]}</h3>
+              <p className={styles.featuredDesc}>{featured.description[lang]}</p>
+
+              <ul className={styles.featuredList}>
+                {featured.items[lang].map((item) => (
+                  <li key={item}>
+                    <Check size={16} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                type="button"
+                className={styles.featuredCta}
+                onClick={() => router.push(featured.href)}
+              >
+                {featured.cta[lang]}
+                <ArrowRight size={17} />
+              </button>
+            </div>
+
+            <div className={styles.featuredVisual} aria-hidden="true">
+              <span className={`${styles.signalRing} ${styles.signalRingOne}`} />
+              <span className={`${styles.signalRing} ${styles.signalRingTwo}`} />
+              <span className={`${styles.signalRing} ${styles.signalRingThree}`} />
+              <div className={styles.towerBadge}>
+                <RadioTower size={44} />
+              </div>
+              <span className={styles.networkLabel}>LTE</span>
+              <span className={`${styles.networkLabel} ${styles.networkLabel5g}`}>5G</span>
+            </div>
+          </article>
+        </motion.div>
+
         <div className={styles.grid}>
           {cards.map((card, i) => {
             const Icon = ICONS[i];
@@ -52,16 +94,9 @@ export const Servicioss = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.2, duration: 0.7 }}
               >
-
-                {/* IMAGE */}
                 <div className={styles.imageWrap}>
-                  
                   <div className={styles.imageMotion}>
-                    
-                    <motion.div
-                      className={styles.imageInner}
-                      transition={{ duration: 0.25 }}
-                    >
+                    <motion.div className={styles.imageInner} transition={{ duration: 0.25 }}>
                       <Image
                         src={IMAGES[i]}
                         alt={card.title[lang]}
@@ -70,28 +105,20 @@ export const Servicioss = () => {
                         className={styles.image}
                       />
                     </motion.div>
-
                   </div>
 
                   <span className={styles.iconBadge}>
                     <Icon />
                   </span>
-
                 </div>
 
-                {/* BODY */}
                 <div className={styles.cardBody}>
                   <p className={`${styles.badge} ${BADGE_CLASSES[i]}`}>
                     {card.badge[lang]}
                   </p>
 
-                  <h3 className={styles.cardTitle}>
-                    {card.title[lang]}
-                  </h3>
-
-                  <p className={styles.cardDesc}>
-                    {card.description[lang]}
-                  </p>
+                  <h3 className={styles.cardTitle}>{card.title[lang]}</h3>
+                  <p className={styles.cardDesc}>{card.description[lang]}</p>
 
                   <ul className={styles.featureList}>
                     {card.items[lang].map((item, j) => (
@@ -109,7 +136,6 @@ export const Servicioss = () => {
                   </ul>
                 </div>
 
-                {/* CTA */}
                 <div className={styles.ctaWrapper}>
                   <Button
                     variant="primary"
@@ -120,7 +146,6 @@ export const Servicioss = () => {
                     <span className={styles.ctaArrow}>→</span>
                   </Button>
                 </div>
-
               </motion.article>
             );
           })}
