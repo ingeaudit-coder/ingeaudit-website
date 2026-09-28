@@ -57,7 +57,7 @@ export default function LinkedinFeed() {
           >
             <div className={styles.profileBanner}>
               <Image
-                src="/images/linkedin/banner.jpeg"
+                src="/images/linkedin/banner.webp"
                 alt=""
                 fill
                 sizes="504px"
@@ -67,7 +67,7 @@ export default function LinkedinFeed() {
             <div className={styles.profileBody}>
               <div className={styles.avatarWrapper}>
                 <Image
-                  src="/images/linkedin/perfil.jpeg"
+                  src="/images/linkedin/perfil.webp"
                   alt="Ingeaudit"
                   fill
                   sizes="64px"

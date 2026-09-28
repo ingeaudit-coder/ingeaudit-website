@@ -8,6 +8,8 @@ const translations = {
     servicios: { es: "Servicios", en: "Services" },
     homologacion: { es: "Homologación", en: "Homologation" },
     mediciones: { es: "Mediciones de Campo", en: "Field Measurements" },
+    coberturaPrivada: { es: "Cobertura LTE/5G Privado", en: "Private LTE/5G Coverage" },
+    nuevo: { es: "NUEVO", en: "NEW" },
     operadores: { es: "Operadores/Empresas", en: "Operators/Companies" },
     personas: { es: "Personas Naturales", en: "Individuals" },
     contactanos: { es: "Contactanos", en: "Contact" },
@@ -636,6 +638,20 @@ const translations = {
       es: "Soluciones integrales en telecomunicaciones bajo cumplimiento normativo y excelencia técnica.",
       en: "Comprehensive telecommunications solutions under regulatory compliance and technical excellence.",
     },
+    featured: {
+      badge: { es: "NUEVO SERVICIO", en: "NEW SERVICE" },
+      title: { es: "Medición y Análisis de Cobertura LTE/5G Privado", en: "Private LTE/5G Coverage Measurement & Analysis" },
+      description: {
+        es: "Evaluación especializada de cobertura y desempeño para redes LTE/5G privadas, con resultados técnicos orientados a la toma de decisiones.",
+        en: "Specialized coverage and performance assessment for private LTE/5G networks, with technical results designed to support decision-making.",
+      },
+      items: {
+        es: ["Reporte de cobertura", "Reporte de Servicios VoNR/VoLTE/MOS", "Reporte de Sistemas Radiantes"],
+        en: ["Coverage report", "VoNR/VoLTE/MOS services report", "Radiating systems report"],
+      },
+      cta: { es: "CONOCER NUEVO SERVICIO", en: "EXPLORE NEW SERVICE" },
+      href: "/servicios/cobertura-lte-5g-privado",
+    },
     cards: [
       {
         badge: { es: "SERVICIOS TÉCNICOS", en: "TECHNICAL SERVICES" },
@@ -680,6 +696,75 @@ const translations = {
         href: "/servicios/homologacion/personas",
       },
     ],
+  },
+
+  newServicePopup: {
+    aria: { es: "Nuevo servicio de cobertura LTE y 5G privado", en: "New private LTE and 5G coverage service" },
+    close: { es: "Cerrar aviso", en: "Close notice" },
+    badge: { es: "NUEVO SERVICIO", en: "NEW SERVICE" },
+    title: { es: "Medición y Análisis de Cobertura LTE/5G Privado", en: "Private LTE/5G Coverage Measurement & Analysis" },
+    description: {
+      es: "Cobertura, servicios de voz y sistemas radiantes en un estudio técnico especializado.",
+      en: "Coverage, voice services and radiating systems in a specialized technical study.",
+    },
+    cta: { es: "Conocer servicio", en: "Explore service" },
+  },
+
+  privateCoveragePage: {
+    hero: {
+      badge: { es: "NUEVO SERVICIO", en: "NEW SERVICE" },
+      title: { es: "Medición y Análisis de Cobertura LTE/5G Privado", en: "Private LTE/5G Coverage Measurement & Analysis" },
+      subtitle: {
+        es: "Estudios técnicos para caracterizar cobertura, servicios y sistemas radiantes en redes privadas LTE y 5G.",
+        en: "Technical studies to characterize coverage, services and radiating systems in private LTE and 5G networks.",
+      },
+      cta: { es: "Solicitar evaluación", en: "Request assessment" },
+    },
+    studies: {
+      eyebrow: { es: "CASOS DE ESTUDIO", en: "STUDY CASES" },
+      title: { es: "Reportes orientados al desempeño real de la red", en: "Reports focused on real network performance" },
+      subtitle: {
+        es: "El alcance del estudio se ajusta a los objetivos técnicos del proyecto y al tipo de red privada evaluada.",
+        en: "The study scope is adapted to the technical objectives of the project and the type of private network being evaluated.",
+      },
+      items: [
+        {
+          title: { es: "Reporte de cobertura", en: "Coverage Report" },
+          description: { es: "Caracterización de la cobertura de la red y visualización de los resultados obtenidos durante la medición.", en: "Network coverage characterization and visualization of the results obtained during measurement." },
+        },
+        {
+          title: { es: "Reporte de Servicios VoNR/VoLTE/MOS", en: "VoNR/VoLTE/MOS Services Report" },
+          description: { es: "Análisis de servicios de voz sobre LTE/5G y métricas asociadas a la experiencia y calidad de la comunicación.", en: "Analysis of voice services over LTE/5G and metrics associated with communication experience and quality." },
+        },
+        {
+          title: { es: "Reporte de Sistemas Radiantes", en: "Radiating Systems Report" },
+          description: { es: "Revisión técnica de los sistemas radiantes considerados dentro del alcance del estudio de cobertura.", en: "Technical review of the radiating systems included within the scope of the coverage study." },
+        },
+      ],
+    },
+    technical: {
+      eyebrow: { es: "DETALLE TÉCNICO", en: "TECHNICAL DETAIL" },
+      title: { es: "Medición adaptada a cada proyecto", en: "Measurement tailored to each project" },
+      description: {
+        es: "La metodología se define de acuerdo con la tecnología, bandas, entorno y objetivos específicos de la red LTE/5G privada.",
+        en: "The methodology is defined according to the technology, bands, environment and specific objectives of the private LTE/5G network.",
+      },
+      equipmentLabel: { es: "EQUIPAMIENTO UTILIZADO", en: "EQUIPMENT USED" },
+      equipmentTitle: { es: "Configuración según alcance del estudio", en: "Configuration according to study scope" },
+      equipmentDescription: {
+        es: "El equipamiento de medición se selecciona para cada proyecto según la red, las bandas involucradas y las pruebas requeridas. El detalle se incorpora en la propuesta técnica.",
+        en: "Measurement equipment is selected for each project according to the network, the bands involved and the required tests. Details are included in the technical proposal.",
+      },
+    },
+    cta: {
+      eyebrow: { es: "LTE / 5G PRIVADO", en: "PRIVATE LTE / 5G" },
+      title: { es: "Conversemos sobre el escenario que necesitas medir", en: "Tell us about the scenario you need to measure" },
+      description: {
+        es: "Podemos definir el alcance del estudio y los reportes requeridos a partir de las características de tu red privada.",
+        en: "We can define the study scope and required reports based on the characteristics of your private network."
+      },
+      button: { es: "Contactar a Ingeaudit", en: "Contact Ingeaudit" },
+    },
   },
 
   // ─── HOMOLOGACIÓN page hero ─────────────────────────────
