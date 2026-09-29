@@ -297,8 +297,544 @@
 
   .contentSection,
   .techSection,
-  .processSection {
+  .processSection,
+  .diagramSection {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+/* ─── Network diagram: private 5G SA vs public 5G ─── */
+.diagramSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.diagramCard {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #0b1220, #070d19);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.diagramCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: radial-gradient(rgba(96, 165, 250, 0.32) 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: radial-gradient(circle at 50% 40%, #000, transparent 78%);
+}
+
+.diagramGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 7fr 2.2fr 3fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* Private network panel */
+.privatePanel {
+  position: relative;
+  padding: clamp(1.4rem, 3vw, 1.9rem);
+  border: 1px dashed rgba(96, 165, 250, 0.55);
+  border-radius: 1rem;
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.principalBadge {
+  position: absolute;
+  top: -0.78rem;
+  left: 1.5rem;
+  padding: 0.28rem 0.85rem;
+  border-radius: 999px;
+  color: #10131c;
+  background: var(--gold-primary);
+  font-size: 0.66rem;
+  font-weight: 850;
+  letter-spacing: 0.14em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.panelHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.35rem 0 0.6rem;
+}
+
+.panelHeader h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.25rem, 2.3vw, 1.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.tag {
+  padding: 0.22rem 0.6rem;
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 0.5rem;
+  color: #9cc3ff;
+  background: rgba(37, 99, 235, 0.14);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 0.3rem 0.7rem;
+  margin-left: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.6rem;
+  color: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.04);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+}
+
+.towerWrap {
+  display: flex;
+  justify-content: center;
+  margin: 0.6rem 0 0.1rem;
+}
+
+.towerBox {
+  width: 100%;
+  max-width: 320px;
+  height: 225px;
+}
+
+.fanLines {
+  display: block;
+  width: 100%;
+  height: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.nodeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+
+.nodeCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 120px;
+  padding: 0.95rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 0.85rem;
+  background: linear-gradient(145deg, #101827, #0d1220);
+  color: #fff;
+  text-align: center;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.nodeCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.42);
+}
+
+.nodeCardActive {
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+.nodeLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.nodeIcon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: #76aaff;
+}
+
+.nodeTags {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  width: 100%;
+  margin-bottom: 0.15rem;
+}
+
+.nodeTagPrivate,
+.nodeTagPublic {
+  padding: 0.16rem 0.45rem;
+  border-radius: 0.35rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.nodeTagPrivate {
+  color: #9cc3ff;
+  background: rgba(37, 99, 235, 0.16);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+.nodeTagPublic {
+  color: #ffb3bc;
+  background: rgba(224, 86, 106, 0.14);
+  border: 1px solid rgba(224, 86, 106, 0.35);
+}
+
+.ping {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.35rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #76aaff;
+}
+
+.pingRight {
+  right: auto;
+  left: -0.35rem;
+}
+
+.pingRose {
+  background: #e0566a;
+}
+
+.ping::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: inherit;
+  animation: pingRing 1.7s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pingRing {
+  75%,
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+/* Firewall bridge */
+.bridgePanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bridgeRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.bridgeLink {
+  flex: 1;
+  height: 2px;
+  background-image: linear-gradient(90deg, currentColor 50%, transparent 50%);
+  background-size: 10px 2px;
+  animation: dashFlow 1.15s linear infinite;
+}
+
+.bridgeLinkBlue {
+  color: #76aaff;
+}
+
+.bridgeLinkRed {
+  color: #e0566a;
+}
+
+@keyframes dashFlow {
+  to {
+    background-position: 10px 0;
+  }
+}
+
+.firewall {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 116px;
+  margin: 0 0.55rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(201, 169, 97, 0.5);
+  border-radius: 0.85rem;
+  background: #0a1122;
+  box-shadow: 0 0 20px rgba(201, 169, 97, 0.16);
+  animation: firewallShield 3.5s ease-in-out infinite;
+}
+
+.firewallIcon {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  border-radius: 0.6rem;
+  color: var(--gold-primary);
+  background: rgba(201, 169, 97, 0.1);
+}
+
+.firewall span {
+  color: #f0e2c0;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+@keyframes firewallShield {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(201, 169, 97, 0.18);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 26px rgba(201, 169, 97, 0.34);
+  }
+}
+
+.bridgeBadges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 215px;
+}
+
+.badgeOk {
+  padding: 0.38rem 0.85rem;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 999px;
+  color: #cfe0ff;
+  background: rgba(37, 99, 235, 0.14);
+  font-size: 0.71rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badgeDenied {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.38rem 0.85rem;
+  border: 1px solid rgba(224, 86, 106, 0.32);
+  border-radius: 999px;
+  color: #ffc9cf;
+  background: rgba(224, 86, 106, 0.12);
+  font-size: 0.71rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badgeDenied strong {
+  color: #ff8f9c;
+  font-weight: 850;
+}
+
+/* Public network panel */
+.publicPanel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.1rem, 2.6vw, 1.6rem);
+  border: 1px dashed rgba(224, 86, 106, 0.45);
+  border-radius: 1rem;
+  background: rgba(224, 86, 106, 0.05);
+}
+
+.publicHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.publicHeader h3 {
+  margin: 0;
+  color: #ffb3bc;
+  font-size: 1.12rem;
+  letter-spacing: -0.01em;
+}
+
+.publicTag {
+  padding: 0.18rem 0.55rem;
+  border: 1px solid rgba(224, 86, 106, 0.35);
+  border-radius: 0.45rem;
+  color: #ffb3bc;
+  background: rgba(224, 86, 106, 0.14);
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.publicTower {
+  display: flex;
+  justify-content: center;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.publicTowerBox {
+  width: 100%;
+  max-width: 175px;
+  height: 152px;
+}
+
+.publicArrow {
+  display: flex;
+  justify-content: center;
+  color: #e0566a;
+  animation: arrowBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.internetBox {
+  margin: 0.55rem 0;
+  padding: 0.85rem;
+  border: 1px solid rgba(224, 86, 106, 0.3);
+  border-radius: 0.8rem;
+  background: rgba(224, 86, 106, 0.08);
+  text-align: center;
+}
+
+.internetTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  color: #ffd0d5;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.internetBox p {
+  margin: 0.28rem 0 0;
+  color: rgba(255, 190, 197, 0.72);
+  font-size: 0.72rem;
+}
+
+.outsideLabel {
+  margin-top: 0.4rem;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.privateWaves .wave1 {
+  animation: wavePulse 3s ease-out infinite;
+}
+
+.privateWaves .wave2 {
+  animation: wavePulse 3s ease-out infinite 1s;
+}
+
+.privateWaves .wave3 {
+  animation: wavePulse 3s ease-out infinite 2s;
+}
+
+@keyframes wavePulse {
+  0% {
+    r: 18px;
+    opacity: 0.95;
+    stroke-width: 2.5px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    r: 75px;
+    opacity: 0;
+    stroke-width: 1px;
+  }
+}
+
+.publicWaves .wave1 {
+  animation: wavePulsePublic 2.8s ease-out infinite;
+}
+
+.publicWaves .wave2 {
+  animation: wavePulsePublic 2.8s ease-out infinite 1.4s;
+}
+
+@keyframes wavePulsePublic {
+  0% {
+    r: 12px;
+    opacity: 0.8;
+    stroke-width: 2px;
+  }
+  100% {
+    r: 42px;
+    opacity: 0;
+    stroke-width: 1px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .diagramGrid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .bridgePanel {
+    margin: 0.5rem 0;
+  }
+
+  .bridgeBadges {
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .nodeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .nodeCard {
+    min-height: 96px;
+  }
+
+  .firewall {
+    min-width: 96px;
+    margin: 0 0.35rem;
+    padding: 0.75rem 0.7rem;
+  }
+
+  .principalBadge {
+    left: 1rem;
   }
 }
