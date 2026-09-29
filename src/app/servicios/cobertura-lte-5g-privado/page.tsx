@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Activity,
   ArrowDown,
@@ -31,27 +32,36 @@ export default function CoberturaPrivadaPage() {
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.heroBackdrop} aria-hidden="true">
-          <span className={styles.ringOne} />
-          <span className={styles.ringTwo} />
-          <span className={styles.ringThree} />
-          <RadioTower className={styles.tower} />
+        <div className={styles.heroInner}>
+          <motion.div
+            className={styles.heroContent}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55 }}
+          >
+            <span className={styles.newBadge}>{service.hero.badge[lang]}</span>
+            <h1>{service.hero.title[lang]}</h1>
+            <p>{service.hero.subtitle[lang]}</p>
+            <Link href="/contactanos" className={styles.primaryCta}>
+              {service.hero.cta[lang]}
+              <ArrowRight size={18} />
+            </Link>
+          </motion.div>
         </div>
 
-        <motion.div
-          className={styles.heroContent}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55 }}
-        >
-          <span className={styles.newBadge}>{service.hero.badge[lang]}</span>
-          <h1>{service.hero.title[lang]}</h1>
-          <p>{service.hero.subtitle[lang]}</p>
-          <Link href="/contactanos" className={styles.primaryCta}>
-            {service.hero.cta[lang]}
-            <ArrowRight size={18} />
-          </Link>
-        </motion.div>
+        <div className={styles.heroVisual} aria-hidden="true">
+          <Image
+            src="/images/servicios/imagen-faena.webp"
+            alt=""
+            fill
+            priority
+            quality={85}
+            sizes="(max-width: 1100px) 100vw, 1200px"
+            className={styles.heroImg}
+          />
+          <span className={styles.heroTint} />
+          <span className={styles.heroFade} />
+        </div>
       </section>
 
       <section className={styles.contentSection}>
