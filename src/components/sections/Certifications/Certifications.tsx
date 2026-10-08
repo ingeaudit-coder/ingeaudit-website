@@ -79,6 +79,17 @@ export default function Certifications() {
                       />
                     </div>
 
+                    {idx === 2 && (
+                      <a
+                        href="/certificaciones/certificado-homologacion.pdf"
+                        download="certificado-homologacion.pdf"
+                        className={styles.certLink}
+                      >
+                        <FileText aria-hidden="true" />
+                        {lang === "es" ? "Descargar certificado" : "Download certificate"}
+                      </a>
+                    )}
+
                     {cert.enlaces && (
                       <div className={styles.certLinks}>
                         {cert.enlaces.map((enlace, linkIdx) => (
